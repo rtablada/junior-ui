@@ -21,3 +21,15 @@ $black: #000000;
 $red: #FF5A5A;
 $blue: #479CF7;
 $green: #00DD61;
+
+
+// Keeps the footer at the bottom
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site__content {
+  flex: 1;
+}

@@ -1,4 +1,4 @@
-{{outlet}}
+<body class="site">
 <nav class="nav">
   <div class="nav__inner">
     <ul class="nav__content">
@@ -13,12 +13,14 @@
     </ul>
   </div>
 </nav>
-{{outlet}}
+  <main class="site__content">
+    {{outlet}}
+  </main>
 <footer class="footer">
   <div class="footer__inner">
     <ul class="footer__content">
-      <li class="footer__item">Coded and designed by Peter Court</li>
-      <li class="footer__item">Built with Ember. Hosted on Surge. Using SASS with BEM syntax.</li>
+      <li class="footer__item">© Hello Junior 2016</li>
     </ul>
   </div>
 </footer>
+</body>

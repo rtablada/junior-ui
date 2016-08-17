@@ -1,15 +1,15 @@
 .footer {
   background: $grey-three;
-  &__inner {
 
+  &__inner {
+    padding: 2em;
   }
 
   &__content {
-
+    display: flex;
+    justify-content: space-between;
   }
 
   &__item {
-
-
-  }
+    }
 }
