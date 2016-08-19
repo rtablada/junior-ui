@@ -6,7 +6,7 @@
   box-sizing: border-box;
 
   // For now until I can get Calibre loaded in
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Europa', sans-serif;
   text-decoration: none;
   list-style: none;
 }
@@ -32,6 +32,7 @@ $green: #00DD61;
 
 .site__content {
   flex: 1;
+  background: $grey-two;
 }
 
 .column {
@@ -47,7 +48,8 @@ $green: #00DD61;
   border-radius: 4px;
   background: $blue;
   color: $white;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .cancel-btn {
@@ -57,7 +59,8 @@ $green: #00DD61;
   border-radius: 4px;
   background: $red;
   color: $white;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .submit-btn {
@@ -67,7 +70,8 @@ $green: #00DD61;
   border-radius: 4px;
   background: $green;
   color: $white;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 
@@ -82,4 +86,7 @@ $green: #00DD61;
   padding: 0.75rem 0;
   margin: 1rem 0;
   border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Europa', sans-serif;
+  padding-left: 1rem;
 }

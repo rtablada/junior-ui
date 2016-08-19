@@ -1,7 +1,7 @@
+
 .login {
-  background: $grey-four;
+  background: $white;
   max-width: 30rem;
-  border-radius: 8px;
   margin: 0 auto;
 
   &__inner {
@@ -12,4 +12,5 @@
 .button__container {
   display: flex;
   justify-content: space-between;
+  padding-top: 5rem;
 }
