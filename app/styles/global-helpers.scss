@@ -39,7 +39,7 @@ $green: #00DD61;
 }
 
 
-// Global Button!
+// GLOBAL BUTTONS
 .cta-btn {
   padding: 0.75em 2.5em;
   border: 0;
@@ -48,4 +48,38 @@ $green: #00DD61;
   background: $blue;
   color: $white;
   font-size: 14px;
+}
+
+.cancel-btn {
+  padding: 0.75em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $red;
+  color: $white;
+  font-size: 14px;
+}
+
+.submit-btn {
+  padding: 0.75em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $green;
+  color: $white;
+  font-size: 14px;
+}
+
+
+// GLOBAL INPUT
+
+.input {
+  outline: none;
+  background: $grey-two;
+  color: $grey-four;
+  border: 0;
+  width: 100%;
+  padding: 0.75rem 0;
+  margin: 1rem 0;
+  border-radius: 4px;
 }

@@ -1,8 +1,18 @@
 .box {
-  background: $grey-two;
+  background: $grey-four;
   max-width: 30rem;
   border-radius: 8px;
+  margin: 0 auto;
+
+  &__inner {
+  padding: 1rem;
+  }
 }
+
+.input__box {
+
+}
+
 
 .button__box {
   display: flex;
