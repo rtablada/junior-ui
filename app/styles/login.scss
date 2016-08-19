@@ -1,0 +1,10 @@
+.box {
+  background: $grey-two;
+  max-width: 30rem;
+  border-radius: 8px;
+}
+
+.button__box {
+  display: flex;
+  justify-content: space-between;
+}
