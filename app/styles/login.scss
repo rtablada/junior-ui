@@ -1,4 +1,4 @@
-.box {
+.login {
   background: $grey-four;
   max-width: 30rem;
   border-radius: 8px;
@@ -9,12 +9,7 @@
   }
 }
 
-.input__box {
-
-}
-
-
-.button__box {
+.button__container {
   display: flex;
   justify-content: space-between;
 }
