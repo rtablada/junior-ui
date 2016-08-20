@@ -1,16 +1,38 @@
 
 .login {
-  background: $white;
   max-width: 30rem;
   margin: 0 auto;
 
   &__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
+  }
+
+  &__content {
+    background: $white;
+  }
+
+  &__title {
+  font-size: 28px;
+  text-align: center;
   }
 }
 
 .button__container {
   display: flex;
-  justify-content: space-between;
-  padding-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  background: $blue;
+}
+
+.cancel-btn {
+  width: 10rem;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.wrap {
+
 }
