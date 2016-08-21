@@ -40,6 +40,7 @@
     width: 50%;
     padding: 1rem;
     min-width: 20rem;
+    flex: 1 0 20rem;
   }
 
   &__right {
@@ -49,6 +50,7 @@
     justify-content: center;
     padding: 1rem;
     min-width: 20rem;
+    flex: 1 0 20rem;
   }
 
   &__title {
@@ -61,7 +63,6 @@
   }
 
   &__sub {
-    color: $white;
     text-align: center;
   }
 }
@@ -69,7 +70,7 @@
 // BLOCK TWO
 
 .two {
-  background: $red;
+  background: $grey-one;
 
   &__spacing {
     width: 100%;
