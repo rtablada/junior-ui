@@ -26,14 +26,19 @@
     padding: 2rem 0;
   }
 
+  .login-items {
+    justify-content: space-around;
+  }
+
   &__sub {
-    color: $grey-three;
+    color: $grey-four;
     font-size: 18px;
   }
 }
 
 .login-btn {
   margin: 0 1rem;
+  text-align: center;
 }
 
 //  MEDIA Q's
@@ -41,7 +46,7 @@
   // MOBILE
   .form {
     &__card {
-      margin-top: 2rem;
+      margin: 1rem 0;
     }
   }
   .form__container--btn {
@@ -57,7 +62,7 @@
   // TABLET
   .form {
     &__card {
-      margin-top: 3rem;
+      margin: 2rem 0;
     }
   }
   .login {
@@ -68,7 +73,7 @@
   // DESKTOP
   .form {
     &__card {
-      margin-top: 5rem;
+      margin: 3rem 0;
     }
   }
   .login {
