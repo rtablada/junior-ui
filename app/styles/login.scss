@@ -33,6 +33,15 @@
   &__sub {
     color: $grey-four;
     font-size: 18px;
+    padding: 1em 2em;
+  }
+  &__sub:hover {
+    padding: 1em 2em;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    background: rgba(221,221,221, 0.4);
+    font-size: 18px;
   }
 }
 
@@ -47,6 +56,10 @@
   .form {
     &__card {
       margin: 1rem 0;
+    }
+    &__sub:hover {
+      width: 23rem;
+      text-align: center;
     }
   }
   .form__container--btn {
