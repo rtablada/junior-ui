@@ -2,7 +2,7 @@
 <div class="form">
   <div class="form__inner">
     <div class="form__card">
-      {{!-- {{#simple-form onsubmit=(action "login") as |inputs|}} --}}
+      {{#simple-form onsubmit=(action "forgot") as |inputs|}}
         <div class="form__container--input">
           <div class="box-2">
           <h1 class="form__title">Password Reset</h1>
@@ -17,7 +17,7 @@
           {{#link-to 'login' class="form__sub space-half" }}Login{{/link-to}}
           {{#link-to 'signup' class="form__sub space-half" }}Create a new account{{/link-to}}
         </div>
-      {{!-- {{/simple-form}} --}}
+      {{/simple-form}}
     </div>
   </div>
 </div>
