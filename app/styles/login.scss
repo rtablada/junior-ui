@@ -1,38 +1,77 @@
-
-.login {
-  max-width: 30rem;
-  margin: 0 auto;
-
+.form {
   &__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  }
-
-  &__content {
     background: $white;
+    border-radius: 4px;
+    max-width: 30rem;
+    margin: 0 auto;
   }
 
   &__title {
-  font-size: 28px;
-  text-align: center;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__container--input {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &__container--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $grey-one;
+    border-radius: 0 0 4px 4px;
+    padding: 2rem 0;
+  }
+
+  &__sub {
+    color: $grey-three;
+    font-size: 18px;
   }
 }
 
-.button__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $blue;
-}
-
-.cancel-btn {
-  width: 10rem;
-  text-align: center;
+.login-btn {
   margin: 0 1rem;
 }
 
-.wrap {
-
+//  MEDIA Q's
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
+  .form {
+    &__card {
+      margin-top: 2rem;
+    }
+  }
+  .form__container--btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-btn {
+    margin: .5rem 0;
+    width: 23rem;
+  }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
+  // TABLET
+  .form {
+    &__card {
+      margin-top: 3rem;
+    }
+  }
+  .login {
+    margin: 0 1rem;
+  }
+}
+@media screen and (min-width: 60rem) and (max-width: 300rem) {
+  // DESKTOP
+  .form {
+    &__card {
+      margin-top: 5rem;
+    }
+  }
+  .login {
+    margin: 0 1rem;
+  }
 }

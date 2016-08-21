@@ -1,5 +1,5 @@
 .nav {
-  background: $grey-one;
+  background: $grey-two;
 
   &__inner {
     padding: 2em;
@@ -8,17 +8,7 @@
   &__content {
     display: flex;
     align-items: center;
-  }
-
-  &__left {
-    flex-grow: 2;
-  }
-
-  &__right {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
   }
 
   &__item {
