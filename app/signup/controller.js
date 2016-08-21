@@ -5,12 +5,13 @@ export default Ember.Controller.extend({
 
   actions: {
     signUp(formValues) {
-      const authenticator = 'authenticator:application';
-
-      this.get('session').authenticate(authenticator, {
-        identification: formValues.email,
-        password: formValues.password
-      });
+      // const authenticator = 'authenticator:application';
+      //
+      // this.get('session').authenticate(authenticator, {
+      //   identification: formValues.email,
+      //   password: formValues.password
+    // });
+        this.transitionToRoute('forum');
     },
   },
 });

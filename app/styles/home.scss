@@ -82,19 +82,24 @@
   // MOBILE
   .block {
     padding: 1rem;
+
     &__content {
       justify-content: center;
     }
+
     &__title {
       font-size: 24px;
     }
+
     &__p {
       font-size: 16px;
     }
+
     &__sub {
       font-size: 20px;
     }
   }
+
   .two {
     &__spacing {
       padding: 10rem 0;
@@ -107,19 +112,24 @@
   // TABLET
   .block {
     padding: 1rem;
+
     &__content {
       // justify-content: center;
     }
+
     &__title {
       font-size: 30px;
     }
+
     &__p {
       font-size: 18px;
     }
+
     &__sub {
       font-size: 24px;
     }
   }
+
   .two {
     &__spacing {
       padding: 10rem 0;
@@ -133,19 +143,24 @@
   // DESKTOP
   .block {
     padding: 1rem;
+
     &__content {
       justify-content: center;
     }
+
     &__title {
       font-size: 40px;
     }
+
     &__p {
       font-size: 20px;
     }
+
     &__sub {
       font-size: 28px;
     }
   }
+
   .two {
     &__spacing {
       padding: 15rem 0;
