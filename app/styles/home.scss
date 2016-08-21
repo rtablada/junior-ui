@@ -34,7 +34,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    background: pink;
   }
 
   &__left {
@@ -60,24 +59,22 @@
   &__p {
     font-size: 20px;
   }
+
+  &__sub {
+    color: $white;
+    text-align: center;
+  }
 }
 
 // BLOCK TWO
 
 .two {
-  background: $blue;
-}
+  background: $red;
 
-.block__content--two {
-  padding: 15rem 0;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.block__title--two {
-  color: $white;
-  font-size: 30px;
-  text-align: center;
+  &__spacing {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 //  MEDIA Q's
@@ -94,19 +91,66 @@
     &__p {
       font-size: 16px;
     }
+    &__sub {
+      font-size: 20px;
+    }
+  }
+  .two {
+    &__spacing {
+      padding: 10rem 0;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }
 @media screen and (min-width: 40rem) and (max-width: 60rem) {
   // TABLET
   .block {
-
+    padding: 1rem;
     &__content {
-      justify-content: center;
+      // justify-content: center;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__p {
+      font-size: 18px;
+    }
+    &__sub {
+      font-size: 24px;
+    }
+  }
+  .two {
+    &__spacing {
+      padding: 10rem 0;
+      width: 100%;
+      margin: 0 auto;
     }
   }
 
 }
 @media screen and (min-width: 60rem) and (max-width: 300rem) {
   // DESKTOP
-
+  .block {
+    padding: 1rem;
+    &__content {
+      justify-content: center;
+    }
+    &__title {
+      font-size: 40px;
+    }
+    &__p {
+      font-size: 20px;
+    }
+    &__sub {
+      font-size: 28px;
+    }
+  }
+  .two {
+    &__spacing {
+      padding: 15rem 0;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
 }
