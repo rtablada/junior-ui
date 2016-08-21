@@ -10,6 +10,9 @@ Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('forgot');
+  this.route('forum');
+  this.route('jobs');
+  this.route('interviews');
 });
 
 export default Router;
