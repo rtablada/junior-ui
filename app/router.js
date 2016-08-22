@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('forum');
   this.route('jobs');
   this.route('interviews');
+  this.route('users');
 });
 
 export default Router;
