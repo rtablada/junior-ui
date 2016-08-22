@@ -7,7 +7,6 @@
   }
 
   &__title {
-    font-size: 40px;
     text-align: center;
     font-weight: 700;
   }
@@ -61,6 +60,9 @@
       width: 23rem;
       text-align: center;
     }
+    &__title {
+      font-size: 24px;
+    }
   }
   .form__container--btn {
     display: flex;
@@ -77,6 +79,9 @@
     &__card {
       margin: 2rem 0;
     }
+    &__title {
+      font-size: 30px;
+    }
   }
   .login {
     margin: 0 1rem;
@@ -87,6 +92,9 @@
   .form {
     &__card {
       margin: 3rem 0;
+    }
+    &__title {
+      font-size: 40px;
     }
   }
   .login {
