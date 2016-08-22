@@ -1,0 +1,44 @@
+.post {
+
+  &__inner {
+
+  }
+
+  &__content {
+
+  }
+
+  &__top {
+    background: $white;
+    &--content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__h1 {
+  }
+
+}
+
+//  MEDIA Q's
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
+  .post {
+    &__h1 {
+      font-size: 24px;
+    }
+  }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
+  // TABLET
+
+}
+@media screen and (min-width: 60rem) and (max-width: 300rem) {
+  // DESKTOP
+  .post {
+    &__h1 {
+      font-size: 30px;
+    }
+  }
+}
