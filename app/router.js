@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('jobs');
   this.route('interviews');
   this.route('profile');
+  this.route('brand');
 });
 
 export default Router;
