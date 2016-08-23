@@ -1,34 +1,48 @@
 .post {
-
   &__inner {
-
-  }
+    }
 
   &__content {
-
-  }
+    }
 
   &__top {
+    background: $blue;
+    padding: 1rem;
+    border-radius: 4px 4px 0 0;
+
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__middle {
     background: $white;
     &--content {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
-  &__h1 {
-  }
 
+
+
+  &__bottom {
+    background: $grey-one;
+    padding: 2rem 1rem;
+    border-radius: 0 0 4px 4px;
+
+    &--content {
+      }
+  }
 }
 
 //  MEDIA Q's
 @media screen and (min-width: 10rem) and (max-width: 40rem) {
   // MOBILE
-  .post {
-    &__h1 {
-      font-size: 24px;
-    }
-  }
+  .post {}
 }
 @media screen and (min-width: 40rem) and (max-width: 60rem) {
   // TABLET
@@ -36,9 +50,5 @@
 }
 @media screen and (min-width: 60rem) and (max-width: 300rem) {
   // DESKTOP
-  .post {
-    &__h1 {
-      font-size: 30px;
-    }
-  }
+  .post {}
 }
