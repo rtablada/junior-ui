@@ -2,7 +2,7 @@
 <div class="form">
   <div class="form__inner">
     <div class="form__card">
-      {{#simple-form onsubmit=(action "update") as |inputs|}}
+      {{#simple-form startingValues=model onsubmit=(action "update") as |inputs|}}
         <div class="form__container--input">
           <div class="box-2">
             <h1 class="form__title">Update Your Profile</h1>

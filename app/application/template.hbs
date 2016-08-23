@@ -9,6 +9,14 @@
     </div>
   </nav>
   <main class="site__content">
+    {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
+    <div class="column is-10">
+      <h2>
+        {{#link-to 'profile'}}Complete Your Profile{{/link-to}}
+      </h2>
+    </div>
+    {{/if}}
+
     <div class="column is-10">
       {{outlet}}
     </div>
