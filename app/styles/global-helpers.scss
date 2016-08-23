@@ -1,5 +1,103 @@
+
+// GLOBAL RESETS
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: 'Europa', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+// GLOBAL COLORS
+$grey-one: #F8F8F8;
+$grey-two: #F1F1F1;
+$grey-three: #DDDDDD;
+$grey-four: #BBBBBB;
+$white: #FFFFFF;
+$black: #000000;
+$red: #FF5A5A;
+$blue: #479CF7;
+$green: #00DD61;
+
+
+// Keeps the footer at the bottom
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site__content {
+  flex: 1;
+  background: $grey-two;
+}
+
+.column {
+  margin: 0 auto;
+}
+
+
+// GLOBAL BUTTONS
+.cta-btn {
+  padding: 0.75em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $blue;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  padding: 1em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $red;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.submit-btn {
+  padding: 1em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $green;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+// GLOBAL INPUT
+
+.global__input {
+  outline: none;
+  background: $grey-two;
+  color: $black;
+  border: 0;
+  width: 90%;
+  padding: 0.75rem 0;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Europa', sans-serif;
+  padding-left: 1rem;
+}
+
+// GlOBAL BOX
+
+.box-2 {
+  padding: 2rem 0;
+}
+
+// GLOBAL SPACE
+
+.space-half {
+  margin: .5rem 0;
 }

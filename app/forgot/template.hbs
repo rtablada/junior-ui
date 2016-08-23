@@ -1,0 +1,23 @@
+{{outlet}}
+<div class="form">
+  <div class="form__inner">
+    <div class="form__card">
+      {{#simple-form onsubmit=(action "forgot") as |inputs|}}
+        <div class="form__container--input">
+          <div class="box-2">
+          <h1 class="form__title">Password Reset</h1>
+        </div>
+          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email associated with account"}}
+          {{input class="global__input" type="password" name="name" value=inputs.password placeholder="Username"}}
+          <div class="box-2">
+            <button class="submit-btn login-btn" type="submit" name="button">Reset Password</button>
+          </div>
+        </div>
+        <div class="form__container--btn login-items">
+          {{#link-to 'login' class="form__sub space-half" }}Login{{/link-to}}
+          {{#link-to 'signup' class="form__sub space-half" }}Create a new account{{/link-to}}
+        </div>
+      {{/simple-form}}
+    </div>
+  </div>
+</div>

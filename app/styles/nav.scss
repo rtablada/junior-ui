@@ -1,0 +1,23 @@
+.nav {
+  background: $grey-two;
+
+  &__inner {
+    padding: 2em;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    font-size: 16px;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 8rem;
+
+  }
+}
