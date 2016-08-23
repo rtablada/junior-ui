@@ -1,30 +1,83 @@
 {{outlet}}
 <div class="form">
   <div class="form__inner">
-    <div class="form__card">
-      {{#simple-form startingValues=model onsubmit=(action "update") as |inputs|}}
-        <div class="form__container--input">
-          <div class="box-2">
-            <h1 class="form__title">Update Your Profile</h1>
-          </div>
-          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
-          {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
-          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
-          {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
-          {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Old Password"}}
-          {{input class="global__input" type="password" name="name"value=inputs.password placeholder="New Password"}}
+    {{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="form__card" as |inputs|}}
+      <div class="form__container--input">
+        <div class="box-2">
+          <h1 class="form__title">Update Your Profile</h1>
+        </div>
+
+        <div class="form-input">
           {{input class="global__input" type="text" name="name" value=inputs.profilePicture placeholder="Profile Picture"}}
+        </div>
+
+        <div class="form-input">
           {{input class="global__input" type="text" name="name" value=inputs.jobStatus placeholder="Job Status"}}
+        </div>
+
+        <div class="form-input">
           {{input class="global__input" type="text" name="name" value=inputs.experience placeholder="Experience"}}
+        </div>
+
+        <div class="form-input">
           {{input class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Educational Background"}}
-          <div class="box-2">
-            <button class="submit-btn login-btn" type="submit" name="button">Update Profile</button>
-          </div>
         </div>
-        <div class="form__container--btn">
-          {{#link-to 'login' class="form__sub" }}Already have an account?{{/link-to}}
+
+        <div class="box-2">
+          <button class="submit-btn login-btn" type="submit" name="button">Update</button>
         </div>
-      {{/simple-form}}
-    </div>
+      </div>
+    {{/simple-form}}
+
+    {{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="form__card" as |inputs|}}
+      <div class="form__container--input">
+        <div class="box-2">
+          <h1 class="form__title">Update Your User Info</h1>
+        </div>
+        <div class="form-input">
+          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
+        </div>
+
+        <div class="form-input">
+          {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
+        </div>
+
+        <div class="form-input">
+          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
+        </div>
+
+        <div class="form-input">
+          {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
+        </div>
+
+        <div class="form-input">
+          {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Confirm Password"}}
+        </div>
+
+        <div class="box-2">
+          <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+        </div>
+      </div>
+    {{/simple-form}}
+
+    {{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="form__card form__card--danger" as |inputs|}}
+      <div class="form__container--input">
+        <div class="box-2">
+          <h1 class="form__title">Change Your Password</h1>
+        </div>
+
+        <div class="form-input">
+          {{input class="global__input" type="password" name="name" placeholder="Old Password"}}
+        </div>
+
+        <div class="form-input">
+          {{input class="global__input" type="password" name="name" placeholder="New Password"}}
+        </div>
+
+        <div class="box-2">
+          <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+        </div>
+      </div>
+    {{/simple-form}}
   </div>
 </div>
