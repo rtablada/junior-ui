@@ -10,8 +10,11 @@ export default Ember.Controller.extend({
       // this.get('session').authenticate(authenticator, {
       //   identification: formValues.email,
       //   password: formValues.password
-    // });
+      // });
+      const user = this.store.createRecord('user', formValues);
+      user.save().then(() => {
         this.transitionToRoute('forum');
+      });
     },
   },
 });

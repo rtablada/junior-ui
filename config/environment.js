@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    DS: {
+      host: 'http://localhost:3333',
+    },
     modulePrefix: 'junior-ui',
     environment: environment,
     rootURL: '/',
