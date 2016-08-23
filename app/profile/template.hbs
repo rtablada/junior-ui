@@ -1,0 +1,30 @@
+{{outlet}}
+<div class="form">
+  <div class="form__inner">
+    <div class="form__card">
+      {{#simple-form onsubmit=(action "update") as |inputs|}}
+        <div class="form__container--input">
+          <div class="box-2">
+            <h1 class="form__title">Update Your Profile</h1>
+          </div>
+          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
+          {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
+          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
+          {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
+          {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Old Password"}}
+          {{input class="global__input" type="password" name="name"value=inputs.password placeholder="New Password"}}
+          {{input class="global__input" type="text" name="name" value=inputs.profilePicture placeholder="Profile Picture"}}
+          {{input class="global__input" type="text" name="name" value=inputs.jobStatus placeholder="Job Status"}}
+          {{input class="global__input" type="text" name="name" value=inputs.experience placeholder="Experience"}}
+          {{input class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Educational Background"}}
+          <div class="box-2">
+            <button class="submit-btn login-btn" type="submit" name="button">Update Profile</button>
+          </div>
+        </div>
+        <div class="form__container--btn">
+          {{#link-to 'login' class="form__sub" }}Already have an account?{{/link-to}}
+        </div>
+      {{/simple-form}}
+    </div>
+  </div>
+</div>

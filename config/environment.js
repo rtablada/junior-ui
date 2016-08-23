@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    DS: {
+      host: 'http://localhost:3333',
+    },
     modulePrefix: 'junior-ui',
     environment: environment,
     rootURL: '/',
@@ -18,6 +21,11 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  ENV['ember-simple-auth-token'] = {
+   serverTokenEndpoint: `${ENV.DS.host}/token`,
+   tokenPropertyName: 'access_token',
+ };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
