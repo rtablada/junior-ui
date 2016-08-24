@@ -90,6 +90,22 @@ $green: #00DD61;
   padding-left: 1rem;
 }
 
+.global__textarea {
+  outline: none;
+  background: $grey-two;
+  color: $black;
+  border: 0;
+  width: 90%;
+  min-height: 10rem;
+  padding: 0.75rem 0;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Europa', sans-serif;
+  padding-left: 1rem;
+  resize: none;
+}
+
 // GLOBAL SPACE
 
 .space-half {

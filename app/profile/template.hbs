@@ -1,26 +1,26 @@
 {{outlet}}
-<div class="form">
-  <div class="form__inner">
-    {{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="form__card" as |inputs|}}
-      <div class="form__container--input">
+<div class="profile">
+  <div class="profile__inner">
+    {{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="profile__card profile__big" as |inputs|}}
+      <div class="profile__container--input profile__big">
         <div class="box-2">
-          <h1 class="form__title">Update Your Profile</h1>
+          <h1 class="global__h2 profile__title">Update Your Profile</h1>
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="text" name="name" value=inputs.profilePicture placeholder="Profile Picture"}}
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="text" name="name" value=inputs.jobStatus placeholder="Job Status"}}
         </div>
 
-        <div class="form-input">
-          {{input class="global__input" type="text" name="name" value=inputs.experience placeholder="Experience"}}
+        <div class="profile-input">
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.experience placeholder="Experience"}}
         </div>
 
-        <div class="form-input">
-          {{input class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Educational Background"}}
+        <div class="profile-input">
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.educationalBackground placeholder="Educational Background"}}
         </div>
 
         <div class="box-2">
@@ -29,28 +29,28 @@
       </div>
     {{/simple-form}}
 
-    {{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="form__card" as |inputs|}}
-      <div class="form__container--input">
+    {{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="profile__card" as |inputs|}}
+      <div class="profile__container--input profile__small">
         <div class="box-2">
-          <h1 class="form__title">Update Your User Info</h1>
+          <h1 class="global__h2 profile__title">Update Your User Info</h1>
         </div>
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Confirm Password"}}
         </div>
 
@@ -60,17 +60,17 @@
       </div>
     {{/simple-form}}
 
-    {{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="form__card form__card--danger" as |inputs|}}
-      <div class="form__container--input">
+    {{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="profile__card profile__card--danger" as |inputs|}}
+      <div class="profile__container--input">
         <div class="box-2">
-          <h1 class="form__title">Change Your Password</h1>
+          <h1 class="global__h2 form__title">Change Your Password</h1>
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="password" name="name" placeholder="Old Password"}}
         </div>
 
-        <div class="form-input">
+        <div class="profile-input">
           {{input class="global__input" type="password" name="name" placeholder="New Password"}}
         </div>
 
@@ -79,5 +79,7 @@
         </div>
       </div>
     {{/simple-form}}
+
+
   </div>
 </div>
