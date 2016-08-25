@@ -9,12 +9,22 @@
     </div>
   </nav>
   <main class="site__content">
+    <div class="flash-messages">
+      {{#each flashMessages.queue as |flash|}}
+        {{#flash-message flash=flash class="success-message" as |message|}}
+          <div class="chip">
+            {{flash.message}}
+          </div>
+        {{/flash-message}}
+      {{/each}}
+    </div>
+
     {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-    <div class="column is-10">
-      <h2>
+      <div class="column is-10">
+        <h2>
         {{#link-to 'profile'}}Complete Your Profile{{/link-to}}
       </h2>
-    </div>
+      </div>
     {{/if}}
 
     <div class="column is-10">

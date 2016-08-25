@@ -196,3 +196,11 @@
   width: 2rem;
   background: #F8F8F8;
 }
+
+
+.flash-messages {
+  position: absolute;
+  top: 2rem;
+  width:100%;
+  z-index: 100000000000;
+}
