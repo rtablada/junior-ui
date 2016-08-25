@@ -1,18 +1,25 @@
 .nav {
-  background: $grey-two;
+  background: $white;
 
   &__inner {
-    padding: 2em;
+    padding: 1em;
   }
 
   &__content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__item {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 2rem;
+    color: $black;
+  }
+
+  &__item:active {
+    color: $red;
   }
 
   &__logo {

@@ -3,8 +3,15 @@
     <div class="column is-10">
       <div class="nav__inner">
         <div class="nav__content">
-          <a href="/"><img src="./images/nav/logo.svg" class="nav__item nav__logo" alt="Junior Logo" /></a>
-        </div>
+          <a href="/"><img src="./images/nav/logo.svg" class="nav__logo" alt="Junior Logo" /></a>
+        {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
+            <h2 class="nav__item">
+            {{#link-to 'jobs' class="nav__item"}}Job Board{{/link-to}}
+            {{#link-to 'forum' class="nav__item"}}Forum{{/link-to}}
+            {{#link-to 'profile' class="nav__item"}}Profile{{/link-to}}
+          </h2>
+        {{/if}}
+      </div>
       </div>
     </div>
   </nav>
@@ -18,13 +25,6 @@
         {{/flash-message}}
       {{/each}}
     </div>
-    {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-      <div class="column is-10">
-        <h2>
-        {{#link-to 'profile'}}Complete Your Profile{{/link-to}}
-      </h2>
-      </div>
-    {{/if}} --}}
     <div class="column is-10">
       {{outlet}}
     </div>

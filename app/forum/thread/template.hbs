@@ -39,16 +39,37 @@
             </div>
           </div>
         </div>
+        {{#simple-form onsubmit=(action "addComment") as |inputs| }}
+          <div class="forum__card forum__post">
+            <div class="profile-input">
+              {{textarea class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Add a comment"}}
+            </div>
+            <div class="box-2">
+              <button class="submit-btn login-btn" type="submit" name="button">Post</button>
+            </div>
+          </div>
+        {{/simple-form}}
 
         <div class="forum__card forum__post">
-          <div class="profile-input">
-            {{textarea class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Add a comment"}}
-          </div>
-          <div class="box-2">
-            <button class="submit-btn login-btn" type="submit" name="button">Post</button>
+          <div class="forum__post--inner">
+            <div class="forum__post--wrapper">
+              <div class="forum__post--img--box">
+                <img src="/images/forum/p.png" alt="" class="forum__post--img">
+              </div>
+              <div class="forum__post--top">
+                <div class="forum__post--user">
+                  <p class="forum__post--name">Katie Lentile</p>
+                  <p class="">@celentile</p>
+                </div>
+                <p class="">Posted August 25</p>
+              </div>
+            </div>
+            <div class="line-1"></div>
+            <div class="forum__post--text--box">
+              <p class="">{{inputs.comment}}</p>
+            </div>
           </div>
         </div>
-
 
       </div>
     </div>
