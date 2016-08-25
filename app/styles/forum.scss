@@ -11,17 +11,19 @@
 }
 
 .forum__nav {
-  background: transparent;
+  background: white;
 
   &--inner {}
 }
 
 .forum__main {
   flex-grow: 2;
+  background: $red;
 
   &--top {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0;
   }
 
   &--inner {}
@@ -39,6 +41,8 @@
     display: flex;
     padding: 1rem 0;
     align-items: center;
+  }
+  &--title {
   }
 }
 

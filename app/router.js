@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('thread', {
       path: ':thread_id'
     });
+    this.route('new-post');
   });
   this.route('jobs');
   this.route('interviews');

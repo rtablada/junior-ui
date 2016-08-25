@@ -6,19 +6,28 @@
     <div class="forum__card forum__nav">
       <div class="forum__nav--inner">
         <div class="box-2">
-          <h1 class="form__sub space-half">Top</h1>
-          <h1 class="form__sub space-half">Recent</h1>
+          <h1 class="global__h4 forum__post--title">Forum</h1>
+          <h1 class="form__sub space-half">Top Posts</h1>
+          <h1 class="form__sub space-half">Recent Posts</h1>
           <h1 class="form__sub space-half">Categories</h1>
           <h1 class="form__sub space-half">Liked</h1>
         </div>
+
+        <div class="">
+          <h1>Job Board</h1>
+          {{#link-to 'jobs' class="form__sub space-half"}}Job Board{{/link-to}}
+          {{#link-to 'profile' class="form__sub space-half"}}Edit Profile{{/link-to}}
+        </div>
+          <h1 class="form__sub space-half">Interviews</h1>
+          <h1 class="form__sub space-half">Privacy Policy</h1>
       </div>
     </div>
 
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
         <div class="forum__main--top">
-          <h1 class="global__h3 forum__post--title">Today's Top Posts</h1>
-          <button type="button" class="cta-btn" name="button">New Post</button>
+          <h1 class="global__h4 forum__post--title">Today's Top Posts</h1>
+        {{#link-to 'forum' class="submit-btn"}}New Post{{/link-to}}
         </div>
 
         <div class="forum__card forum__post">

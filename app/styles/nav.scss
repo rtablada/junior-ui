@@ -21,6 +21,9 @@
   &__item:active {
     color: $red;
   }
+  &__item:hover {
+    color: $red;
+  }
 
   &__logo {
     width: 100%;
