@@ -1,52 +1,58 @@
-.together {
-  margin: 0 auto;
+.forum {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-
 .forum__card {
-  background: $white;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.forum__nav {
+  background: transparent;
+
+  &--inner {
+  }
 }
 
 .forum__main {
-  min-width: 70rem;
+  flex-grow: 2;
+
+  &--inner {}
 }
 
-.forum__card--post {
-  background: $grey-one;
-  width: 100%;
-  padding: 0.75rem 0;
-  border-radius: 4px;
-  margin: 0 auto;
-  margin: 1rem;
+.forum__post {
+  background: $white;
+  margin: 1rem 0;
+
+  &--inner {
+    padding: 1rem;
+  }
+
+  &--wrapper {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+  }
 }
 
-.forum__card--inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-}
-
-.forum__card--img {
+.forum__post--img {
   object-fit: cover;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
 }
 
-.profile__top {
-
+// INDEX
+.forum__post--group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.forum__title {
-  font-weight: 700;
-}
-
-.forum__nav {
-  background: transparent;
-  min-width: 15rem;
-}
-
+// THREAD
 .forum__post--top {
   display: flex;
   justify-content: space-between;
@@ -59,35 +65,23 @@
   margin: 0 1rem;
 }
 
-.display {
-  display: flex;
-  padding: 1rem 0;
-}
 
-.forum__container--input {
-padding: 2rem 1rem;
-border-radius: 4px;
-margin: 0 1rem;
-}
 
-.line-1 {
-  background: $grey-one;
-  padding: 1px 0;
-}
-
-.post__text--box {
+.forum__post--text--box {
   padding: 2rem 0;
 }
 
-.post__text--name {
-  font-size: 20px;
-}
 
-
-.post__text--username {
+//  MEDIA Q's
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
 
 }
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
+  // TABLET
 
-.post__text--date {
-  color: $grey-four;
+}
+@media screen and (min-width: 60rem) and (max-width: 300rem) {
+  // DESKTOP
+
 }

@@ -1,9 +1,9 @@
 {{outlet}}
-<div class="profile">
-  <div class="profile__inner">
+<div class="forum">
+  <div class="forum__inner">
 
     <div class="forum__card forum__nav">
-      <div class="forum__container--input">
+      <div class="forum__nav--inner">
         <div class="box-2">
           <h1 class="form__sub space-half">Top</h1>
           <h1 class="form__sub space-half">Recent</h1>
@@ -14,30 +14,29 @@
     </div>
 
     <div class="forum__card forum__main">
-      <div class="profile__container--input profile__big">
-        <div class="box-2 profile__top">
-          <h1 class="global__h3 forum__title">Today's Top Posts</h1>
+      <div class="forum__main--inner">
+        <div class="forum__main--top">
+          <h1 class="global__h3 forum__post--title">Today's Top Posts</h1>
         </div>
 
-        <div class="together">
-          <div class="forum__card--post">
-            <div class="forum__card--inner">
-              <img src="./images/forum/katie.png" alt="" class="forum__card--img">
-              {{#link-to 'forum.thread' 1 class="global__h5"}}Quick question with Sketch{{/link-to}}
+        <div class="forum__card forum__post">
+          <div class="forum__post--inner">
+            <div class="forum__post--group">
+              <div class="forum__post--wrapper">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/katie.png" alt="" class="forum__post--img">
+                </div>
+                <div class="forum__post--user">
+                  <p class="">Katie Lentile</p>
+                </div>
+              </div>
+              {{#link-to 'forum.thread' 1 class="global__h5" }}Quick question with Sketch{{/link-to}}
               <p class="global__h6">13 Comments</p>
             </div>
           </div>
-
-          <div class="forum__card--post">
-            <div class="forum__card--inner">
-              <img src="./images/forum/peter.jpg" alt="" class="forum__card--img">
-              <p class="global__h5">Quick question with Sketch</p>
-              <p class="global__h6">13 Comments</p>
-            </div>
-          </div>
         </div>
+
       </div>
     </div>
-
   </div>
 </div>
