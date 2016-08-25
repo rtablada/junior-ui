@@ -5,11 +5,12 @@
 @import 'home';
 @import 'jobs';
 @import 'profile';
+@import 'forum';
 
 // Bulma Custom CSS
 @import 'sass/utilities/utilities';
 // @import 'sass/base/generic';
-// Double container
+// Double Container
 @import 'sass/base/classes';
 // @import 'sass/elements/elements';
 // @import 'sass/components/components';
@@ -198,9 +199,20 @@
 }
 
 
+// FLASH MESSAGES
 .flash-messages {
   position: absolute;
-  top: 2rem;
+  top: 10rem;
   width:100%;
   z-index: 100000000000;
+}
+
+.flash-success {
+  font-family: 'Europa', sans-serif;
+  background: $green;
+  padding: 1em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  color: $white;
 }

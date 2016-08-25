@@ -1,0 +1,12 @@
+.forum__card--post {
+  background: $grey-one;
+  width: 90%;
+  padding: 0.75rem 0;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.forum__card--inner {
+  display: flex;
+  justify-content: space-between;
+}
