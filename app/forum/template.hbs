@@ -1,90 +1,43 @@
 {{outlet}}
 <div class="profile">
   <div class="profile__inner">
-    <div class="profile__card profile__big">
+
+    <div class="forum__card forum__nav">
+      <div class="forum__container--input">
+        <div class="box-2">
+          <h1 class="form__sub space-half">Top</h1>
+          <h1 class="form__sub space-half">Recent</h1>
+          <h1 class="form__sub space-half">Categories</h1>
+          <h1 class="form__sub space-half">Liked</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="forum__card forum__main">
       <div class="profile__container--input profile__big">
-        <div class="box-2">
-          <h1 class="global__h2 profile__title">Today's Top Posts</h1>
+        <div class="box-2 profile__top">
+          <h1 class="global__h3 forum__title">Today's Top Posts</h1>
         </div>
 
-        <div class="forum__card--post">
-          <div class="forum__card--inner">
-          <img src="" alt="" class="forum__card--img">
-          <p class="forum__card--title">Quick question with Sketch</p>
-          <p class="forum__card--status">13 Comments</p>
+        <div class="together">
+          <div class="forum__card--post">
+            <div class="forum__card--inner">
+              <img src="./images/forum/katie.png" alt="" class="forum__card--img">
+              <p class="global__h5">Quick question with Sketch</p>
+              <p class="global__h6">13 Comments</p>
+            </div>
           </div>
-        </div>
 
-        <div class="profile-input">
-          {{input class="global__input" type="text" name="name" value=inputs.jobStatus placeholder="Job Status"}}
-        </div>
-
-        <div class="profile-input">
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.experience placeholder="Experience"}}
-        </div>
-
-        <div class="profile-input">
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.educationalBackground placeholder="Educational Background"}}
-        </div>
-
-        <div class="box-2">
-          <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+          <div class="forum__card--post">
+            <div class="forum__card--inner">
+              <img src="./images/forum/peter.jpg" alt="" class="forum__card--img">
+              <p class="global__h5">Quick question with Sketch</p>
+              <p class="global__h6">13 Comments</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div>
-      <div class="profile__card">
-        <div class="profile__container--input profile__small">
-          <div class="box-2">
-            <h1 class="global__h2 profile__title">Update Your User Info</h1>
-          </div>
-          <div class="profile-input">
-            {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Confirm Password"}}
-          </div>
-
-          <div class="box-2">
-            <button class="submit-btn login-btn" type="submit" name="button">Update</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="profile__card">
-        <div class="profile__container--input">
-          <div class="box-2">
-            <h1 class="global__h2 form__title">Change Your Password</h1>
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="password" name="name" placeholder="Old Password"}}
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="password" name="name" placeholder="New Password"}}
-          </div>
-
-          <div class="box-2">
-            <button class="submit-btn login-btn" type="submit" name="button">Update</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </div>
 </div>
