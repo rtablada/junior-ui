@@ -10,7 +10,11 @@ Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('forgot');
-  this.route('forum');
+  this.route('forum', function() {
+    this.route('thread', {
+      path: ':thread_id'
+    });
+  });
   this.route('jobs');
   this.route('interviews');
   this.route('profile');

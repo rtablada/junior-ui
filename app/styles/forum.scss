@@ -4,7 +4,7 @@
 
 
 .forum__card {
-
+  background: $white;
 }
 
 .forum__main {
@@ -45,4 +45,49 @@
 .forum__nav {
   background: transparent;
   min-width: 15rem;
+}
+
+.forum__post--top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.forum__post--user {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.display {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.forum__container--input {
+padding: 2rem 1rem;
+border-radius: 4px;
+margin: 0 1rem;
+}
+
+.line-1 {
+  background: $grey-one;
+  padding: 1px 0;
+}
+
+.post__text--box {
+  padding: 2rem 0;
+}
+
+.post__text--name {
+  font-size: 20px;
+}
+
+
+.post__text--username {
+
+}
+
+.post__text--date {
+  color: $grey-four;
 }
