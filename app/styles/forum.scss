@@ -2,6 +2,8 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
+    background: $grey-one;
+    height: 100vh;
   }
 }
 
@@ -11,14 +13,14 @@
 }
 
 .forum__nav {
-  background: white;
+  flex-grow: 1;
+  min-width: 15rem;
 
   &--inner {}
 }
 
 .forum__main {
   flex-grow: 2;
-  background: $red;
 
   &--top {
     display: flex;
@@ -31,18 +33,33 @@
 
 .forum__post {
   background: $white;
+  border-radius: 4px;
+  padding: .25rem;
   margin: 1rem 0;
 
   &--inner {
     padding: 1rem;
   }
 
-  &--wrapper {
+  &--left {
     display: flex;
-    padding: 1rem 0;
     align-items: center;
+    width: 15rem;
   }
+  &--middle {
+    width: 39rem;
+  }
+  &--right {
+    display: flex;
+    align-items: center;
+    width: 10rem;
+  }
+  &--heart {
+    width: 2rem;
+  }
+
   &--title {
+    font-weight: 600;
   }
 }
 
@@ -56,21 +73,37 @@
 // INDEX
 .forum__post--group {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 // THREAD
-.forum__post--top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+.forum__post {
+  &--top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-.forum__post--user {
-  display: flex;
-  flex-direction: column;
-  margin: 0 1rem;
+  &--user {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+
+  &--name {
+    font-size: 18px;
+  }
+
+  &--question {
+    font-size: 18px;
+    color: $black;
+  }
+
+  &--comment {
+    color: $grey-three;
+    font-size: 18px;
+  }
+
 }
 
 .forum__post--text--box {
@@ -89,4 +122,38 @@
 @media screen and (min-width: 60rem) and (max-width: 300rem) {
   // DESKTOP
 
+}
+
+.forum__nav {
+  &--item {
+    // background: $grey-two;
+    color: $grey-four;
+    width: 100%;
+    padding: 0.75rem 0;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+  }
+
+  &--item:hover {
+    background: rgba(221,221,221, 0.4);
+    color: $black;
+    width: 100%;
+    padding: 0.75rem 0;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+  }
+}
+
+.fa-heart {
+  color: $grey-two;
+}
+
+.red {
+  color: $red;
 }

@@ -5,47 +5,121 @@
 
     <div class="forum__card forum__nav">
       <div class="forum__nav--inner">
-        <div class="box-2">
-          <h1 class="global__h4 forum__post--title">Forum</h1>
-          <h1 class="form__sub space-half">Top Posts</h1>
-          <h1 class="form__sub space-half">Recent Posts</h1>
-          <h1 class="form__sub space-half">Categories</h1>
-          <h1 class="form__sub space-half">Liked</h1>
-        </div>
-
+        {{input class="global__input" type="text" name="name" placeholder="Search"}}
         <div class="">
-          <h1>Job Board</h1>
-          {{#link-to 'jobs' class="form__sub space-half"}}Job Board{{/link-to}}
-          {{#link-to 'profile' class="form__sub space-half"}}Edit Profile{{/link-to}}
+          <h1 class="forum__nav--item">Top Posts</h1>
+          <h1 class="forum__nav--item">Recent Posts</h1>
+          <h1 class="forum__nav--item">Categories</h1>
+          <h1 class="forum__nav--item">Liked</h1>
         </div>
-          <h1 class="form__sub space-half">Interviews</h1>
-          <h1 class="form__sub space-half">Privacy Policy</h1>
       </div>
     </div>
 
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
         <div class="forum__main--top">
-          <h1 class="global__h4 forum__post--title">Today's Top Posts</h1>
-        {{#link-to 'forum' class="submit-btn"}}New Post{{/link-to}}
+          <h1 class="global__h3 forum__post--title">Today's Top Posts</h1>
+          {{#link-to 'forum' class="cancel-btn" }}New Post{{/link-to}}
         </div>
 
-        <div class="forum__card forum__post">
+        <div class="forum__post">
           <div class="forum__post--inner">
             <div class="forum__post--group">
-              <div class="forum__post--wrapper">
+              <div class="forum__post--left">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/cale.jpg" alt="" class="forum__post--img">
+                </div>
+                <div class="forum__post--user">
+                  <p class="forum__post--name">Cale Glendening</p>
+                </div>
+              </div>
+              <div class="forum__post--middle">
+                {{#link-to 'forum.thread' 1 class="forum__post--question" }}Does anyone have a connection at Google?{{/link-to}}
+              </div>
+              <div class="forum__post--right">
+                <p class="forum__post--comment">5 Comments</p>
+              </div>
+              <div class="forum__post--heart">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forum__post">
+          <div class="forum__post--inner">
+            <div class="forum__post--group">
+              <div class="forum__post--left">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/judson.jpg" alt="" class="forum__post--img">
+                </div>
+                <div class="forum__post--user">
+                  <p class="forum__post--name">Judson Collier</p>
+                </div>
+              </div>
+              <div class="forum__post--middle">
+                {{#link-to 'forum.thread' 1 class="forum__post--question" }}What's the best solution in CSS for vertical centering?{{/link-to}}
+              </div>
+              <div class="forum__post--right">
+                <p class="forum__post--comment">145 Comments</p>
+              </div>
+              <div class="forum__post--heart">
+                <i class="fa fa-heart red" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forum__post">
+          <div class="forum__post--inner">
+            <div class="forum__post--group">
+              <div class="forum__post--left">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/jeremy.jpg" alt="" class="forum__post--img">
+                </div>
+                <div class="forum__post--user">
+                  <p class="forum__post--name">Jeremy Browning</p>
+                </div>
+              </div>
+              <div class="forum__post--middle">
+                {{#link-to 'forum.thread' 1 class="forum__post--question" }}We are hiring iOS Developers at Profilic! Ping me if interested.{{/link-to}}
+              </div>
+              <div class="forum__post--right">
+                <p class="forum__post--comment">18 Comments</p>
+              </div>
+              <div class="forum__post--heart">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forum__post">
+          <div class="forum__post--inner">
+            <div class="forum__post--group">
+              <div class="forum__post--left">
                 <div class="forum__post--img--box">
                   <img src="/images/forum/katie.png" alt="" class="forum__post--img">
                 </div>
                 <div class="forum__post--user">
-                  <p class="">Katie Lentile</p>
+                  <p class="forum__post--name">Sammi Harvey</p>
                 </div>
               </div>
-              {{#link-to 'forum.thread' 1 class="global__h5" }}Quick question with Sketch{{/link-to}}
-              <p class="global__h6">13 Comments</p>
+              <div class="forum__post--middle">
+                {{#link-to 'forum.thread' 1 class="forum__post--question" }}Does anyone have a connection at Google?{{/link-to}}
+              </div>
+              <div class="forum__post--right">
+                <p class="forum__post--comment">21 Comments</p>
+              </div>
+              <div class="forum__post--heart">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </div>
+
+
+
 
       </div>
     </div>
