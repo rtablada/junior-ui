@@ -1,0 +1,24 @@
+<div class="forum">
+  <div class="forum__inner">
+
+    <div class="forum__card forum__nav">
+      <div class="forum__nav--inner">
+        {{input class="global__input" type="text" name="name" placeholder="Search"}}
+        <div class="">
+          {{#link-to "app.forum" class="forum__nav--item"}}Top Discussions{{/link-to}}
+          <h1 class="forum__nav--item">Helpful Resources</h1>
+          <h1 class="forum__nav--item">Upcoming Interviews</h1>
+          {{#link-to "app.jobs" class="forum__nav--item"}}Jobs{{/link-to}}
+          <h1 class="forum__nav--item">My Likes</h1>
+          {{#link-to "app.profile" class="forum__nav--item"}}My Profile{{/link-to}}
+        </div>
+      </div>
+    </div>
+
+    <div class="forum__card forum__main">
+      <div class="forum__main--inner">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>
