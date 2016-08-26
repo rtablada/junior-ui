@@ -17,6 +17,7 @@
     </div>
   </nav>
   <main class="site__content">
+    <div class="column is-10">
     <div class="flash-messages">
       {{#each flashMessages.queue as |flash|}}
         {{#flash-message flash=flash class="success-message flash-success" as |message|}}
@@ -26,11 +27,10 @@
         {{/flash-message}}
       {{/each}}
     </div>
-    <div class="column is-10">
       {{outlet}}
     </div>
   </main>
-  <footer class="footer">
+  {{!-- <footer class="footer">
     <div class="column is-10">
       <div class="footer__inner">
         <ul class="footer__content">
@@ -38,5 +38,5 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </footer> --}}
 </body>

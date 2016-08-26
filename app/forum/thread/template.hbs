@@ -4,11 +4,13 @@
 
     <div class="forum__card forum__nav">
       <div class="forum__nav--inner">
-        <div class="box-2">
-          <h1 class="form__sub space-half">Top</h1>
-          <h1 class="form__sub space-half">Recent</h1>
-          <h1 class="form__sub space-half">Categories</h1>
-          <h1 class="form__sub space-half">Liked</h1>
+        {{input class="global__input" type="text" name="name" placeholder="Search"}}
+        <div class="">
+          <h1 class="forum__nav--item">Top Posts</h1>
+          <h1 class="forum__nav--item">Recent Posts</h1>
+          <h1 class="forum__nav--item">Categories</h1>
+          <h1 class="forum__nav--item">Liked</h1>
+          <h1 class="forum__nav--item">Jobs</h1>
         </div>
       </div>
     </div>
@@ -16,57 +18,64 @@
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
         <div class="forum__main--top">
-          <h1 class="global__h3 forum__post--title">Quick question with Sketch</h1>
+          <h1 class="global__h3 forum__post--title">Today's Top Discussions</h1>
+          {{#link-to 'forum' class="cancel-btn" }}New Post{{/link-to}}
         </div>
 
-        <div class="forum__card forum__post">
+        <div class="forum__post">
           <div class="forum__post--inner">
-            <div class="forum__post--wrapper">
-              <div class="forum__post--img--box">
-                <img src="/images/forum/p.png" alt="" class="forum__post--img">
-              </div>
-              <div class="forum__post--top">
-                <div class="forum__post--user">
-                  <p class="forum__post--name">Katie Lentile</p>
-                  <p class="">@celentile</p>
+            <div class="forum__post--group">
+              <div class="forum__post--left">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/C.png" alt="" class="forum__post--img">
                 </div>
-                <p class="">Posted August 25</p>
+                <div class="forum__post--user">
+                  <p class="forum__post--name">Cale Glendening</p>
+                </div>
+              </div>
+              <div class="forum__post--middle">
+                {{#link-to 'forum.thread' 1 class="forum__post--question" }}Does anyone have a connection at Google?{{/link-to}}
+              </div>
+              <div class="forum__post--right">
+                <p class="forum__post--comment">Posted August 25</p>
+              </div>
+              <div class="forum__post--heart">
+                <i class="fa fa-heart" aria-hidden="true"></i>
               </div>
             </div>
-            <div class="line-1"></div>
-            <div class="forum__post--text--box">
-              <p class="">Anyone know if it's possible to put modules in subfolders? I've tried a few variations and tried poking through GitHub to find out how require is parsing paths, but couldn't find anything.</p>
-            </div>
+            {{#simple-form onsubmit=(action "addComment") as |inputs| }}
+              <div class="forum__post">
+                <div class="">
+                  {{textarea class="global__textarea" type="text" name="name" value=inputs.educationalBackground placeholder="Add a comment"}}
+                </div>
+                <div class="">
+                  <button class="submit-btn" type="submit" name="button">Post Comment</button>
+                </div>
+              </div>
+            {{/simple-form}}
           </div>
         </div>
-        {{#simple-form onsubmit=(action "addComment") as |inputs| }}
-          <div class="forum__card forum__post">
-            <div class="profile-input">
-              {{textarea class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Add a comment"}}
-            </div>
-            <div class="box-2">
-              <button class="submit-btn login-btn" type="submit" name="button">Post</button>
-            </div>
-          </div>
-        {{/simple-form}}
 
-        <div class="forum__card forum__post">
+        <div class="forum__post">
           <div class="forum__post--inner">
-            <div class="forum__post--wrapper">
-              <div class="forum__post--img--box">
-                <img src="/images/forum/p.png" alt="" class="forum__post--img">
-              </div>
-              <div class="forum__post--top">
-                <div class="forum__post--user">
-                  <p class="forum__post--name">Katie Lentile</p>
-                  <p class="">@celentile</p>
+            <div class="forum__post--group">
+              <div class="forum__post--left">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/J.png" alt="" class="forum__post--img">
                 </div>
-                <p class="">Posted August 25</p>
+                <div class="forum__post--user">
+                  <p class="forum__post--name">Jeremy Browning</p>
+                </div>
               </div>
-            </div>
-            <div class="line-1"></div>
-            <div class="forum__post--text--box">
-              <p class="">{{inputs.comment}}</p>
+              <div class="forum__post--middle">
+                {{#link-to 'forum.thread' 1 class="forum__post--question" }}I'm a designer in the NYC office, let me know what you need!{{/link-to}}
+              </div>
+              <div class="forum__post--right">
+                <p class="forum__post--comment">Posted August 25</p>
+              </div>
+              <div class="forum__post--heart">
+                <i class="fa fa-heart red" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </div>

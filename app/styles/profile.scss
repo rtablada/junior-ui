@@ -3,6 +3,7 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__card {
     margin: 1rem;
@@ -90,7 +91,7 @@
   // DESKTOP
   .profile {
     &__card {
-      margin: 3rem 0;
+      // margin: 3rem 0;
     }
   }
   .login {

@@ -1,14 +1,14 @@
 .nav {
-  // background: $white;
+  background: $grey-two;
 
   &__inner {
-    padding: 1em;
+    padding-top: 2em;
   }
 
   &__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__item {

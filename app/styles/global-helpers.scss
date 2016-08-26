@@ -32,6 +32,7 @@ $green: #00DD61;
 .site__content {
   flex: 1;
   background: $grey-two;
+  padding-top: 3rem;
 }
 
 .column {
@@ -95,7 +96,7 @@ $green: #00DD61;
   background: $grey-two;
   color: $black;
   border: 0;
-  width: 90%;
+  width: 100%;
   min-height: 10rem;
   padding: 0.75rem 0;
   margin: 1rem 0;

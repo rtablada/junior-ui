@@ -5,16 +5,16 @@
       {{#simple-form onsubmit=(action "signUp") as |inputs|}}
         <div class="form__container--input">
           <div class="box__1">
-            <h1 class="global__h2 form__title">Apply For An Invite</h1>
+            <h1 class="global__h2 form__title">Get Started</h1>
           </div>
           {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
           {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
           {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
-          {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
+          {{!-- {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}} --}}
           {{input class="global__input" type="password" name="name"value=inputs.password
           placeholder="Password"}}
           <div class="box__2">
-            <button class="submit-btn login-btn" type="submit" name="button">Create Account</button>
+          {{#link-to 'profile' class="submit-btn login-btn"}}Next{{/link-to}}
           </div>
         </div>
         <div class="form__container--btn">
