@@ -1,12 +1,12 @@
 
 .profile {
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
   }
   &__card {
-    margin: 1rem;
+    // margin: 1rem;
   }
 
   &__title {
@@ -19,7 +19,6 @@
     text-align: center;
     background: $white;
     border-radius: 4px;
-    margin: 0 1rem;
   }
 
   &__container--btn {
@@ -48,6 +47,17 @@
     background: rgba(221,221,221, 0.4);
     font-size: 18px;
   }
+}
+
+.profile-input {
+  margin: 1rem 0;
+}
+
+.profile-label {
+  text-align: left;
+  font-weight: 400;
+  color: $black;
+  font-size: 18px;
 }
 
 .login-btn {
@@ -96,13 +106,5 @@
   }
   .login {
     margin: 0 1rem;
-  }
-  .profile__big {
-    flex-grow: 2;
-    max-width: 60rem;
-  }
-
-  .profile__small {
-      flex-grow: 1;
   }
 }
