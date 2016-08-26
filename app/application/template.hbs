@@ -4,14 +4,6 @@
       <div class="nav__inner">
         <div class="nav__content">
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
-        {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-            {{!-- <h2 class="nav__item">
-            {{#link-to 'jobs' class="nav__item"}}Job Board{{/link-to}}
-            {{#link-to 'forum' class="nav__item"}}Forum{{/link-to}}
-            {{#link-to 'profile' class="nav__item"}}Profile{{/link-to}}
-          </h2> --}}
-        {{/if}}
-        {{!-- {{#link-to 'signup' class="cta-btn"}}Join{{/link-to}} --}}
       </div>
       </div>
     </div>
@@ -30,13 +22,13 @@
       {{outlet}}
     </div>
   </main>
-  {{!-- <footer class="footer">
+  <footer class="footer">
     <div class="column is-10">
       <div class="footer__inner">
         <ul class="footer__content">
-          <li class="global__h5">© Hello Junior 2016</li>
+          <li class="footer__item">© Hello Junior 2016</li>
         </ul>
       </div>
     </div>
-  </footer> --}}
+  </footer>
 </body>

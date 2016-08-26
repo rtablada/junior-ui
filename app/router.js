@@ -21,6 +21,9 @@ Router.map(function() {
       this.route('new-job');
     });
     this.route('profile');
+    this.route('resources', function() {
+      this.route('new-resource');
+    });
   })
   this.route('interviews');
   this.route('brand');
