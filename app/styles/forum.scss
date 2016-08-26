@@ -1,0 +1,171 @@
+.forum {
+  &__inner {
+    display: flex;
+    background: $grey-one;
+    border-radius: 4px;
+  }
+}
+
+.forum__card {
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.forum__nav {
+  flex-grow: 1;
+  max-width: 15rem;
+}
+
+.forum__main {
+  flex-grow: 2;
+  max-width: 70rem;
+
+  &--top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+}
+
+.forum__post {
+  background: $white;
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin: 1rem 0;
+  max-width: 70rem;
+
+  &--inner {
+    padding: 1rem;
+  }
+
+  &--left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &--middle {
+    width: 100%;
+  }
+
+  &--right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // width: 10rem;
+  }
+
+  &--heart {
+    padding: 0 2rem;
+  }
+
+  &--title {
+    font-weight: 600;
+  }
+
+  &--description {
+    padding: 2rem 0;
+    &--copy {
+    font-size: 18px;
+    }
+  }
+}
+
+.forum__post--img {
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+}
+
+// INDEX
+.forum__post--group {
+  display: flex;
+  align-items: center;
+}
+
+// THREAD
+.forum__post {
+  &--top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &--user {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+
+  &--name {
+    font-size: 18px;
+  }
+
+  &--question {
+    font-size: 18px;
+    color: $black;
+    width: 100%;
+  }
+
+  &--comment {
+    color: $grey-three;
+    font-size: 18px;
+  }
+
+}
+
+.forum__post--text--box {
+  padding: 2rem 0;
+}
+
+//  MEDIA Q's
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
+
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
+  // TABLET
+
+}
+@media screen and (min-width: 60rem) and (max-width: 300rem) {
+  // DESKTOP
+
+}
+
+.forum__nav {
+  &--item {
+    display: block;
+    // background: $grey-two;
+    color: $grey-four;
+    width: 100%;
+    padding: 0.75rem 0;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+  }
+
+  &--item:hover {
+    background: rgba(221,221,221, 0.4);
+    color: $black;
+    width: 100%;
+    padding: 0.75rem 0;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+  }
+}
+
+.fa-heart {
+  color: $grey-two;
+}
+
+.red {
+  color: $red;
+}

@@ -1,3 +1,16 @@
+// Bulma Custom CSS
+@import 'sass/utilities/utilities';
+// @import 'sass/base/generic';
+// Double Container
+@import 'sass/base/classes';
+@import 'sass/elements/content';
+// @import 'sass/components/components';
+// Grid
+@import 'sass/components/grid';
+// Section
+@import 'sass/layout/section';
+// @import 'sass/layout/layout';
+
 @import 'global-helpers';
 @import 'nav';
 @import 'footer';
@@ -5,19 +18,9 @@
 @import 'home';
 @import 'jobs';
 @import 'profile';
-
-// Bulma Custom CSS
-@import 'sass/utilities/utilities';
-// @import 'sass/base/generic';
-// Double container
-@import 'sass/base/classes';
-// @import 'sass/elements/elements';
-// @import 'sass/components/components';
-// Grid
-@import 'sass/components/grid';
-// Section
-@import 'sass/layout/section';
-// @import 'sass/layout/layout';
+@import 'forum';
+@import 'lists';
+@import 'content';
 
 // --------------------------------------------------------
 // --------------------------------------------------------
@@ -198,9 +201,20 @@
 }
 
 
+// FLASH MESSAGES
 .flash-messages {
   position: absolute;
-  top: 2rem;
-  width:100%;
+  top: 8rem;
+  width: 82%;
   z-index: 100000000000;
+}
+
+.flash-success {
+  font-family: 'Europa', sans-serif;
+  background: $green;
+  padding: 1rem;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  color: $white;
 }

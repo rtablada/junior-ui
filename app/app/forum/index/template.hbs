@@ -1,0 +1,30 @@
+<div class="forum__main--top">
+  <h1 class="global__h3 forum__post--title">Today's Top Discussions</h1>
+  {{#link-to 'app.forum.new-post' class="cancel-btn" }}New Post{{/link-to}}
+</div>
+
+{{#each model as |post|}}
+  <div class="forum__post">
+    <div class="forum__post--inner">
+      <div class="forum__post--group">
+        <div class="forum__post--left">
+          <div class="forum__post--img--box">
+            <img src="/images/forum/C.png" alt="" class="forum__post--img">
+          </div>
+          <div class="forum__post--user">
+            <p class="forum__post--name">{{post.user.firstName}} {{post.user.lastName}}</p>
+          </div>
+        </div>
+        <div class="forum__post--middle">
+          {{#link-to 'app.forum.thread' post class="forum__post--question" }}{{post.jsonData.title}}{{/link-to}}
+        </div>
+        <div class="forum__post--right">
+          <p class="forum__post--comment">{{post.comments.length}} Comments</p>
+        </div>
+        <div class="forum__post--heart">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}

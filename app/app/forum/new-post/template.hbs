@@ -1,0 +1,27 @@
+{{outlet}}
+<div class="profile">
+  <div class="profile__inner">
+    {{#simple-form startingValues=model onsubmit=(action "addNewPost") class="profile__card" as |inputs|}}
+    <div class="forum__main--top">
+      <h1 class="global__h3 forum__post--title">Add New Post</h1>
+      <button class="submit-btn login-btn" type="submit" name="button">Add New Post</button>
+    </div>
+        <div class="profile__container--input profile__small">
+        <div class="profile-input">
+          <p class="profile-label">Post Title</p>
+          {{input class="global__input" type="text" name="name" value=inputs.title placeholder="Post Title"}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Post Description</p>
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.description placeholder="Post Description"}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Tags</p>
+          {{input class="global__input" type="text" name="name" value=inputs.tags placeholder="Design, Resource, Startup etc."}}
+        </div>
+      </div>
+    {{/simple-form}}
+</div>
+</div>

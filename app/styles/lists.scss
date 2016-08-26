@@ -1,0 +1,9 @@
+ol {
+  counter-reset: ol;
+
+  li::before {
+    counter-increment: ol;
+    content: counter(ol) ".";
+    margin-right: 0.5rem;
+  }
+}
