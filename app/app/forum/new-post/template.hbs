@@ -1,31 +1,27 @@
 {{outlet}}
-<div class="forum__card forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--wrapper">
-      <div class="forum__post--img--box">
-        <img src="/images/forum/p.png" alt="" class="forum__post--img">
-      </div>
-      <div class="forum__post--top">
-        <div class="forum__post--user">
-          <p class="forum__post--name">Katie Lentile</p>
-          <p class="">@celentile</p>
+<div class="profile">
+  <div class="profile__inner">
+    {{#simple-form startingValues=model onsubmit=(action "addNewPost" model) class="profile__card" as |inputs|}}
+    <div class="forum__main--top">
+      <h1 class="global__h3 forum__post--title">Add New Post</h1>
+      <button class="submit-btn login-btn" type="submit" name="button">Add New Post</button>
+    </div>
+        <div class="profile__container--input profile__small">
+        <div class="profile-input">
+          <p class="profile-label">Post Title</p>
+          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="Post Title"}}
         </div>
-        <p class="">Posted August 25</p>
+
+        <div class="profile-input">
+          <p class="profile-label">Post Description</p>
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.experience placeholder="Post Description"}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Tags</p>
+          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Design, Resource, Startup etc."}}
+        </div>
       </div>
-    </div>
-    <div class="line-1"></div>
-    <div class="forum__post--text--box">
-      <p class="">Anyone know if it's possible to put modules in subfolders? I've tried a few variations and tried poking through GitHub to find out how require is parsing paths, but couldn't find anything.</p>
-    </div>
-  </div>
+    {{/simple-form}}
 </div>
-{{#simple-form onsubmit=(action "addNewPost") as |inputs| }}
-  <div class="forum__card forum__post">
-    <div class="profile-input">
-      {{textarea class="global__input" type="text" name="name" value=inputs.educationalBackground placeholder="Add a comment"}}
-    </div>
-    <div class="box-2">
-      <button class="submit-btn login-btn" type="submit" name="button">Post</button>
-    </div>
-  </div>
-{{/simple-form}}
+</div>

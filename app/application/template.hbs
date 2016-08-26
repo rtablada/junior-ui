@@ -3,7 +3,7 @@
     <div class="column is-10">
       <div class="nav__inner">
         <div class="nav__content">
-          {{#link-to "index"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
+          {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
         {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
             {{!-- <h2 class="nav__item">
             {{#link-to 'jobs' class="nav__item"}}Job Board{{/link-to}}

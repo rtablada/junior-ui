@@ -1,0 +1,27 @@
+{{outlet}}
+<div class="profile">
+  <div class="profile__inner">
+    {{#simple-form startingValues=model onsubmit=(action "addNewJob" model) class="profile__card" as |inputs|}}
+    <div class="forum__main--top">
+      <h1 class="global__h3 forum__post--title">Add New Job</h1>
+      <button class="submit-btn login-btn" type="submit" name="button">Add New Job</button>
+    </div>
+        <div class="profile__container--input profile__small">
+        <div class="profile-input">
+          <p class="profile-label">Company</p>
+          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="Etsy, Apple etc."}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Job Description</p>
+          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Product Designer, Developer etc."}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Job Title</p>
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.experience placeholder="Union Made Creative is looking for a cross between Michael Jordan and Michael Bierut for their Senior Designer position in Los Angeles. Must love meticulous design and be able to dunk from the foul line."}}
+        </div>
+      </div>
+    {{/simple-form}}
+</div>
+</div>

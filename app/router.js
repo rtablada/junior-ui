@@ -17,7 +17,9 @@ Router.map(function() {
       });
       this.route('new-post');
     });
-    this.route('jobs');
+    this.route('jobs', function() {
+      this.route('new-job');
+    });
     this.route('profile');
   })
   this.route('interviews');
