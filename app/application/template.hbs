@@ -4,21 +4,31 @@
       <div class="nav__inner">
         <div class="nav__content">
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
-      </div>
+          {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
+              <div class="nav--user">
+                <div class="forum__post--img--box">
+                  <img src="/images/forum/C.png" alt="" class="forum__post--img">
+                </div>
+                <div class="forum__post--user">
+                  <p class="nav__item">Peter Court</p>
+                </div>
+              </div>
+          {{/if}}
+        </div>
       </div>
     </div>
   </nav>
   <main class="site__content">
     <div class="column is-10">
-    <div class="flash-messages">
-      {{#each flashMessages.queue as |flash|}}
-        {{#flash-message flash=flash class="success-message flash-success" as |message|}}
-          <div class="chip">
-            {{flash.message}}
-          </div>
-        {{/flash-message}}
-      {{/each}}
-    </div>
+      <div class="flash-messages">
+        {{#each flashMessages.queue as |flash|}}
+          {{#flash-message flash=flash class="success-message flash-success" as |message|}}
+            <div class="chip">
+              {{flash.message}}
+            </div>
+          {{/flash-message}}
+        {{/each}}
+      </div>
       {{outlet}}
     </div>
   </main>
@@ -26,7 +36,7 @@
     <div class="column is-10">
       <div class="footer__inner">
         <ul class="footer__content">
-          <li class="footer__item">© Hello Junior 2016</li>
+          <li class="footer__item">© 2016</li>
         </ul>
       </div>
     </div>

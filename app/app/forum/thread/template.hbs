@@ -1,6 +1,5 @@
 <div class="forum__main--top">
-  <h1 class="global__h3 forum__post--title">Does anyone have a connection at Google?</h1>
-  {{#link-to 'app.forum.new-post' class="cancel-btn" }}Add New Post{{/link-to}}
+  <h1 class="global__h3 forum__post--title">{{model.jsonData.title}}</h1>
 </div>
 
 <div class="forum__post">
@@ -11,11 +10,11 @@
           <img src="/images/forum/C.png" alt="" class="forum__post--img">
         </div>
         <div class="forum__post--user">
-          <p class="forum__post--name">Cale Glendening</p>
+          <p class="forum__post--name">{{model.user.firstName}} {{model.user.lastName}}</p>
         </div>
       </div>
       <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}I'm looking for some help with a project and need to reach out to someone on the design team.{{/link-to}}
+        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}Learning PHP and Ruby{{/link-to}}
       </div>
       <div class="forum__post--right">
         <p class="forum__post--comment">Posted August 25</p>
@@ -24,19 +23,30 @@
         <i class="fa fa-heart" aria-hidden="true"></i>
       </div>
     </div>
-    {{#simple-form onsubmit=(action "addComment") as |inputs| }}
+
+    <div class="forum__post--description">
+      <div class="forum__post--description--copy content">
+        {{md-text text=model.jsonData.description}}
+      </div>
+    </div>
+
+    {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
       <div class="forum__post">
         <div class="">
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.educationalBackground placeholder="Add a comment"}}
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
         </div>
         <div class="">
           <button class="submit-btn" type="submit" name="button">Post Comment</button>
+        </div>
+        <div class="box__2">
+          <button class="cancel-btn" type="submit" name="button">Delete Comment</button>
         </div>
       </div>
     {{/simple-form}}
   </div>
 </div>
 
+{{#each model.comments as |comment|}}
 <div class="forum__post">
   <div class="forum__post--inner">
     <div class="forum__post--group">
@@ -45,11 +55,11 @@
           <img src="/images/forum/J.png" alt="" class="forum__post--img">
         </div>
         <div class="forum__post--user">
-          <p class="forum__post--name">Jeremy Browning</p>
+          <p class="forum__post--name">{{comment.user.firstName}} {{comment.user.lastName}}</p>
         </div>
       </div>
       <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}I'm a designer in the NYC office, let me know what you need!{{/link-to}}
+        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
       </div>
       <div class="forum__post--right">
         <p class="forum__post--comment">Posted August 25</p>
@@ -60,3 +70,4 @@
     </div>
   </div>
 </div>
+{{/each}}

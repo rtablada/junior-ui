@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('app', function() {
     this.route('forum', function() {
       this.route('thread', {
-        path: ':thread_id'
+        path: ':post_id'
       });
       this.route('new-post');
     });

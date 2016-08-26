@@ -1,20 +1,19 @@
 .nav {
-  background: $grey-two;
+  background: $white;
 
   &__inner {
-    padding-top: 2em;
+    padding: 1em 0;
   }
 
   &__content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__item {
     font-size: 18px;
-    font-weight: 600;
-    margin: 0 2rem;
+    font-weight: 400;
     color: $black;
   }
 
@@ -28,6 +27,12 @@
   &__logo {
     width: 100%;
     max-width: 8rem;
+  }
 
+  &--user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
   }
 }

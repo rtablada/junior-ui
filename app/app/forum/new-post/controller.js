@@ -5,15 +5,12 @@ export default Ember.Controller.extend({
     addNewPost(formdata) {
       const post = this.store.createRecord('post', {
         postType: 'forum',
-        jsonData: {
-          title: 'Hello',
-          text: formdata.educationalBackground,
-        }
+        jsonData: formdata,
       });
 
-      post.save();
-
-      // this.transitionToRoute('forum');
+      post.save().then(() => {
+        this.transitionToRoute('app.forum');
+      });
     },
   },
 });

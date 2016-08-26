@@ -14,7 +14,6 @@
 .forum__nav {
   flex-grow: 1;
   max-width: 15rem;
-  &--inner {}
 }
 
 .forum__main {
@@ -26,14 +25,12 @@
     justify-content: space-between;
     padding: 1rem 0;
   }
-
-  &--inner {}
 }
 
 .forum__post {
   background: $white;
   border-radius: 4px;
-  padding: .25rem;
+  padding: 0.25rem;
   margin: 1rem 0;
   max-width: 70rem;
 
@@ -46,9 +43,11 @@
     align-items: center;
     width: 100%;
   }
+
   &--middle {
     width: 100%;
   }
+
   &--right {
     display: flex;
     align-items: center;
@@ -56,12 +55,20 @@
     width: 100%;
     // width: 10rem;
   }
+
   &--heart {
     padding: 0 2rem;
   }
 
   &--title {
     font-weight: 600;
+  }
+
+  &--description {
+    padding: 2rem 0;
+    &--copy {
+    font-size: 18px;
+    }
   }
 }
 
@@ -161,8 +168,4 @@
 
 .red {
   color: $red;
-}
-
-.forum__post--description {
-  width: 80%;
 }
