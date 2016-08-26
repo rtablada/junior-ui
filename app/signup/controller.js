@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
       // });
       const user = this.store.createRecord('user', formValues);
       user.save().then(() => {
-        this.transitionToRoute('forum');
+        this.transitionToRoute('login');
       });
     },
   },
