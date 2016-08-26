@@ -1,13 +1,11 @@
 {{outlet}}
-<div class="forum__main--top">
-  <h1 class="global__h3 forum__post--title">Edit Your Profile</h1>
-  {{#link-to 'app.forum' class="submit-btn" }}Save Profile{{/link-to}}
-</div>
-
 <div class="profile">
   <div class="profile__inner">
     {{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="profile__card" as |inputs|}}
-
+    <div class="forum__main--top">
+      <h1 class="global__h3 forum__post--title">Edit Your Profile</h1>
+      <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+    </div>
         <div class="profile__container--input profile__small">
         <div class="profile-input">
           <p class="profile-label">First Name</p>
@@ -28,19 +26,15 @@
           <p class="profile-label">Password</p>
           {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Confirm Password"}}
         </div>
-
-        <div class="box-2">
-          <button class="submit-btn login-btn" type="submit" name="button">Update</button>
-        </div>
       </div>
     {{/simple-form}}
 
-    <div class="forum__main--top">
-      <h1 class="global__h3 forum__post--title">About</h1>
-    </div>
       {{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="profile__card profile__big" as |inputs|}}
+      <div class="forum__main--top">
+        <h1 class="global__h3 forum__post--title">About</h1>
+        <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+      </div>
         <div class="profile__container--input">
-
           <div class="profile-input">
             <p class="profile-label">Mini-Resume</p>
             {{input class="global__input" type="text" name="name" value=inputs.profilePicture placeholder="Intern at Apple, Freelance Designer for 2 years, etc."}}
@@ -60,17 +54,14 @@
             <p class="profile-label">What are you currently learning?</p>
             {{textarea class="global__textarea" type="text" name="name" value=inputs.educationalBackground placeholder="I've spent the last there months learning Ruby and PHP etc."}}
           </div>
-          <div class="box-2">
-            <button class="submit-btn login-btn" type="submit" name="button">Update</button>
-          </div>
         </div>
       {{/simple-form}}
 
-
-      <div class="forum__main--top">
-        <h1 class="global__h3 forum__post--title">Change Password</h1>
-      </div>
       {{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="profile__card profile__card--danger" as |inputs|}}
+      <div class="forum__main--top">
+        <h1 class="global__h3 forum__post--title">Change Your Password</h1>
+        <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+      </div>
         <div class="profile__container--input">
           <div class="profile-input">
             {{input class="global__input" type="password" name="name" placeholder="Old Password"}}
@@ -78,9 +69,6 @@
 
           <div class="profile-input">
             {{input class="global__input" type="password" name="name" placeholder="New Password"}}
-          </div>
-          <div class="box-2">
-            <button class="submit-btn login-btn" type="submit" name="button">Update</button>
           </div>
         </div>
       {{/simple-form}}
