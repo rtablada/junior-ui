@@ -1,10 +1,11 @@
-.form {
+
+.profile {
   &__inner {
-    margin: 0 auto;
-    max-width: 30rem;
+    display: flex;
+    flex-wrap: wrap;
   }
   &__card {
-    margin-bottom: 1rem;
+    margin: 1rem;
   }
 
   &__title {
@@ -13,10 +14,11 @@
   }
 
   &__container--input {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     text-align: center;
     background: $white;
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px;
+    margin: 0 1rem;
   }
 
   &__container--btn {
@@ -55,7 +57,7 @@
 //  MEDIA Q's
 @media screen and (min-width: 10rem) and (max-width: 40rem) {
   // MOBILE
-  .form {
+  .profile {
     &__card {
       margin: 1rem 0;
     }
@@ -64,7 +66,7 @@
       text-align: center;
     }
   }
-  .form__container--btn {
+  .profile__container--btn {
     display: flex;
     flex-direction: column;
   }
@@ -75,7 +77,7 @@
 }
 @media screen and (min-width: 40rem) and (max-width: 60rem) {
   // TABLET
-  .form {
+  .profile {
     &__card {
       margin: 2rem 0;
     }
@@ -86,12 +88,20 @@
 }
 @media screen and (min-width: 60rem) and (max-width: 300rem) {
   // DESKTOP
-  .form {
+  .profile {
     &__card {
       margin: 3rem 0;
     }
   }
   .login {
     margin: 0 1rem;
+  }
+  .profile__big {
+    flex-grow: 2;
+    max-width: 60rem;
+  }
+
+  .profile__small {
+      flex-grow: 1;
   }
 }
