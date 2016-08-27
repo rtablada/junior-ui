@@ -1,0 +1,73 @@
+<div class="forum__main--top">
+  <h1 class="global__h3 forum__post--title">{{model.jsonData.title}}</h1>
+</div>
+
+<div class="forum__post">
+  <div class="forum__post--inner">
+    <div class="forum__post--group">
+      <div class="forum__post--left">
+        <div class="forum__post--img--box">
+          <img src="/images/forum/C.png" alt="" class="forum__post--img">
+        </div>
+        <div class="forum__post--user">
+          <p class="forum__post--name">{{model.user.firstName}} {{model.user.lastName}}</p>
+        </div>
+      </div>
+      <div class="forum__post--middle">
+        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}Learning PHP and Ruby{{/link-to}}
+      </div>
+      <div class="forum__post--right">
+        <p class="forum__post--comment">Posted August 25</p>
+      </div>
+      <div class="forum__post--heart">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="forum__post--description">
+      <div class="forum__post--description--copy content">
+        {{md-text text=model.jsonData.description}}
+      </div>
+    </div>
+
+    {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
+      <div class="forum__post">
+        <div class="">
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
+        </div>
+        <div class="">
+          <button class="submit-btn" type="submit" name="button">Post Comment</button>
+        </div>
+        <div class="box__2">
+          <button class="cancel-btn" type="submit" name="button">Delete Comment</button>
+        </div>
+      </div>
+    {{/simple-form}}
+  </div>
+</div>
+
+{{#each model.comments as |comment|}}
+<div class="forum__post">
+  <div class="forum__post--inner">
+    <div class="forum__post--group">
+      <div class="forum__post--left">
+        <div class="forum__post--img--box">
+          <img src="/images/forum/J.png" alt="" class="forum__post--img">
+        </div>
+        <div class="forum__post--user">
+          <p class="forum__post--name">{{comment.user.firstName}} {{comment.user.lastName}}</p>
+        </div>
+      </div>
+      <div class="forum__post--middle">
+        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
+      </div>
+      <div class="forum__post--right">
+        <p class="forum__post--comment">Posted August 25</p>
+      </div>
+      <div class="forum__post--heart">
+        <i class="fa fa-heart red" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
