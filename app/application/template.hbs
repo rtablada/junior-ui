@@ -5,14 +5,14 @@
         <div class="nav__content">
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
           {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-              <div class="nav--user">
-                <div class="forum__post--img--box">
-                  <img src="/images/forum/C.png" alt="" class="forum__post--img">
-                </div>
-                <div class="forum__post--user">
-                  <p class="nav__item">Peter Court</p>
-                </div>
+            <div class="nav--user">
+              <div class="forum__post--img--box">
+                <img src="/images/forum/C.png" alt="" class="forum__post--img">
               </div>
+              <div class="forum__post--user">
+                <p class="nav__item">Peter Court</p>
+              </div>
+            </div>
           {{/if}}
         </div>
       </div>

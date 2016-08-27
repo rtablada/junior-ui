@@ -3,14 +3,29 @@
   .forum__nav {
     display: none;
   }
+  .nav--user {
+    display: none;
+  }
+  .nav__content {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile__btn--hide {
+    display: none;
+  }
 }
 @media screen and (min-width: 40rem) and (max-width: 60rem) {
   // TABLET
   .forum__nav {
     display: none;
   }
+  .mobile__btn {
+    display: none;
+  }
 }
 @media screen and (min-width: 60rem) and (max-width: 300rem) {
   // DESKTOP
-
+  .mobile__btn {
+    display: none;
+  }
 }
