@@ -30,7 +30,7 @@
     margin: 1rem 0;
     max-width: 70rem;
 
-    border-left: $black solid 10px;
+    border-left: $green solid 10px;
   }
 
   .index__post--inner {
@@ -69,11 +69,20 @@
   }
 
   .username {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .username__box {
     padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .date {
+    color: $grey-two;
+    font-size: 18px;
   }
 
   .post__box {

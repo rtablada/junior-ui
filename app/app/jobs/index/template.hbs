@@ -1,100 +1,35 @@
-<div class="forum__main--top">
-  <h1 class="global__h3 forum__post--title">Today's Top Jobs</h1>
-  {{#link-to 'app.jobs.new-job' class="cancel-btn" }}Submit A New Job{{/link-to}}
+<div class="index__container">
+  <h1 class="forum__post--title index__header">Today's Top Jobs</h1>
+  {{#link-to 'app.forum.new-post' class="cancel-btn mobile__hide" }}New Job{{/link-to}}
+  {{#link-to 'app.forum.new-post' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
 </div>
 
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/C.png" alt="" class="forum__post--img">
+{{!-- {{#each model as |post|}} --}}
+  <div class="index__post">
+    <div class="index__post--inner">
+      <div class="index__post--wrapper">
+        <div class="user">
+          <div class="img__box">
+            <img src="/images/forum/C.png" alt="" class="user__img">
+          </div>
+          <div class="username__box">
+            <p class="username">Peter Court</p>
+            <p class="date mt">Posted August 25</p>
+          </div>
         </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">Etsy</p>
+        <div class="post__box">
+          {{#link-to 'app.forum.thread' post class="post__title" }}Etsy{{/link-to}}
         </div>
-      </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}Does anyone have a connection at Google?{{/link-to}}
-      </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">5 Comments</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
+
+        <div class="second__line">
+          <div class="comment__box">
+            <p class="comment">5 Comments</p>
+          </div>
+          <div class="icon__box">
+            <i class="fa fa-heart heart" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/J.png" alt="" class="forum__post--img">
-        </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">Eventbrite</p>
-        </div>
-      </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}What's the best solution in CSS for vertical centering?{{/link-to}}
-      </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">145 Comments</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart red" aria-hidden="true"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/JJ.png" alt="" class="forum__post--img">
-        </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">Twitter</p>
-        </div>
-      </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}We are hiring iOS Developers at Profilic! Ping me if interested.{{/link-to}}
-      </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">18 Comments</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/W.png" alt="" class="forum__post--img">
-        </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">Apple</p>
-        </div>
-      </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}Help with Flexbox!{{/link-to}}
-      </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">21 Comments</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-      </div>
-    </div>
-  </div>
-</div>
+{{!-- {{/each}} --}}
