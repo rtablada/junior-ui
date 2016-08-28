@@ -2,8 +2,8 @@
 <div class="profile">
   <div class="profile__inner">
     {{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="profile__card" as |inputs|}}
-    <div class="forum__main--top">
-      <h1 class="global__h3 forum__post--title">Edit Your Profile</h1>
+    <div class="forum__main--top index__container">
+      <h1 class="forum__post--title index__header">Edit Your Profile</h1>
       <button class="submit-btn login-btn" type="submit" name="button">Update</button>
     </div>
         <div class="profile__container--input profile__small">
@@ -30,8 +30,8 @@
     {{/simple-form}}
 
       {{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="profile__card profile__big" as |inputs|}}
-      <div class="forum__main--top">
-        <h1 class="global__h3 forum__post--title">About</h1>
+      <div class="forum__main--top index__container">
+        <h1 class="forum__post--title index__header">About</h1>
         <button class="submit-btn login-btn" type="submit" name="button">Update</button>
       </div>
         <div class="profile__container--input">
@@ -58,8 +58,8 @@
       {{/simple-form}}
 
       {{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="profile__card profile__card--danger" as |inputs|}}
-      <div class="forum__main--top">
-        <h1 class="global__h3 forum__post--title">Change Your Password</h1>
+      <div class="forum__main--top index__container">
+        <h1 class="forum__post--title index__header">Change Your Password</h1>
         <button class="submit-btn login-btn" type="submit" name="button">Update</button>
       </div>
         <div class="profile__container--input">

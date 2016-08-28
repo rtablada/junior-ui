@@ -1,27 +1,30 @@
-<div class="forum__main--top">
-  <h1 class="global__h3 forum__post--title">{{model.jsonData.title}}</h1>
+<div class="forum__main--top index__container">
+  <h1 class="forum__post--title index__header">{{model.jsonData.title}}</h1>
 </div>
 
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/C.png" alt="" class="forum__post--img">
+<div class="forum__post index__post">
+  <div class="forum__post--inner index__post--inner">
+    <div class="forum__post--group index__post--wrapper">
+      <div class="forum__post--left user">
+        <div class="forum__post--img--box img__box">
+          <img src="/images/forum/C.png" alt="" class="forum__post--img user__img">
         </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">{{model.user.firstName}} {{model.user.lastName}}</p>
+        <div class="forum__post--user username__box">
+          <p class="forum__post--name username">{{model.user.firstName}} {{model.user.lastName}}</p>
+          <p class="forum__post--name date mt">Posted August 25</p>
         </div>
       </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}Learning PHP and Ruby{{/link-to}}
+      <div class="forum__post--middle post__box">
+        {{#link-to 'app.forum.thread' 1 class="forum__post--question post__title" }}Learning PHP and Ruby{{/link-to}}
       </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">Posted August 25</p>
+      <div class="second__line">
+      <div class="forum__post--right comment__box">
+        <p class="forum__post--comment comment">Posted August 25</p>
       </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
+      <div class="forum__post--heart icon__box">
+        <i class="fa fa-heart heart" aria-hidden="true"></i>
       </div>
+    </div>
     </div>
 
     <div class="forum__post--description">
@@ -44,32 +47,34 @@
 </div>
 
 {{#each model.comments as |comment|}}
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/J.png" alt="" class="forum__post--img">
+  <div class="forum__post index__post">
+    <div class="forum__post--inner index__post--inner">
+      <div class="forum__post--group index__post--wrapper">
+        <div class="forum__post--left user">
+          <div class="forum__post--img--box img__box">
+            <img src="/images/forum/J.png" alt="" class="forum__post--img user__img">
+          </div>
+          <div class="forum__post--user username__box">
+            <p class="forum__post--name username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
+          </div>
         </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">{{comment.user.firstName}} {{comment.user.lastName}}</p>
+        <div class="forum__post--middle post__box">
+          <h1 class="post__title">{{comment.user.email}}</h1>
+        </div>
+        <div class="second__line">
+        <div class="forum__post--right comment__box">
+          <p class="forum__post--comment comment">Posted August 25</p>
+        </div>
+        <div class="forum__post--heart icon__box">
+          <i class="fa fa-heart heart" aria-hidden="true"></i>
+        </div>
         </div>
       </div>
-      <div class="forum__post--middle">
-        <h1>{{comment.user.email}} </h1>
-      </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">Posted August 25</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart red" aria-hidden="true"></i>
-      </div>
-    </div>
-    <div class="forum__post--description">
-      <div class="forum__post--description--copy content">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
+      <div class="forum__post--description">
+        <div class="forum__post--description--copy content">
+          {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
+        </div>
       </div>
     </div>
   </div>
-</div>
 {{/each}}
