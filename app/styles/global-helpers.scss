@@ -21,7 +21,6 @@ $red: #FF5A5A;
 $blue: #479CF7;
 $green: #00DD61;
 
-
 // Keeps the footer at the bottom
 .site {
   display: flex;
@@ -38,7 +37,6 @@ $green: #00DD61;
 .column {
   margin: 0 auto;
 }
-
 
 // GLOBAL BUTTONS
 .cta-btn {
@@ -73,7 +71,6 @@ $green: #00DD61;
   font-size: 18px;
   font-weight: 600;
 }
-
 
 // GLOBAL INPUT
 
@@ -110,11 +107,18 @@ $green: #00DD61;
 // GLOBAL SPACE
 
 .space-half {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 // GLOBAL LINES
 
 .line-1 {
   border: 1px $grey-two solid;
+}
+
+@media screen and (min-width: 10rem) and (max-width: 76rem) {
+  // TABLET
+  .forum__nav {
+    display: none;
+  }
 }

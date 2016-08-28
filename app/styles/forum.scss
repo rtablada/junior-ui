@@ -12,56 +12,56 @@
 }
 
 .forum__nav {
-  flex-grow: 1;
-  max-width: 15rem;
+  flex-grow: 2;
+  max-width: 30rem;
 }
 
 .forum__main {
-  flex-grow: 2;
-  max-width: 70rem;
+  flex-grow: 1;
+  max-width: 75rem;
 
   &--top {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 1rem 0;
   }
 }
 
 .forum__post {
-  background: $white;
-  border-radius: 4px;
-  padding: 0.25rem;
-  margin: 1rem 0;
-  max-width: 70rem;
+  // background: $white;
+  // border-radius: 4px;
+  // padding: 0.25rem;
+  // margin: 1rem 0;
+  // max-width: 70rem;
 
   &--inner {
-    padding: 1rem;
+    // padding: 1rem;
   }
 
   &--left {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    // display: flex;
+    // align-items: center;
+    // width: 100%;
   }
 
   &--middle {
-    width: 100%;
+    // width: 100%;
   }
 
   &--right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 100%;
     // width: 10rem;
   }
 
   &--heart {
-    padding: 0 2rem;
+    // padding: 0 2rem;
   }
 
   &--title {
-    font-weight: 600;
+    // font-weight: 600;
   }
 
   &--description {
@@ -73,46 +73,46 @@
 }
 
 .forum__post--img {
-  object-fit: cover;
-  width: 3rem;
-  height: 3rem;
-  min-width: 3rem;
-  border-radius: 50%;
+  // object-fit: cover;
+  // width: 3rem;
+  // height: 3rem;
+  // min-width: 3rem;
+  // border-radius: 50%;
 }
 
 // INDEX
 .forum__post--group {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 }
 
 // THREAD
 .forum__post {
   &--top {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    // width: 100%;
   }
 
   &--user {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // margin: 0 1rem;
   }
 
   &--name {
-    font-size: 18px;
+    // font-size: 18px;
   }
 
   &--question {
-    font-size: 18px;
-    color: $black;
-    width: 100%;
+    // font-size: 18px;
+    // color: $black;
+    // width: 100%;
   }
 
   &--comment {
-    color: $grey-three;
-    font-size: 18px;
+    // color: $grey-three;
+    // font-size: 18px;
   }
 
 }
@@ -163,7 +163,7 @@
 }
 
 .fa-heart {
-  color: $grey-two;
+  // color: $grey-two;
 }
 
 .red {

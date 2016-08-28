@@ -21,7 +21,10 @@
 @import 'forum';
 @import 'lists';
 @import 'content';
-@import 'mobile/mobile';
+
+@import 'index/mobile.scss';
+@import 'index/tablet.scss';
+@import 'index/desktop.scss';
 
 // --------------------------------------------------------
 // --------------------------------------------------------
