@@ -1,1 +1,27 @@
 {{outlet}}
+<div class="profile">
+  <div class="profile__inner">
+    {{#simple-form startingValues=model onsubmit=(action "addNewResource") class="profile__card" as |inputs|}}
+    <div class="forum__main--top">
+      <h1 class="global__h3 forum__post--title">Add New Resource</h1>
+      <button class="submit-btn login-btn" type="submit" name="button">Add New Resource</button>
+    </div>
+        <div class="profile__container--input profile__small">
+        <div class="profile-input">
+          <p class="profile-label">Resource Name</p>
+          {{input class="global__input" type="text" name="name" value=inputs.title placeholder="Article Name, App etc."}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Resource Description</p>
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.description placeholder="Short description describing the resource"}}
+        </div>
+
+        <div class="profile-input">
+          <p class="profile-label">Tags</p>
+          {{input class="global__input" type="text" name="name" value=inputs.tags placeholder="Design, Dev, Startup etc."}}
+        </div>
+      </div>
+    {{/simple-form}}
+</div>
+</div>

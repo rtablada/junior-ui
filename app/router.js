@@ -22,6 +22,9 @@ Router.map(function() {
     });
     this.route('profile');
     this.route('resources', function() {
+      this.route('thread', {
+        path: ':post_id'
+      });
       this.route('new-resource');
     });
   })

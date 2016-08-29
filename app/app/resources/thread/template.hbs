@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="forum__post--middle">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}Learning PHP and Ruby{{/link-to}}
+        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}Learning PHP and Ruby{{/link-to}}
       </div>
       <div class="forum__post--right">
         <p class="forum__post--comment">Posted August 25</p>
@@ -56,18 +56,13 @@
         </div>
       </div>
       <div class="forum__post--middle">
-        <h1>{{comment.user.email}} </h1>
+        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
       </div>
       <div class="forum__post--right">
         <p class="forum__post--comment">Posted August 25</p>
       </div>
       <div class="forum__post--heart">
         <i class="fa fa-heart red" aria-hidden="true"></i>
-      </div>
-    </div>
-    <div class="forum__post--description">
-      <div class="forum__post--description--copy content">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
       </div>
     </div>
   </div>

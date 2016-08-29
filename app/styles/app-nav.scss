@@ -1,0 +1,16 @@
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
+  .forum__nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
+  // TABLET
+  .forum__nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 60rem) and (max-width: 300rem) {
+  // DESKTOP
+
+}
