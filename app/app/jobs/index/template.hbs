@@ -1,7 +1,7 @@
 <div class="index__container">
   <h1 class="forum__post--title index__header">Today's Top Jobs</h1>
   {{#link-to 'app.jobs.new-job' class="cancel-btn mobile__hide" }}New Job{{/link-to}}
-  {{#link-to 'app.forum' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
+  {{#link-to 'app.jobs.new-job' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
 </div>
 
 {{#each model as |post|}}
