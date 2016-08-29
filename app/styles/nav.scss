@@ -1,3 +1,20 @@
+//  MEDIA Q's
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
+
+}
+@media screen and (min-width: 40rem) and (max-width: 76rem) {
+  // TABLET
+
+}
+@media screen and (min-width: 76rem) and (max-width: 300rem) {
+  // DESKTOP
+
+}
+
+
+
+
 .nav {
   background: $white;
 
@@ -8,7 +25,6 @@
   &__content {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   &__item {
@@ -37,6 +53,21 @@
     width: 100%;
   }
 }
+
+.search {
+  outline: none;
+  background: $grey-two;
+  color: $black;
+  border: 0;
+  width: 80%;
+  padding: 0.75rem 0;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Europa', sans-serif;
+  padding-left: 1rem;
+}
+
 @media screen and (min-width: 10rem) and (max-width: 76rem) {
   // MOBILE
 
