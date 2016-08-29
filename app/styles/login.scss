@@ -1,97 +1,106 @@
-.form {
-  // &__inner {
-  //   margin: 0 auto;
-  //   max-width: 30rem;
-  // }
-  // &__card {
-  //   margin-bottom: 1rem;
-  // }
+// .form {
+//   // &__inner {
+//   //   margin: 0 auto;
+//   //   max-width: 30rem;
+//   // }
+//   // &__card {
+//   //   margin-bottom: 1rem;
+//   // }
+//
+//   &__title {
+//     // text-align: center;
+//     // font-weight: 700;
+//   }
+//
+//   &__container--input {
+//     // padding: 1rem;
+//     // text-align: center;
+//     // background: $white;
+//     // border-radius: 4px 4px 0 0;
+//   }
+//
+//   &__container--btn {
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     // background: $grey-one;
+//     // border-radius: 0 0 4px 4px;
+//     // padding: 2rem 0;
+//   }
+//
+//   .login-items {
+//     // justify-content: space-around;
+//   }
+//
+//   // &__sub {
+//   //   color: $grey-four;
+//   //   font-size: 16px;
+//   //   padding: 0.75em 2em;
+//   // }
+//   // &__sub:hover {
+//   //   padding: 0.75em 2em;
+//   //   border: 0;
+//   //   outline: none;
+//   //   border-radius: 4px;
+//   //   background: rgba(221,221,221, 0.4);
+//   //   font-size: 16px;
+//   //   color: $black;
+//   // }
+// }
+//
+// .login-btn {
+//   // text-align: center;
+// }
+//
+// //  MEDIA Q's
+// @media screen and (min-width: 10rem) and (max-width: 40rem) {
+//   // MOBILE
+//   .form {
+//     &__card {
+//       margin: 1rem 0;
+//     }
+//     &__sub:hover {
+//       width: 23rem;
+//       text-align: center;
+//     }
+//   }
+//   .form__container--btn {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   .login-btn {
+//     margin: .5rem 0;
+//     width: 23rem;
+//   }
+// }
+// @media screen and (min-width: 40rem) and (max-width: 60rem) {
+//   // TABLET
+//   .form {
+//     &__card {
+//       margin: 2rem 0;
+//     }
+//   }
+//   .login {
+//     margin: 0 1rem;
+//   }
+// }
+// @media screen and (min-width: 60rem) and (max-width: 300rem) {
+//   // DESKTOP
+//   .form {
+//     &__card {
+//       margin: 3rem 0;
+//     }
+//   }
+//   .login {
+//     margin: 0 1rem;
+//   }
+// }
 
-  &__title {
-    // text-align: center;
-    // font-weight: 700;
-  }
-
-  &__container--input {
-    // padding: 1rem;
-    // text-align: center;
-    // background: $white;
-    // border-radius: 4px 4px 0 0;
-  }
-
-  &__container--btn {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // background: $grey-one;
-    // border-radius: 0 0 4px 4px;
-    // padding: 2rem 0;
-  }
-
-  .login-items {
-    // justify-content: space-around;
-  }
-
-  // &__sub {
-  //   color: $grey-four;
-  //   font-size: 16px;
-  //   padding: 0.75em 2em;
-  // }
-  // &__sub:hover {
-  //   padding: 0.75em 2em;
-  //   border: 0;
-  //   outline: none;
-  //   border-radius: 4px;
-  //   background: rgba(221,221,221, 0.4);
-  //   font-size: 16px;
-  //   color: $black;
-  // }
-}
-
-.login-btn {
-  // text-align: center;
-}
-
-//  MEDIA Q's
-@media screen and (min-width: 10rem) and (max-width: 40rem) {
-  // MOBILE
-  .form {
-    &__card {
-      margin: 1rem 0;
-    }
-    &__sub:hover {
-      width: 23rem;
-      text-align: center;
-    }
-  }
-  .form__container--btn {
-    display: flex;
-    flex-direction: column;
-  }
-  .login-btn {
-    margin: .5rem 0;
-    width: 23rem;
-  }
-}
-@media screen and (min-width: 40rem) and (max-width: 60rem) {
-  // TABLET
-  .form {
-    &__card {
-      margin: 2rem 0;
-    }
-  }
-  .login {
-    margin: 0 1rem;
-  }
-}
-@media screen and (min-width: 60rem) and (max-width: 300rem) {
-  // DESKTOP
-  .form {
-    &__card {
-      margin: 3rem 0;
-    }
-  }
-  .login {
-    margin: 0 1rem;
-  }
+.login--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $grey-one;
+  padding: 2rem 0;
 }

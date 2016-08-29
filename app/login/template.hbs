@@ -1,21 +1,21 @@
 {{outlet}}
-<div class="form">
-  <div class="form__inner">
-    <div class="form__card">
+<div class="form__input">
+  <div class="form__input--inner">
+    <div class="form__input--card">
       {{#simple-form onsubmit=(action "login") as |inputs|}}
-        <div class="form__container--input">
+        <div class="form__input--card--input">
           <div class="box__1">
-          <h1 class="global__h2 form__title">Login</h1>
+          <h1 class="form--title">Login</h1>
         </div>
-          {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}}
-          {{input class="global__input" type="password" name="name" value=inputs.password placeholder="Password"}}
+          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.username placeholder="Username"}}
+          {{input class="form__input--card--input--item" type="password" name="name" value=inputs.password placeholder="Password"}}
           <div class="box__2">
-            <button class="submit-btn login-btn" type="submit" name="button">Login</button>
+            <button class="submit-btn form--btn" type="submit" name="button">Login</button>
           </div>
         </div>
-        <div class="form__container--btn login-items">
-          {{#link-to 'forgot' class="form__sub space-half" }}Forgot Password?{{/link-to}}
-          {{#link-to 'signup' class="form__sub space-half" }}Create a new account{{/link-to}}
+        <div class="login--container">
+          {{#link-to 'forgot' class="form--sub" }}Forgot Password?{{/link-to}}
+          {{#link-to 'signup' class="form--sub" }}Create a new account{{/link-to}}
         </div>
       {{/simple-form}}
     </div>
