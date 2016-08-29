@@ -3,18 +3,27 @@
     <div class="column is-11">
       <div class="nav__inner">
         <div class="nav__content">
+          <i {{action "toggleNav"}} class="fa fa-bars" aria-hidden="true"></i>
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
           {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-            <div class="nav--user">
-              <div class="img__box">
-                <img src="/images/forum/C.png" alt="" class="user__img">
-              </div>
-              <div class="forum__post--user">
-                <p class="nav__item">Peter Court</p>
-              </div>
-            </div>
           {{/if}}
         </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="sub__nav sub__nav--off">
+    <div class="column is-11">
+      <div class="sub__nav--inner">
+        <ul class="sub__nav--content">
+          <div class="sub__nav--content--inner">
+          {{#link-to "app.forum" class="sub__nav--item"}}Forum{{/link-to}}
+          {{#link-to "app.forum" class="sub__nav--item"}}Resources{{/link-to}}
+          {{#link-to "app.forum" class="sub__nav--item"}}Jobs{{/link-to}}
+          {{#link-to "app.forum" class="sub__nav--item"}}Interviews{{/link-to}}
+          {{#link-to "app.forum" class="sub__nav--item"}}Likes{{/link-to}}
+          {{#link-to "app.forum" class="sub__nav--item"}}My Profile{{/link-to}}
+        </div>
+        </ul>
       </div>
     </div>
   </nav>

@@ -29,6 +29,10 @@
     margin: 1rem 0;
     max-width: 70rem;
 
+    -webkit-box-shadow: 0 10px 6px -6px $grey-two;
+	   -moz-box-shadow: 0 10px 6px -6px $grey-two;
+	        box-shadow: 0 10px 6px -6px $grey-two;
+
     border-left: $black solid 10px;
   }
 

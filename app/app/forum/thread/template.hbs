@@ -1,4 +1,5 @@
 <div class="forum__main--top index__container">
+  <i class="fa fa-angle-left" aria-hidden="true"></i>
   <h1 class="forum__post--title index__header">{{model.jsonData.title}}</h1>
 </div>
 
@@ -15,7 +16,7 @@
         </div>
       </div>
       <div class="forum__post--middle post__box">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question post__title" }}Learning PHP and Ruby{{/link-to}}
+        {{#link-to 'app.forum.thread' 1 class="forum__post--question post__title" }}{{model.jsonData.title}}{{/link-to}}
       </div>
       <div class="second__line">
       <div class="forum__post--right comment__box">

@@ -1,8 +1,12 @@
 .forum {
   &__inner {
     display: flex;
-    background: $grey-one;
+    // background: $grey-one;
     border-radius: 4px;
+
+    -webkit-box-shadow: 0 10px 6px -6px $grey-two;
+     -moz-box-shadow: 0 10px 6px -6px $red;
+          box-shadow: 0 10px 6px -6px $black;
   }
 }
 
@@ -12,12 +16,12 @@
 }
 
 .forum__nav {
-  flex-grow: 2;
-  max-width: 30rem;
+  flex-grow: 1;
+  max-width: 20rem;
 }
 
 .forum__main {
-  flex-grow: 1;
+  flex-grow: 2;
   max-width: 75rem;
 
   &--top {
@@ -160,12 +164,4 @@
     font-family: 'Europa', sans-serif;
     padding-left: 1rem;
   }
-}
-
-.fa-heart {
-  // color: $grey-two;
-}
-
-.red {
-  color: $red;
 }
