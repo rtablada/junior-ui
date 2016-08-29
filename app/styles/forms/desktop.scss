@@ -1,4 +1,4 @@
-@media screen and (min-width: 10rem) and (max-width: 40rem) {
+@media screen and (min-width: 73rem) and (max-width: 300rem) {
   // MOBILE
   .form__input {
     &--inner {
@@ -8,6 +8,7 @@
 
     &--card {
       margin-bottom: 1rem;
+      padding-top: 5rem;
     }
 
     &--card--input {
@@ -68,7 +69,7 @@
   .form--title {
     text-align: center;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
   }
 
 }
