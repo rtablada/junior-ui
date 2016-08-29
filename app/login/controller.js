@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
       { identification: formValues.username, password: formValues.password })
       .then(() => {
           this.get('flashMessages').success('Welcome back Peter!');
-          this.transitionToRoute('forum');
+          this.transitionToRoute('app.forum');
         });
     },
   },
