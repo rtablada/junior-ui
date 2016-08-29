@@ -1,0 +1,128 @@
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  // MOBILE
+  .mobile__hide {
+    display: none;
+  }
+
+  .index__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .index__header {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .index__circle {
+    font-size: 30px;
+    color: $red;
+  }
+  // BODY
+  .index__post {
+    background: $white;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 70rem;
+
+    -webkit-box-shadow: 0 10px 6px -6px $grey-two;
+	   -moz-box-shadow: 0 10px 6px -6px $grey-two;
+	        box-shadow: 0 10px 6px -6px $grey-two;
+
+    border-left: $black solid 10px;
+  }
+
+  .index__post--inner {
+    padding: 0.25rem;
+  }
+
+  .index__post--wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .second__line {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  // USER
+  .user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .img__box {
+    }
+
+  .user__img {
+    object-fit: cover;
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+  }
+
+  .username {
+    font-size: 18px;
+  }
+
+  .username__box {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .date {
+    color: $grey-two;
+    font-size: 16px;
+  }
+
+  .post__box {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .post__title {
+    font-size: 20px;
+    color: $black;
+    width: 100%;
+  }
+
+  .tag__box {
+    }
+
+  .tag {
+    }
+
+  .comment__box {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 100%;
+  }
+
+  .comment {
+    color: $grey-three;
+    font-size: 16px;
+  }
+
+  .icon__box {
+    // padding: 0 2rem;
+  }
+
+  .heart {
+    color: $grey-two;
+  }
+}

@@ -1,28 +1,32 @@
-<div class="forum__main--top">
-  <h1 class="global__h3 forum__post--title">Today's Top Discussions</h1>
-  {{#link-to 'app.forum.new-post' class="cancel-btn" }}New Post{{/link-to}}
+<div class="forum__main--top index__container">
+  <h1 class="forum__post--title index__header">Today's Top Discussions</h1>
+  {{#link-to 'app.forum.new-post' class="cancel-btn mobile__hide" }}New Post{{/link-to}}
+  {{#link-to 'app.forum.new-post' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
 </div>
 
 {{#each model as |post|}}
-  <div class="forum__post">
-    <div class="forum__post--inner">
-      <div class="forum__post--group">
-        <div class="forum__post--left">
-          <div class="forum__post--img--box">
-            <img src="/images/forum/C.png" alt="" class="forum__post--img">
+  <div class="forum__post index__post">
+    <div class="forum__post--inner index__post--inner">
+      <div class="forum__post--group index__post--wrapper">
+        <div class="forum__post--left user">
+          <div class="forum__post--img--box img__box">
+            <img src="/images/forum/C.png" alt="" class="forum__post--img user__img">
           </div>
-          <div class="forum__post--user">
-            <p class="forum__post--name">{{post.user.firstName}} {{post.user.lastName}}</p>
+          <div class="forum__post--user username__box">
+            <p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>
+            <p class="forum__post--name date mt">Posted August 25</p>
           </div>
         </div>
-        <div class="forum__post--middle">
-          {{#link-to 'app.forum.thread' post class="forum__post--question" }}{{post.jsonData.title}}{{/link-to}}
+        <div class="forum__post--middle post__box">
+          {{#link-to 'app.forum.thread' post class="forum__post--question post__title" }}{{post.jsonData.title}}{{/link-to}}
         </div>
-        <div class="forum__post--right">
-          <p class="forum__post--comment">{{post.comments.length}} Comments</p>
-        </div>
-        <div class="forum__post--heart">
-          <i class="fa fa-heart" aria-hidden="true"></i>
+        <div class="second__line">
+          <div class="forum__post--right comment__box">
+            <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
+          </div>
+          <div class="forum__post--heart icon__box">
+            <i class="fa fa-heart heart" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>

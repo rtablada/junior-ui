@@ -2,13 +2,13 @@
   background: $white;
 
   &__inner {
-    padding: 1em 0;
+    padding: 1rem;
   }
 
   &__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__item {
@@ -20,6 +20,7 @@
   &__item:active {
     color: $red;
   }
+
   &__item:hover {
     color: $red;
   }
@@ -34,5 +35,68 @@
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+  }
+}
+@media screen and (min-width: 10rem) and (max-width: 76rem) {
+  // MOBILE
+
+  .sub__nav {
+    background: $grey-two;
+
+    &--inner {
+      overflow: hidden;
+    }
+
+    &--content {
+      padding: 1rem 0;
+      height: 60px;
+    }
+
+    &--content--inner {
+      display: flex;
+      // align-items: center;
+      // margin: 0 34px;
+      padding-bottom: 50px;
+      list-style: none;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .sub__nav--item {
+    color: $grey-four;
+    font-size: 22px;
+    margin-right: 6rem;
+    width: 100%;
+  }
+
+  .sub__nav--item:first-child {
+    margin-left: 1rem;
+  }
+
+  .sub__nav--item:active {
+    color: $black;
+  }
+
+  .sub__nav--item:hover {
+    color: $black;
+  }
+
+  .fa-bars {
+    text-align: left;
+    width: 100%;
+  }
+
+  .sub__nav--off {
+    display: none;
+  }
+
+}
+@media screen and (min-width: 76rem) and (max-width: 300rem) {
+  // DESKTOP
+  .sub__nav {
+    display: none;
   }
 }
