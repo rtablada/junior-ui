@@ -11,9 +11,13 @@ export default Ember.Controller.extend({
       this.get('session').authenticate(authenticator,
       { identification: formValues.username, password: formValues.password })
       .then(() => {
-          this.get('flashMessages').success('Welcome back Peter!');
+          this.get('flashMessages').success('Login Success!');
           this.transitionToRoute('app.forum');
-        });
+        })
+        .catch((reason) => {
+          this.get('flashMessages').danger('Login attempt failed. Did you enter the correct email and password?');
+          console.log(reason);
+        })
     },
   },
 });

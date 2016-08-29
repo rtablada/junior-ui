@@ -7,5 +7,9 @@ export default Ember.Controller.extend({
       const ham = document.querySelector(".sub__nav");
       ham.classList.toggle('sub__nav--off')
     },
+    invalidateSession() {
+      this.get('session').invalidate();
+      // this.transitionToRoute('index');
+    },
   },
 });

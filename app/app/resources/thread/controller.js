@@ -13,8 +13,8 @@ export default Ember.Controller.extend({
         reset();
       });
     },
-    deleteComment() {
-      this.transitionToRoute('resources.index');
-    }
+    deleteComment(comment) {
+      comment.destroyRecord();
+    },
   },
 });

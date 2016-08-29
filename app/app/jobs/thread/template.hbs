@@ -75,6 +75,9 @@
           {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
         </div>
       </div>
+      {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}} --}}
+          <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Post</button>
+      {{!-- {{/if}} --}}
     </div>
   </div>
 {{/each}}

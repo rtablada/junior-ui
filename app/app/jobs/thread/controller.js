@@ -11,12 +11,11 @@ export default Ember.Controller.extend({
       });
 
       comment.save().then(() => {
-        alert('done');
         reset();
       });
     },
-    deleteComment() {
-      this.transitionToRoute('forum');
-    }
+    deleteComment(comment) {
+      comment.destroyRecord();
+    },
   },
 });

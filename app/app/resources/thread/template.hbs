@@ -1,26 +1,29 @@
-<div class="forum__main--top">
-  <h1 class="global__h3 forum__post--title">{{model.jsonData.title}}</h1>
+<div class="index__container">
+  <h1 class="index__header">{{model.jsonData.title}}</h1>
 </div>
 
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/C.png" alt="" class="forum__post--img">
+<div class="index__post">
+  <div class="index__post--inner">
+    <div class="index__post--wrapper">
+      <div class="user">
+        <div class="img__box">
+          <img src="/images/forum/C.png" alt="" class="user__img">
         </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">{{model.user.firstName}} {{model.user.lastName}}</p>
+        <div class="username__box">
+          <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
+          <p class="date mt">Posted August 25</p>
         </div>
       </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{model.jsonData.title}}{{/link-to}}
+      <div class="post__box">
+        {{#link-to 'app.resources.thread' 1 class="post__title" }}{{model.jsonData.title}}{{/link-to}}
       </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">Posted August 25</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
+      <div class="second__line">
+        <div class="comment__box">
+          <p class="comment">Posted August 25</p>
+        </div>
+        <div class="icon__box">
+          <i class="fa fa-heart heart" aria-hidden="true"></i>
+        </div>
       </div>
     </div>
 
@@ -44,27 +47,37 @@
 </div>
 
 {{#each model.comments as |comment|}}
-<div class="forum__post">
-  <div class="forum__post--inner">
-    <div class="forum__post--group">
-      <div class="forum__post--left">
-        <div class="forum__post--img--box">
-          <img src="/images/forum/J.png" alt="" class="forum__post--img">
+  <div class="index__post">
+    <div class="index__post--inner">
+      <div class="index__post--wrapper">
+        <div class="user">
+          <div class="img__box">
+            <img src="/images/forum/J.png" alt="" class="user__img">
+          </div>
+          <div class="username__box">
+            <p class="username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
+          </div>
         </div>
-        <div class="forum__post--user">
-          <p class="forum__post--name">{{comment.user.firstName}} {{comment.user.lastName}}</p>
+        <div class="post__box">
+          <h1 class= "post__title">{{comment.user.email}}</h1>
+        </div>
+        <div class="second__line">
+          <div class="comment__box">
+            <p class="comment">Posted August 25</p>
+          </div>
+          <div class="icon__box">
+            <i class="fa fa-heart heart" aria-hidden="true"></i>
+          </div>
+        </div>
+        </div>
+        <div class="forum__post--description">
+          <div class="forum__post--description--copy content">
+          {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
         </div>
       </div>
-      <div class="forum__post--middle">
-        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
-      </div>
-      <div class="forum__post--right">
-        <p class="forum__post--comment">Posted August 25</p>
-      </div>
-      <div class="forum__post--heart">
-        <i class="fa fa-heart red" aria-hidden="true"></i>
-      </div>
+      {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}} --}}
+          <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Post</button>
+      {{!-- {{/if}} --}}
     </div>
   </div>
-</div>
 {{/each}}

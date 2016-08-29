@@ -1,20 +1,27 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
   actions: {
-    addComment(post, {markdown}, reset) {
+    addComment(post, {
+      markdown
+    }, reset) {
       const comment = this.store.createRecord('comment', {
         post,
         markdown,
       });
-
       comment.save().then(() => {
-        alert('done');
         reset();
       });
     },
-    deleteComment() {
-      this.transitionToRoute('forum');
-    }
+    deleteComment(comment) {
+      comment.destroyRecord();
+    },
+    deletePost(post) {
+      post.destroyRecord().then(() => {
+        this.transitionToRoute('app.forum.index');
+      });
+    },
+
   },
 });
