@@ -5,12 +5,12 @@
         <div class="nav__content">
           <i {{action "toggleNav"}} class="fa fa-bars mt" aria-hidden="true"></i>
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
-          {{input class="search desktop" type="text" name="name" placeholder="Search"}}
-          {{!-- <div class="">
-          {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="user__img"/>{{/link-to}}
-          {{#link-to "app.profile"}}<img src="/images/forum/J.png" class="user__img"/>{{/link-to}}
-          </div> --}}
           {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
+            {{input class="search desktop" type="text" name="name" placeholder="Search"}}
+            <div class="">
+              {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="user__img" />{{/link-to}}
+              {{#link-to "app.profile"}}<img src="/images/forum/J.png" class="user__img" />{{/link-to}}
+            </div>
           {{/if}}
         </div>
       </div>
@@ -21,13 +21,13 @@
       <div class="sub__nav--inner">
         <ul class="sub__nav--content">
           <div class="sub__nav--content--inner">
-          {{#link-to "app.forum" class="sub__nav--item"}}Forum{{/link-to}}
-          {{#link-to "app.resources" class="sub__nav--item"}}Resources{{/link-to}}
-          {{#link-to "app.jobs" class="sub__nav--item"}}Jobs{{/link-to}}
-          {{#link-to "interviews" class="sub__nav--item"}}Interviews{{/link-to}}
-          {{#link-to "app.forum" class="sub__nav--item"}}Likes{{/link-to}}
-          {{#link-to "app.profile" class="sub__nav--item"}}My Profile{{/link-to}}
-        </div>
+            {{#link-to "app.forum" class="sub__nav--item" }}Forum{{/link-to}}
+            {{#link-to "app.resources" class="sub__nav--item" }}Resources{{/link-to}}
+            {{#link-to "app.jobs" class="sub__nav--item" }}Jobs{{/link-to}}
+            {{#link-to "interviews" class="sub__nav--item" }}Interviews{{/link-to}}
+            {{#link-to "app.forum" class="sub__nav--item" }}Likes{{/link-to}}
+            {{#link-to "app.profile" class="sub__nav--item" }}My Profile{{/link-to}}
+          </div>
         </ul>
       </div>
     </div>
