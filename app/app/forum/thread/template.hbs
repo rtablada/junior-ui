@@ -33,9 +33,7 @@
       </div>
     </div>
 
-    {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}} --}}
-        <button {{action "deletePost" model}} class="submit-btn" type="submit" name="button">Delete Post</button>
-    {{!-- {{/if}} --}}
+    <button {{action "deletePost" model}} class="submit-btn" type="submit" name="button">Delete Post</button>
 
     {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
       <div class="forum__post">
