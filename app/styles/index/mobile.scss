@@ -4,6 +4,10 @@
     display: none;
   }
 
+  .desktop {
+    display: none;
+  }
+
   .index__container {
     display: flex;
     justify-content: space-between;
@@ -34,6 +38,10 @@
 	        box-shadow: 0 10px 6px -6px $grey-two;
 
     border-left: $black solid 10px;
+  }
+
+  .index__post:hover {
+    background: rgba(221,221,221, 0.1);
   }
 
   .index__post--inner {

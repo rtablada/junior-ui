@@ -17,8 +17,7 @@
   }
 
   .index__header {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 28px;
   }
 
   .index__circle {
@@ -34,10 +33,14 @@
     max-width: 80rem;
 
     -webkit-box-shadow: 0 10px 6px -6px $grey-two;
-	   -moz-box-shadow: 0 10px 6px -6px $grey-two;
-	        box-shadow: 0 10px 6px -6px $grey-two;
+    -moz-box-shadow: 0 10px 6px -6px $grey-two;
+    box-shadow: 0 10px 6px -6px $grey-two;
 
     border-left: $blue solid 10px;
+  }
+
+  .index__post:hover {
+    background: rgba(221,221,221, 0.1);
   }
 
   .index__post--inner {
@@ -55,8 +58,7 @@
     width: 40%;
   }
 
-  .img__box {
-    }
+  .img__box {}
 
   .user__img {
     object-fit: cover;
@@ -95,8 +97,7 @@
   }
 
   .comment__box {
-
-  }
+    }
 
   .comment {
     color: $grey-three;

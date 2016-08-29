@@ -18,9 +18,14 @@ Router.map(function() {
       this.route('new-post');
     });
     this.route('jobs', function() {
+      this.route('thread', {
+        path: ':post_id'
+      });
       this.route('new-job');
     });
-    this.route('profile');
+    this.route('profile', function() {
+      this.route('user-view');
+    });
     this.route('resources', function() {
       this.route('thread', {
         path: ':post_id'

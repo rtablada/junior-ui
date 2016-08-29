@@ -1,10 +1,10 @@
 <div class="index__container">
   <h1 class="forum__post--title index__header">Today's Top Jobs</h1>
-  {{#link-to 'app.forum.new-post' class="cancel-btn mobile__hide" }}New Job{{/link-to}}
-  {{#link-to 'app.forum.new-post' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
+  {{#link-to 'app.jobs.new-job' class="cancel-btn mobile__hide" }}New Job{{/link-to}}
+  {{#link-to 'app.forum' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
 </div>
 
-{{!-- {{#each model as |post|}} --}}
+{{#each model as |post|}}
   <div class="index__post">
     <div class="index__post--inner">
       <div class="index__post--wrapper">
@@ -13,17 +13,17 @@
             <img src="/images/forum/C.png" alt="" class="user__img">
           </div>
           <div class="username__box">
-            <p class="username">Peter Court</p>
+            <p class="username">{{post.user.firstName}} {{post.user.lastName}}</p>
             <p class="date mt">Posted August 25</p>
           </div>
         </div>
         <div class="post__box">
-          {{#link-to 'app.forum.thread' post class="post__title" }}Etsy{{/link-to}}
+          {{#link-to 'app.jobs.thread' post class="post__title" }}{{post.jsonData.title}}{{/link-to}}
         </div>
 
         <div class="second__line">
           <div class="comment__box">
-            <p class="comment">5 Comments</p>
+            <p class="comment">{{post.comments.length}} Comments</p>
           </div>
           <div class="icon__box">
             <i class="fa fa-heart heart" aria-hidden="true"></i>
@@ -32,4 +32,4 @@
       </div>
     </div>
   </div>
-{{!-- {{/each}} --}}
+{{/each}}

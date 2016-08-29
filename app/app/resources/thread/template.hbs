@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="forum__post--middle">
-        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}Learning PHP and Ruby{{/link-to}}
+        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{model.jsonData.title}}{{/link-to}}
       </div>
       <div class="forum__post--right">
         <p class="forum__post--comment">Posted August 25</p>
