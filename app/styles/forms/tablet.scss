@@ -1,0 +1,75 @@
+@media screen and (min-width: 40rem) and (max-width: 73rem) {
+  // MOBILE
+  .form__input {
+    &--inner {
+      margin: 0 auto;
+      max-width: 25rem;
+    }
+
+    &--card {
+      margin-bottom: 1rem;
+      padding-top: 4rem;
+    }
+
+    &--card--input {
+      padding: 1rem;
+      text-align: center;
+      background: $white;
+      border-radius: 4px 4px 0 0;
+    }
+
+    &--card--input--item {
+      outline: none;
+      background: $grey-two;
+      color: $black;
+      border: 0;
+      width: 100%;
+      padding: 0.75rem 0;
+      margin: 0.5rem 0;
+      border-radius: 4px;
+      font-size: 16px;
+      font-family: 'Europa', sans-serif;
+      padding-left: 1rem;
+    }
+
+  }
+
+  .form--btn {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 16px;
+  }
+
+
+  .form--sub--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $grey-one;
+    border-radius: 0 0 4px 4px;
+    padding: 2rem 0;
+  }
+
+
+  .form--sub {
+    color: $grey-four;
+    font-size: 16px;
+    padding: 0.75em 2em;
+  }
+  .form--sub:hover {
+    padding: 0.75em 2em;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    background: rgba(221,221,221, 0.4);
+    font-size: 16px;
+    color: $black;
+  }
+
+  .form--title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+}

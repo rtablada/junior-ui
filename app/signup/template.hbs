@@ -1,24 +1,22 @@
 {{outlet}}
-<div class="form">
-  <div class="form__inner">
-    <div class="form__card">
+<div class="form form__input">
+  <div class="form__inner form__input--inner">
+    <div class="form__card form__input--card">
       {{#simple-form onsubmit=(action "signUp") as |inputs|}}
-        <div class="form__container--input">
+        <div class="form__container--input form__input--card--input">
           <div class="box__1">
-            <h1 class="global__h2 form__title">Get Started</h1>
+            <h1 class="form--title">Get Started</h1>
           </div>
-          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
-          {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
-          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
-          {{!-- {{input class="global__input" type="text" name="name" value=inputs.username placeholder="Username"}} --}}
-          {{input class="global__input" type="password" name="name"value=inputs.password
-          placeholder="Password"}}
-          <div class="box__2">
-            <button class="submit-btn login-btn">Signup</button>
+          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
+          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
+          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.email placeholder="Email"}}
+          {{input class="form__input--card--input--item" type="password" name="name"value=inputs.password placeholder="Password"}}
+          <div class="box__1">
+            <button class="submit-btn form--btn">Signup</button>
           </div>
         </div>
-        <div class="form__container--btn">
-          {{#link-to 'login' class="form__sub" }}Already have an account?{{/link-to}}
+        <div class="form__container--btn form--sub--container">
+          {{#link-to 'login' class="form--sub" }}Already have an account?{{/link-to}}
         </div>
       {{/simple-form}}
     </div>
