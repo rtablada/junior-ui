@@ -9,7 +9,25 @@
 }
 @media screen and (min-width: 76rem) and (max-width: 300rem) {
   // DESKTOP
-
+  //
+  .nav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search {
+    outline: none;
+    background: $grey-two;
+    color: $black;
+    border: 0;
+    width: 70%;
+    padding: 0.75rem 0;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+  }
 }
 
 
@@ -19,7 +37,7 @@
   background: $white;
 
   &__inner {
-    padding: 1rem;
+    padding: 0rem;
   }
 
   &__content {
@@ -54,19 +72,9 @@
   }
 }
 
-.search {
-  outline: none;
-  background: $grey-two;
-  color: $black;
-  border: 0;
-  width: 80%;
-  padding: 0.75rem 0;
-  margin: 1rem 0;
-  border-radius: 4px;
-  font-size: 18px;
-  font-family: 'Europa', sans-serif;
-  padding-left: 1rem;
-}
+
+
+// SPECIAL SUB NAV
 
 @media screen and (min-width: 10rem) and (max-width: 76rem) {
   // MOBILE
