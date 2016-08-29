@@ -3,7 +3,18 @@ import config from 'junior-ui/config/environment';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
+  init() {
+    this._super(...arguments);
+    this.get('session').on('authenticationSucceeded', () => {
+      this.getCurrentUser();
+    });
+  },
+
   afterModel() {
+    return this.getCurrentUser();
+  },
+
+  getCurrentUser() {
     if (this.get('session.isAuthenticated')) {
       const token = this.get('session').get('session.content.authenticated.access_token');
 

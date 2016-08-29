@@ -3,14 +3,19 @@
     <div class="column is-11">
       <div class="nav__inner">
         <div class="nav__content">
-          <i {{action "toggleNav"}} class="fa fa-bars mt" aria-hidden="true"></i>
+
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
-          {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
+          <i {{action "toggleNav"}} class="fa fa-bars mt" aria-hidden="true"></i>
+          {{#if session.isAuthenticated}}
             {{input class="search desktop" type="text" name="name" placeholder="Search"}}
             <div class="">
               {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="user__img" />{{/link-to}}
               {{#link-to "app.profile"}}<img src="/images/forum/J.png" class="user__img" />{{/link-to}}
             </div>
+          {{else}}
+          {{/if}}
+          {{!-- User profile is not uploaded yet --}}
+          {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
           {{/if}}
         </div>
       </div>
@@ -27,6 +32,8 @@
             {{#link-to "interviews" class="sub__nav--item" }}Interviews{{/link-to}}
             {{#link-to "app.forum" class="sub__nav--item" }}Likes{{/link-to}}
             {{#link-to "app.profile" class="sub__nav--item" }}My Profile{{/link-to}}
+            <a {{action 'invalidateSession' class="sub__nav--item"}}>Logout</a>
+
           </div>
         </ul>
       </div>

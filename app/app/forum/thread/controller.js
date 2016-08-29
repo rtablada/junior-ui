@@ -7,14 +7,17 @@ export default Ember.Controller.extend({
         post,
         markdown,
       });
-
       comment.save().then(() => {
-        alert('done');
         reset();
       });
     },
-    deleteComment() {
-      this.transitionToRoute('forum');
-    }
+    deleteComment(comment) {
+      comment.destroyRecord();
+    },
+    deletePost(post) {
+      post.destroyRecord().then(() => {
+
+      });
+    },
   },
 });

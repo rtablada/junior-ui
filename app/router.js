@@ -35,6 +35,7 @@ Router.map(function() {
   })
   this.route('interviews');
   this.route('brand');
+  this.route('logout');
 });
 
 export default Router;
