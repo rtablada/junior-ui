@@ -51,7 +51,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'https://hellojunior.herokuapp.com';
   }
 
   return ENV;
