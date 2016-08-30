@@ -85,8 +85,7 @@
     width: 50%;
   }
 
-  .comment__box {
-    }
+  .comment__box {}
 
   .comment {
     color: $grey-three;
@@ -110,19 +109,22 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .user-btn {
   border: 0;
   background: #EEEEEE;
   color: $black;
   font-size: 18px;
-  font-family: "europa",sans-serif;
+  font-family: 'europa',sans-serif;
   margin-right: 1rem;
   margin-top: 1rem;
   border-radius: 4px;
   outline: none;
   padding: 0.75rem 1rem;
 
-  &:active, &:hover, &--active {
+  &--active,
+  &:active,
+  &:hover {
     background: $red;
     color: $white;
   }
@@ -138,4 +140,23 @@
     color: $white;
     opacity: 1;
   }
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.action {
+  margin-right: 1rem;
+}
+
+.action--item {
+  color: $grey-three;
+  font-size: 18px;
+}
+
+.tag--item {
+  color: $red;
 }

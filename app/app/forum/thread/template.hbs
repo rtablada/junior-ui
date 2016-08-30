@@ -7,7 +7,6 @@
         </div>
         <div class="forum__post--user username__box">
           <p class="forum__post--name username">{{model.user.firstName}} {{model.user.lastName}}</p>
-          <p class="forum__post--name date mt">Posted August 25</p>
         </div>
       </div>
       <div class="forum__post--middle post__box">
@@ -26,21 +25,41 @@
     <div class="forum__post--description">
       <div class="forum__post--description--copy content">
         {{md-text text=model.jsonData.description}}
+        <div class="actions">
+          <div class="action">
+            <p class="tag--item">#design</p>
+          </div>
+          <div class="action">
+            <p class="tag--item">#startups</p>
+          </div>
+          <div class="action">
+            <p class="tag--item">#resource</p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="action">
+            <p class="action--item">{{model.comments.length}} Comments</p>
+          </div>
+          <div class="action">
+            <a {{action "deletePost" model}} class="action--item">Delete</a>
+          </div>
+          <div class="action">
+            <a {{action "deletePost" model}} class="action--item">Edit</a>
+          </div>
+        </div>
+        {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
+          <div class="forum__post">
+            <div class="">
+              {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
+            </div>
+            <div class="">
+              <button class="submit-btn" type="submit" name="button">Post Comment</button>
+            </div>
+          </div>
+        {{/simple-form}}
       </div>
     </div>
 
-    <button {{action "deletePost" model}} class="submit-btn" type="submit" name="button">Delete Post</button>
-
-    {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
-      <div class="forum__post">
-        <div class="">
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
-        </div>
-        <div class="">
-          <button class="submit-btn" type="submit" name="button">Post Comment</button>
-        </div>
-      </div>
-    {{/simple-form}}
   </div>
 </div>
 
@@ -73,9 +92,7 @@
           {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
         </div>
       </div>
-      {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}} --}}
-          <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Comment</button>
-      {{!-- {{/if}} --}}
+      <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Comment</button>
     </div>
   </div>
 {{/each}}
