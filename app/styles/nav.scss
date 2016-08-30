@@ -75,7 +75,7 @@
 
 // SPECIAL SUB NAV
 
-@media screen and (min-width: 10rem) and (max-width: 76rem) {
+@media screen and (min-width: 10rem) and (max-width: 300rem) {
   // MOBILE
 
   .sub__nav {
@@ -131,10 +131,4 @@
     display: none;
   }
 
-}
-@media screen and (min-width: 76rem) and (max-width: 300rem) {
-  // DESKTOP
-  .sub__nav {
-    display: none;
-  }
 }
