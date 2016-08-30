@@ -4,7 +4,7 @@
       <div class="forum__post--left user">
         {{user-icon user=post.user}}
         <div class="forum__post--user username__box">
-          <p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>
+          {{#link-to 'app.profile'}}<p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>{{/link-to}}
           <p class="forum__post--name date mt">Posted August 25</p>
         </div>
       </div>
@@ -13,7 +13,7 @@
       </div>
       <div class="second__line">
         <div class="action">
-          <p class="tag--item">#design</p>
+          <p class="identifiy">Question</p>
         </div>
         <div class="forum__post--right comment__box">
           <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
