@@ -20,6 +20,14 @@ $black: #000000;
 $red: #FF5A5A;
 $blue: #479CF7;
 $green: #00DD61;
+$purple: #BA5EFF;
+$orange: #FFB200;
+$pink: #FF606A;
+$teal: #46E1BC;
+$light-blue: #19C3EB;
+$yellow: #F8E931;
+$light-green: #00D026;
+
 
 // Keeps the footer at the bottom
 .site {
@@ -113,6 +121,13 @@ $green: #00DD61;
 
 .line-1 {
   border: 1px $grey-two solid;
+}
+
+.red {
+  color: $red;
+}
+.black {
+  color: $grey-two;
 }
 
 @media screen and (min-width: 10rem) and (max-width: 76rem) {

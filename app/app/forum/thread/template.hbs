@@ -2,9 +2,7 @@
   <div class="forum__post--inner index__post--inner">
     <div class="forum__post--group index__post--wrapper">
       <div class="forum__post--left user">
-        <div class="forum__post--img--box img__box">
-          <img src="/images/forum/C.png" alt="" class="forum__post--img user__img">
-        </div>
+        {{user-icon user=model.user}}
         <div class="forum__post--user username__box">
           <p class="forum__post--name username">{{model.user.firstName}} {{model.user.lastName}}</p>
         </div>
@@ -68,9 +66,7 @@
     <div class="forum__post--inner index__post--inner">
       <div class="forum__post--group index__post--wrapper">
         <div class="forum__post--left user">
-          <div class="forum__post--img--box img__box">
-            <img src="/images/forum/J.png" alt="" class="forum__post--img user__img">
-          </div>
+          {{user-icon user=comment.user}}
           <div class="forum__post--user username__box">
             <p class="forum__post--name username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
           </div>
