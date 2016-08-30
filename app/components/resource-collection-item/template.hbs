@@ -1,0 +1,27 @@
+<div class="forum__post index__post">
+  <div class="forum__post--inner index__post--inner">
+    <div class="forum__post--group index__post--wrapper">
+      <div class="forum__post--left user">
+        {{user-icon user=post.user}}
+        <div class="forum__post--user username__box">
+          <p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>
+          <p class="forum__post--name date mt">Posted August 25</p>
+        </div>
+      </div>
+      <div class="forum__post--middle post__box">
+        {{#link-to 'app.resources.thread' post class="forum__post--question post__title" }}{{post.jsonData.title}}{{/link-to}}
+      </div>
+      <div class="second__line">
+        <div class="action">
+          <p class="tag--item">#design</p>
+        </div>
+        <div class="forum__post--right comment__box">
+          <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
+        </div>
+        <div class="forum__post--heart icon__box">
+          <i class="fa fa-heart heart" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
