@@ -1,0 +1,7 @@
+<ul>
+  {{#each model as |post|}}
+    {{#if (eq post.postType "forum")}}
+      {{forum-collection-item post=post}}
+    {{/if}}
+  {{/each}}
+</ul>

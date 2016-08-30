@@ -23,12 +23,35 @@
     color: $black;
     border: 0;
     width: 95%;
-    padding: 0.75rem 0;
     margin: 1rem 0;
     border-radius: 4px;
     font-size: 18px;
     font-family: 'Europa', sans-serif;
     padding-left: 1rem;
+  }
+
+  .search--form {
+    outline: none;
+    background: $grey-two;
+    color: $black;
+    border: 0;
+    width: 95%;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+    display: flex;
+  }
+
+  .search--btn {
+    font-size: 18px;
+    outline: none;
+    background: $grey-two;
+    border: 0;
+    color: $grey-three;
+    border-radius: 4px;
+    padding-right: 3rem;
   }
 }
 

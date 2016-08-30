@@ -30,7 +30,10 @@
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
         <div class="index__container">
-          {{input class="search" type="text" name="name" placeholder="Search"}}
+          {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
+            {{input class="search" type="text" value=search.query placeholder="Search"}}
+            <button class="search--btn">Submit</button>
+          {{/simple-form}}
           <div class="">
             {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="user__img" />{{/link-to}}
           </div>
