@@ -30,7 +30,7 @@ $green: #00DD61;
 
 .site__content {
   flex: 1;
-  background: $red;
+  background: $grey-three;
 }
 
 .column {
@@ -57,7 +57,7 @@ $green: #00DD61;
   background: $red;
   color: $white;
   font-size: 18px;
-  font-weight: 600;
+  font-family: 'Europa', sans-serif;
 }
 
 .submit-btn {

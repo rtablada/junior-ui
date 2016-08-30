@@ -1,34 +1,43 @@
-<div class="forum__main--top index__container">
-  <h1 class="forum__post--title index__header">Today's Top Stories</h1>
-  {{#link-to 'app.forum.new-post' class="cancel-btn mobile__hide" }}New Post{{/link-to}}
-  {{#link-to 'app.forum.new-post' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
+{{!-- <div class="forum__main--top index__container">
+  <h1 class="forum__post--title index__header">Today</h1>
+  <div class="">
+    {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="user__img" />{{/link-to}}
+{{#link-to "app.profile"}}<img src="/images/forum/J.png" class="user__img" />{{/link-to}}
 </div>
+</div> --}}
 
 {{#each model as |post|}}
   <div class="forum__post index__post">
     <div class="forum__post--inner index__post--inner">
-      <div class="forum__post--group index__post--wrapper">
-        <div class="forum__post--left user">
+      <div class="index__post--wrapper">
+        {{!-- <div class="forum__post--left user">
           <div class="forum__post--img--box img__box">
-            <img src="/images/forum/C.png" alt="" class="forum__post--img user__img">
+            <img src="/images/forum/peter.jpg" alt="" class="forum__post--img user__img">
           </div>
           <div class="forum__post--user username__box">
-            <p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>
-            <p class="forum__post--name date mt">Posted August 25</p>
-          </div>
-        </div>
-        <div class="forum__post--middle post__box">
-          {{#link-to 'app.forum.thread' post class="forum__post--question post__title" }}{{post.jsonData.title}}{{/link-to}}
-        </div>
-        <div class="second__line">
-          <div class="forum__post--right comment__box">
-            <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
-          </div>
-          <div class="forum__post--heart icon__box">
-            <i class="fa fa-heart heart" aria-hidden="true"></i>
-          </div>
-        </div>
+            <p class="forum__post--name username">{{post.user.firstName}}
+        {{post.user.lastName}}
+          </p>
+      </div>
+    </div> --}}
+    <div class="title--tag">
+      <div class="post__box">
+        {{#link-to 'app.forum.thread' post class="post__title" }}{{post.jsonData.title}}{{/link-to}}
+      </div>
+      <p class="date mt">#resource #design</p>
+    </div>
+
+    <div class="bottom">
+      <div class="w">
+        <p class="name">{{post.user.firstName}} {{post.user.lastName}}</p>
+        <p class="comments">Learning Ruby, PHP</p>
+      </div>
+      <div class="w">
+        <p class="comments">Posted August 25</p>
+        <p class="comments">{{post.comments.length}} Comments</p>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 {{/each}}

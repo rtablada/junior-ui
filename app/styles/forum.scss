@@ -1,7 +1,6 @@
 .forum {
   &__inner {
     display: flex;
-    background: $grey-one;
     border-radius: 4px;
   }
 }
@@ -17,8 +16,7 @@
 }
 
 .forum__main {
-  flex-grow: 2;
-  max-width: 75rem;
+  max-width: 50rem;
 
   &--top {
     // display: flex;

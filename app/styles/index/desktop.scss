@@ -4,20 +4,40 @@
     display: none;
   }
 
-  .mt {
-    display: none;
+  // .mt {
+  //   display: none;
+  // }
+  //
+  .date {
+  display: flex;
+  width: 100%;
+  }
+  .name {
+    font-size: 14px;
+    color: $grey-four;
+  }
+  .comments {
+    font-size: 14px;
+    color: $grey-four;
+  }
+
+  .w {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
 
   .index__container {
     display: flex;
-    justify-content: space-between;
+    border-bottom: 5px solid $grey-two;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem 0;
     width: 100%;
   }
 
   .index__header {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .index__circle {
@@ -27,20 +47,9 @@
   // BODY
   .index__post {
     background: $white;
+    padding: 0.25rem 1rem;
     border-radius: 4px;
-    padding: 1.5rem 1rem;
     margin: 1rem 0;
-    max-width: 80rem;
-
-    -webkit-box-shadow: 0 10px 6px -6px $grey-two;
-    -moz-box-shadow: 0 10px 6px -6px $grey-two;
-    box-shadow: 0 10px 6px -6px $grey-two;
-
-    border-left: $blue solid 10px;
-  }
-
-  .index__post:hover {
-    background: rgba(221,221,221, 0.1);
   }
 
   .index__post--inner {
@@ -49,6 +58,7 @@
 
   .index__post--wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
   // USER
@@ -62,14 +72,14 @@
 
   .user__img {
     object-fit: cover;
-    width: 3rem;
-    height: 3rem;
-    min-width: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
     border-radius: 50%;
   }
 
   .username {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .username__box {
@@ -77,15 +87,22 @@
     flex-direction: column;
     margin: 0 1rem;
   }
+.title--tag {
+  width: 100%;
+  display: flex;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+}
 
   .post__box {
     width: 100%;
-    flex-wrap: wrap;
-    padding: 0 1rem;
   }
 
   .post__title {
-    font-size: 20px;
+    font-size: 16px;
     color: $black;
   }
 
@@ -97,11 +114,12 @@
   }
 
   .comment__box {
+    padding-left: 8rem;
     }
 
   .comment {
     color: $grey-three;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .icon__box {
