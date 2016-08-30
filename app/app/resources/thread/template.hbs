@@ -6,9 +6,7 @@
   <div class="index__post--inner">
     <div class="index__post--wrapper">
       <div class="user">
-        <div class="img__box">
-          <img src="/images/forum/C.png" alt="" class="user__img">
-        </div>
+        {{user-icon user=model.user}}
         <div class="username__box">
           <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
           <p class="date mt">Posted August 25</p>
@@ -51,9 +49,7 @@
     <div class="index__post--inner">
       <div class="index__post--wrapper">
         <div class="user">
-          <div class="img__box">
-            <img src="/images/forum/J.png" alt="" class="user__img">
-          </div>
+          {{user-icon user=comment.user}}
           <div class="username__box">
             <p class="username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
           </div>

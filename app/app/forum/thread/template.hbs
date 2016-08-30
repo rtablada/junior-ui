@@ -1,17 +1,10 @@
-<div class="forum__main--top index__container">
-  <h1 class="forum__post--title index__header">{{model.jsonData.title}}</h1>
-</div>
-
 <div class="forum__post index__post">
   <div class="forum__post--inner index__post--inner">
     <div class="forum__post--group index__post--wrapper">
       <div class="forum__post--left user">
-        <div class="forum__post--img--box img__box">
-          <img src="/images/forum/C.png" alt="" class="forum__post--img user__img">
-        </div>
+        {{user-icon user=model.user}}
         <div class="forum__post--user username__box">
           <p class="forum__post--name username">{{model.user.firstName}} {{model.user.lastName}}</p>
-          <p class="forum__post--name date mt">Posted August 25</p>
         </div>
       </div>
       <div class="forum__post--middle post__box">
@@ -30,21 +23,41 @@
     <div class="forum__post--description">
       <div class="forum__post--description--copy content">
         {{md-text text=model.jsonData.description}}
+        <div class="actions">
+          <div class="action">
+            <p class="tag--item">#design</p>
+          </div>
+          <div class="action">
+            <p class="tag--item">#startups</p>
+          </div>
+          <div class="action">
+            <p class="tag--item">#resource</p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="action">
+            <p class="action--item">{{model.comments.length}} Comments</p>
+          </div>
+          <div class="action">
+            <a {{action "deletePost" model}} class="action--item">Delete</a>
+          </div>
+          <div class="action">
+            <a {{action "deletePost" model}} class="action--item">Edit</a>
+          </div>
+        </div>
+        {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
+          <div class="forum__post">
+            <div class="">
+              {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
+            </div>
+            <div class="">
+              <button class="submit-btn" type="submit" name="button">Post Comment</button>
+            </div>
+          </div>
+        {{/simple-form}}
       </div>
     </div>
 
-    <button {{action "deletePost" model}} class="submit-btn" type="submit" name="button">Delete Post</button>
-
-    {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
-      <div class="forum__post">
-        <div class="">
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
-        </div>
-        <div class="">
-          <button class="submit-btn" type="submit" name="button">Post Comment</button>
-        </div>
-      </div>
-    {{/simple-form}}
   </div>
 </div>
 
@@ -53,9 +66,7 @@
     <div class="forum__post--inner index__post--inner">
       <div class="forum__post--group index__post--wrapper">
         <div class="forum__post--left user">
-          <div class="forum__post--img--box img__box">
-            <img src="/images/forum/J.png" alt="" class="forum__post--img user__img">
-          </div>
+          {{user-icon user=comment.user}}
           <div class="forum__post--user username__box">
             <p class="forum__post--name username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
           </div>
@@ -77,9 +88,7 @@
           {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
         </div>
       </div>
-      {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}} --}}
-          <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Comment</button>
-      {{!-- {{/if}} --}}
+      <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Comment</button>
     </div>
   </div>
 {{/each}}

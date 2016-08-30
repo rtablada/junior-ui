@@ -7,35 +7,38 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('login');
-  this.route('signup');
-  this.route('forgot');
-  this.route('app', function() {
-    this.route('forum', function() {
-      this.route('thread', {
-        path: ':post_id'
+      this.route('login');
+      this.route('signup');
+      this.route('forgot');
+
+      this.route('app', function() {
+        this.route('forum', function() {
+          this.route('thread', {
+            path: ':post_id'
+          });
+          this.route('new-post');
+        });
+        this.route('jobs', function() {
+          this.route('thread', {
+            path: ':post_id'
+          });
+          this.route('new-job');
+        });
+        this.route('profile', function() {
+          this.route('user-view');
+        });
+        this.route('resources', function() {
+          this.route('thread', {
+            path: ':post_id'
+          });
+          this.route('new-resource');
+        });
+        this.route('stories', function() {
+        });
       });
-      this.route('new-post');
+        this.route('interviews');
+        this.route('brand');
+        this.route('logout');
     });
-    this.route('jobs', function() {
-      this.route('thread', {
-        path: ':post_id'
-      });
-      this.route('new-job');
-    });
-    this.route('profile', function() {
-      this.route('user-view');
-    });
-    this.route('resources', function() {
-      this.route('thread', {
-        path: ':post_id'
-      });
-      this.route('new-resource');
-    });
-  })
-  this.route('interviews');
-  this.route('brand');
-  this.route('logout');
-});
 
 export default Router;

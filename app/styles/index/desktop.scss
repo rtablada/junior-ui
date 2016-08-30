@@ -12,12 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
     width: 100%;
   }
 
   .index__header {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .index__circle {
@@ -28,19 +27,9 @@
   .index__post {
     background: $white;
     border-radius: 4px;
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 1rem 0;
     max-width: 80rem;
-
-    -webkit-box-shadow: 0 10px 6px -6px $grey-two;
-    -moz-box-shadow: 0 10px 6px -6px $grey-two;
-    box-shadow: 0 10px 6px -6px $grey-two;
-
-    border-left: $blue solid 10px;
-  }
-
-  .index__post:hover {
-    background: rgba(221,221,221, 0.1);
   }
 
   .index__post--inner {
@@ -85,7 +74,7 @@
   }
 
   .post__title {
-    font-size: 20px;
+    font-size: 18px;
     color: $black;
   }
 
@@ -96,8 +85,7 @@
     width: 50%;
   }
 
-  .comment__box {
-    }
+  .comment__box {}
 
   .comment {
     color: $grey-three;
@@ -115,4 +103,60 @@
   .fa-angle-left {
     font-size: 30px;
   }
+}
+
+.user-bubble {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-btn {
+  border: 0;
+  background: #EEEEEE;
+  color: $black;
+  font-size: 18px;
+  font-family: 'europa',sans-serif;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  outline: none;
+  padding: 0.75rem 1rem;
+
+  &--active,
+  &:active,
+  &:hover {
+    background: $red;
+    color: $white;
+  }
+
+  &:disabled {
+    background: #EEEEEE;
+    color: $black;
+    opacity: 0.5;
+  }
+
+  &--active:disabled {
+    background: $red;
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.action {
+  margin-right: 1rem;
+}
+
+.action--item {
+  color: $grey-three;
+  font-size: 18px;
+}
+
+.tag--item {
+  color: $red;
 }

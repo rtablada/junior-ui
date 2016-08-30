@@ -3,6 +3,7 @@
     display: flex;
     background: $grey-one;
     border-radius: 4px;
+    min-height: 100vh;
   }
 }
 
@@ -13,12 +14,12 @@
 
 .forum__nav {
   flex-grow: 1;
-  max-width: 20rem;
+  max-width: 18rem;
 }
 
 .forum__main {
   flex-grow: 2;
-  max-width: 75rem;
+  max-width: 80rem;
 
   &--top {
     // display: flex;
@@ -73,11 +74,51 @@
 }
 
 .forum__post--img {
-  // object-fit: cover;
-  // width: 3rem;
-  // height: 3rem;
-  // min-width: 3rem;
-  // border-radius: 50%;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  font-weight: inherit;
+  background: $purple;
+  color: white;
+  text-align: center;
+
+  &--1 {
+    background: $red;
+  }
+
+  &--2 {
+    background: $blue;
+  }
+
+  &--3 {
+    background: $green;
+  }
+
+  &--4 {
+    background: $orange;
+  }
+  &--5 {
+    background: $pink;
+  }
+  &--6 {
+    background: $teal;
+  }
+  &--7 {
+    background: $light-blue;
+  }
+  &--8 {
+    background: $yellow;
+  }
+  &--9 {
+    background: $purple;
+  }
+  &--10 {
+    background: $light-green;
+  }
 }
 
 // INDEX
@@ -159,5 +200,32 @@
     font-size: 18px;
     font-family: 'Europa', sans-serif;
     padding-left: 1rem;
+  }
+
+  .forum__nav--header {
+    display: block;
+    color: $black;
+    width: 100%;
+    padding-top: 1rem;
+    margin: 0.75rem 0;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+    font-weight: 600;
+  }
+  .forum__nav {
+    &--it {
+      display: block;
+      color: $grey-four;
+      width: 100%;
+      margin: 0.5rem 0;
+      font-size: 18px;
+      font-family: 'Europa', sans-serif;
+      padding-left: 1rem;
+    }
+    &--it:hover {
+      color: $black;
+    }
   }
 }
