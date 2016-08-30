@@ -3,6 +3,7 @@
     display: flex;
     background: $grey-one;
     border-radius: 4px;
+    min-height: 100vh;
   }
 }
 
@@ -13,12 +14,12 @@
 
 .forum__nav {
   flex-grow: 1;
-  max-width: 20rem;
+  max-width: 18rem;
 }
 
 .forum__main {
   flex-grow: 2;
-  max-width: 75rem;
+  max-width: 80rem;
 
   &--top {
     // display: flex;
@@ -159,5 +160,32 @@
     font-size: 18px;
     font-family: 'Europa', sans-serif;
     padding-left: 1rem;
+  }
+
+  .forum__nav--header {
+    display: block;
+    color: $black;
+    width: 100%;
+    padding-top: 1rem;
+    margin: 0.75rem 0;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Europa', sans-serif;
+    padding-left: 1rem;
+    font-weight: 600;
+  }
+  .forum__nav {
+    &--it {
+      display: block;
+      color: $grey-four;
+      width: 100%;
+      margin: 0.5rem 0;
+      font-size: 18px;
+      font-family: 'Europa', sans-serif;
+      padding-left: 1rem;
+    }
+    &--it:hover {
+      color: $black;
+    }
   }
 }

@@ -1,9 +1,3 @@
-<div class="index__container">
-  <h1 class="forum__post--title index__header">Today's Top Resources</h1>
-  {{#link-to 'app.resources.new-resource' class="cancel-btn mobile__hide" }}New Resource{{/link-to}}
-  {{#link-to 'app.resources.new-resource' class="fa fa-plus-circle index__circle mobile__only" }}{{/link-to}}
-</div>
-
 {{#each model as |post|}}
   <div class="index__post">
     <div class="index__post--inner">

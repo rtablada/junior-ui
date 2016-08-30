@@ -15,7 +15,7 @@
   }
 
   &__container--input {
-    padding: 2rem 1rem;
+    padding: 0.25rem 1rem;
     text-align: center;
     background: $white;
     border-radius: 4px;
@@ -58,6 +58,11 @@
   font-weight: 400;
   color: $black;
   font-size: 18px;
+}
+
+.post__btn {
+  display: flex;
+  justify-content: flex-start;
 }
 
 //  MEDIA Q's
