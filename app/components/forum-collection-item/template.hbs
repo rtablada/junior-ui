@@ -1,27 +1,29 @@
 <div class="forum__post index__post">
-  <div class="forum__post--inner index__post--inner">
-    <div class="forum__post--group index__post--wrapper">
-      <div class="forum__post--left user">
-        {{user-icon user=post.user}}
-        <div class="forum__post--user username__box">
-          {{#link-to 'app.profile'}}<p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>{{/link-to}}
-          <p class="forum__post--name date mt">Posted August 25</p>
+  {{#link-to 'app.forum.thread' post class="forum__post--question post__title" }}
+    <div class="forum__post--inner index__post--inner">
+      <div class="forum__post--group index__post--wrapper">
+        <div class="forum__post--left user">
+          {{user-icon user=post.user}}
+          <div class="forum__post--user username__box">
+            {{#link-to 'app.profile'}}<p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>{{/link-to}}
+            <p class="forum__post--name date mt">Posted August 25</p>
+          </div>
         </div>
-      </div>
-      <div class="forum__post--middle post__box">
-        {{#link-to 'app.forum.thread' post class="forum__post--question post__title" }}{{post.jsonData.title}}{{/link-to}}
-      </div>
-      <div class="second__line">
-        <div class="action">
-          <p class="identifiy">Question</p>
+        <div class="forum__post--middle post__box">
+          {{post.jsonData.title}}
         </div>
-        <div class="forum__post--right comment__box">
-          <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
-        </div>
-        <div class="forum__post--heart icon__box">
-          <i {{action "toggleColor"}} class="fa fa-heart black red" aria-hidden="true"></i>
+        <div class="second__line">
+          <div class="action">
+            <p class="identifiy">Question</p>
+          </div>
+          <div class="forum__post--right comment__box">
+            <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
+          </div>
+          <div class="forum__post--heart icon__box">
+            <i {{action "toggleColor"}} class="fa fa-heart black red" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {{/link-to}}
 </div>
