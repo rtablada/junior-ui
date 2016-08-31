@@ -36,12 +36,14 @@
     </div>
     <div class="action">
       <button class="user-btn" type="submit" name="button">Post Comment</button>
+    {{#if (eq session.currentUser.id model.user.id)}}
       <div class="action--item">
         <div class="sp">
           <button {{action "deletePost" model}} class="">Delete</button>
         </div>
         <a {{action "updatePost" post}} class="">Edit</a>
       </div>
+      {{/if}}
     </div>
   </div>
 {{/simple-form}}
