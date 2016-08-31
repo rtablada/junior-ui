@@ -1,4 +1,4 @@
-// Bulma Custom CSS
+// GlOBAl BULMA ------------------------------------------------------
 @import 'sass/utilities/utilities';
 // @import 'sass/base/generic';
 // Double Container
@@ -11,6 +11,9 @@
 @import 'sass/layout/section';
 // @import 'sass/layout/layout';
 
+
+
+
 @import 'global/helpers';
 @import 'nav';
 @import 'footer';
@@ -22,207 +25,13 @@
 @import 'lists';
 @import 'content';
 
+
+// GlOBAl INDEX ------------------------------------------------------
 @import 'index/mobile.scss';
 @import 'index/tablet.scss';
 @import 'index/desktop.scss';
 
+// GlOBAl FORMS ------------------------------------------------------
 @import 'forms/mobile.scss';
 @import 'forms/tablet.scss';
 @import 'forms/desktop.scss';
-
-// --------------------------------------------------------
-// --------------------------------------------------------
-// Global Font Sizes
-// --------------------------------------------------------
-// --------------------------------------------------------
-
-.bold {
-  font-weight: 700;
-}
-@media screen and (min-width: 10rem) and (max-width: 40rem) {
-  // MOBILE
-  .global {
-    &__h1 {
-      font-size: 30px;
-    }
-
-    &__h2 {
-      font-size: 24px;
-    }
-
-    &__h3 {
-      font-size: 20px;
-    }
-
-    &__h4 {
-      font-size: 18px;
-    }
-
-    &__h5 {
-      font-size: 16px;
-    }
-
-    &__h6 {
-      font-size: 14px;
-    }
-  }
-}
-@media screen and (min-width: 40rem) and (max-width: 60rem) {
-  // TABLET
-  .global {
-    &__h1 {
-      font-size: 34px;
-    }
-
-    &__h2 {
-      font-size: 28px;
-    }
-
-    &__h3 {
-      font-size: 24px;
-    }
-
-    &__h4 {
-      font-size: 20px;
-    }
-
-    &__h5 {
-      font-size: 18px;
-    }
-
-    &__h6 {
-      font-size: 16px;
-    }
-  }
-}
-@media screen and (min-width: 60rem) and (max-width: 300rem) {
-  // DESKTOP
-  .global {
-    &__h1 {
-      font-size: 40px;
-    }
-
-    &__h2 {
-      font-size: 34px;
-    }
-
-    &__h3 {
-      font-size: 28px;
-    }
-
-    &__h4 {
-      font-size: 24px;
-    }
-
-    &__h5 {
-      font-size: 20px;
-    }
-
-    &__h6 {
-      font-size: 18px;
-    }
-  }
-}
-
-// --------------------------------------------------------
-// --------------------------------------------------------
-// Global Box
-// --------------------------------------------------------
-// --------------------------------------------------------
-
-.box {
-  &__1 {
-    padding: 1rem 0;
-  }
-
-  &__2 {
-    padding: 2rem 0;
-  }
-
-  &__3 {
-    padding: 3rem 0;
-  }
-
-  &__4 {
-    padding: 4rem 0;
-  }
-
-  &__5 {
-    padding: 5rem 0;
-  }
-
-  &__6 {
-    padding: 6rem 0;
-  }
-}
-
-// --------------------------------------------------------
-// --------------------------------------------------------
-// Global Space
-// --------------------------------------------------------
-// --------------------------------------------------------
-
-.space {
-  &__1 {
-    margin: 1rem 0;
-  }
-
-  &__2 {
-    margin: 2rem 0;
-  }
-
-  &__3 {
-    margin: 3rem 0;
-  }
-
-  &__4 {
-    margin: 4rem 0;
-  }
-
-  &__5 {
-    margin: 5rem 0;
-  }
-
-  &__6 {
-    margin: 6rem 0;
-  }
-}
-
-.brand__square--one {
-  width: 2rem;
-  background: #F8F8F8;
-}
-
-.brand__square--two {
-  width: 2rem;
-  background: #F1F1F1;
-}
-
-.brand__square--three {
-  width: 2rem;
-  background: #F8F8F8;
-}
-
-.brand__square--four {
-  width: 2rem;
-  background: #F8F8F8;
-}
-
-
-// FLASH MESSAGES
-.flash-messages {
-  position: absolute;
-  top: 8rem;
-  width: 82%;
-  z-index: 100000000000;
-}
-
-.flash-success {
-  font-family: 'Europa', sans-serif;
-  background: $green;
-  padding: 1rem;
-  border: 0;
-  outline: none;
-  border-radius: 4px;
-  color: $white;
-}

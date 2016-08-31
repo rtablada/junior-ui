@@ -29,6 +29,25 @@ $yellow: #F8E931;
 $light-green: #00D026;
 
 
+// GLOBAL FLASH MESSAGE ------------------------------------------------------
+.flash-messages {
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+  z-index: 100000000000;
+}
+
+.flash-success {
+  font-family: 'Europa', sans-serif;
+  background: $green;
+  padding: 1rem;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  color: $white;
+}
+
+
 // FOOTER BOTTOM ------------------------------------------------------
 .site {
   display: flex;
@@ -79,6 +98,17 @@ $light-green: #00D026;
   font-weight: 600;
 }
 
+.nav-btn {
+  padding: 0.5em 2em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: rgba(0,0,0, 0.3);
+  color: $white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 // GLOBAL INPUT ------------------------------------------------------
 
 .global__input {
@@ -117,9 +147,9 @@ $light-green: #00D026;
   color: $black;
   border: 0;
   width: 95%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Europa', sans-serif;
   padding-left: 1rem;
 }
@@ -128,18 +158,17 @@ $light-green: #00D026;
   outline: none;
   background: $grey-two;
   color: $black;
-  border: 0;
-  width: 95%;
-  margin: 1rem 0;
+  border: 1px solid $grey-one;
+  width: 60%;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Europa', sans-serif;
   padding-left: 1rem;
   display: flex;
 }
 
 .search--btn {
-  font-size: 18px;
+  font-size: 16px;
   outline: none;
   background: $grey-two;
   border: 0;
@@ -149,6 +178,58 @@ $light-green: #00D026;
 }
 
 
-// GLOBAL SPACE ------------------------------------------------------
+// GLOBAL PADDING ------------------------------------------------------
 
-// GLOBAL LINES ------------------------------------------------------
+.box {
+  &__1 {
+    padding: 1rem 0;
+  }
+
+  &__2 {
+    padding: 2rem 0;
+  }
+
+  &__3 {
+    padding: 3rem 0;
+  }
+
+  &__4 {
+    padding: 4rem 0;
+  }
+
+  &__5 {
+    padding: 5rem 0;
+  }
+
+  &__6 {
+    padding: 6rem 0;
+  }
+}
+
+// GLOBAL MARGIN ------------------------------------------------------
+
+.space {
+  &__1 {
+    margin: 1rem 0;
+  }
+
+  &__2 {
+    margin: 2rem 0;
+  }
+
+  &__3 {
+    margin: 3rem 0;
+  }
+
+  &__4 {
+    margin: 4rem 0;
+  }
+
+  &__5 {
+    margin: 5rem 0;
+  }
+
+  &__6 {
+    margin: 6rem 0;
+  }
+}
