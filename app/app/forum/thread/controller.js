@@ -19,9 +19,8 @@ export default Ember.Controller.extend({
     },
     deletePost(post) {
       post.destroyRecord().then(() => {
-        this.transitionToRoute('app.forum.index');
+      this.transitionToRoute('app.forum.index');
       });
     },
-
   },
 });

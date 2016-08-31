@@ -10,4 +10,5 @@ export default DS.Model.extend({
   user: DS.belongsTo('user'),
   createdAt: DS.attr(),
   createdAtFormatted: fromNow(momentComputed('createdAt')),
+  tags: DS.hasMany('tag'),
 });
