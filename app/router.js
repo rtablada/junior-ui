@@ -36,6 +36,7 @@ Router.map(function() {
         this.route('search', {
           path: '/q/:search_term'
         });
+        this.route('favorites');
       });
         this.route('interviews');
         this.route('brand');

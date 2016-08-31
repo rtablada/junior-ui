@@ -104,4 +104,18 @@
       color: $black;
     }
   }
+
+  .category__box {
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
+  .category {
+    border-radius: 50%;
+	  width: 0.60rem;
+	  height: 0.60rem;
+    max-width: 0.60rem;
+    max-height: 0.60rem;
+    background: $red;
+  }
 }

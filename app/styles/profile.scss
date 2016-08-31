@@ -1,14 +1,16 @@
 
-.profile {
-  &__inner {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-  }
-  &__card {
-    // margin: 1rem;
-  }
 
+.profile__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile__card {
+  padding-bottom: 3rem;
+}
+
+.profile {
   &__title {
     text-align: center;
     font-weight: 700;
