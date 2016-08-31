@@ -1,9 +1,10 @@
 // GlOBAL NAV ------------------------------------------------------
 .nav {
-  background: $white;
+  background: $grey-one;
 
   &__inner {
     width: 100%;
+    padding-top: 1rem;
   }
 
   &__content {
@@ -12,9 +13,20 @@
   }
 
   &__logo {
-    max-width: 1.5rem;
+    max-width: 6rem;
     width: 100%;
   }
+}
+
+.logo__box {
+  max-width: 10rem;
+  min-width: 10rem;
+}
+
+.right__box {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hamburger {
@@ -23,12 +35,16 @@
 }
 
 .nav-btn {
-  max-width: 2.5rem;
+  max-width: 2rem;
 }
 
 .right-nav {
   display: flex;
   align-items: center;
+}
+
+.nav-btn--su {
+
 }
 
 // GLOBAL SUB NAV ------------------------------------------------------
