@@ -1,5 +1,5 @@
 
-// GLOBAL RESETS
+// GLOBAL RESETS ------------------------------------------------------
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@
   list-style: none;
 }
 
-// GLOBAL COLORS
+// GLOBAL COLORS ------------------------------------------------------
 $grey-one: #F8F8F8;
 $grey-two: #F1F1F1;
 $grey-three: #DDDDDD;
@@ -29,7 +29,7 @@ $yellow: #F8E931;
 $light-green: #00D026;
 
 
-// Keeps the footer at the bottom
+// FOOTER BOTTOM ------------------------------------------------------
 .site {
   display: flex;
   min-height: 100vh;
@@ -45,7 +45,7 @@ $light-green: #00D026;
   margin: 0 auto;
 }
 
-// GLOBAL BUTTONS
+// GLOBAL BUTTONS ------------------------------------------------------
 .cta-btn {
   padding: 0.75em 2.5em;
   border: 0;
@@ -64,7 +64,7 @@ $light-green: #00D026;
   border-radius: 4px;
   background: $red;
   color: $white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -75,11 +75,11 @@ $light-green: #00D026;
   border-radius: 4px;
   background: $green;
   color: $white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
-// GLOBAL INPUT
+// GLOBAL INPUT ------------------------------------------------------
 
 .global__input {
   outline: none;
@@ -111,28 +111,44 @@ $light-green: #00D026;
   resize: none;
 }
 
-// GLOBAL SPACE
-
-.space-half {
-  margin: 0.5rem 0;
+.search {
+  outline: none;
+  background: $grey-two;
+  color: $black;
+  border: 0;
+  width: 95%;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Europa', sans-serif;
+  padding-left: 1rem;
 }
 
-// GLOBAL LINES
-
-.line-1 {
-  border: 1px $grey-two solid;
+.search--form {
+  outline: none;
+  background: $grey-two;
+  color: $black;
+  border: 0;
+  width: 95%;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Europa', sans-serif;
+  padding-left: 1rem;
+  display: flex;
 }
 
-.red {
-  color: $red;
-}
-.black {
-  color: $grey-two;
+.search--btn {
+  font-size: 18px;
+  outline: none;
+  background: $grey-two;
+  border: 0;
+  color: $grey-three;
+  border-radius: 4px;
+  padding-right: 3rem;
 }
 
-@media screen and (min-width: 10rem) and (max-width: 76rem) {
-  // TABLET
-  .forum__nav {
-    display: none;
-  }
-}
+
+// GLOBAL SPACE ------------------------------------------------------
+
+// GLOBAL LINES ------------------------------------------------------

@@ -242,3 +242,10 @@
     }
   }
 }
+
+@media screen and (min-width: 10rem) and (max-width: 76rem) {
+  // TABLET
+  .forum__nav {
+    display: none;
+  }
+}
