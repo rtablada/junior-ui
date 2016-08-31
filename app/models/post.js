@@ -5,6 +5,7 @@ import momentComputed from 'ember-moment/computeds/moment';
 export default DS.Model.extend({
   postType: DS.attr('string'),
   jsonData: DS.attr(),
+  tagsString: DS.attr(),
   comments: DS.hasMany('comment'),
   user: DS.belongsTo('user'),
   createdAt: DS.attr(),
