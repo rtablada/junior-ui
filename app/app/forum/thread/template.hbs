@@ -1,47 +1,49 @@
-<div class="forum__post index__post">
-  <div class="forum__post--inner index__post--inner">
-    {{thread-header post=model}}
-
-    <div class="forum__post--description">
-      <div class="forum__post--description--copy content">
-        {{md-text text=model.jsonData.description}}
-        <div class="actions">
-          <div class="action">
-            <p class="tag--item">#design</p>
-          </div>
-          <div class="action">
-            <p class="tag--item">#startups</p>
-          </div>
-          <div class="action">
-            <p class="tag--item">#resource</p>
-          </div>
+<div class="index__post">
+  <div class="index__post--inner">
+    <div class="index__post--wrapper">
+      {{user-icon user=model.user}}
+      <div class="post__box">
+        <h1 class="post__title">{{model.jsonData.title}}</h1>
+        <div class="group">
+          {{#link-to 'app.profile'}}
+            <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
+          {{/link-to}}
+          <h1 class="learning">, {{model.user.email}}</h1>
         </div>
-        <div class="actions">
-          <div class="action">
-            <p class="action--item">{{model.comments.length}} Comments</p>
-          </div>
-          <div class="action">
-            <a {{action "deletePost" model}} class="action--item">Delete</a>
-          </div>
-          <div class="action">
-            <a {{action "deletePost" model}} class="action--item">Edit</a>
-          </div>
+      </div>
+      <div class="second__line">
+        <div class="comment__box">
+          <p class="comment">{{model.comments.length}} Comments</p>
+          <p class="date">Posted {{model.createdAtFormatted}}</p>
         </div>
-        {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
-          <div class="forum__post">
-            <div class="">
-              {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
-            </div>
-            <div class="">
-              <button class="submit-btn" type="submit" name="button">Post Comment</button>
-            </div>
-          </div>
-        {{/simple-form}}
       </div>
     </div>
   </div>
 </div>
+<div class="description__box">
+  {{md-text text=model.jsonData.description}}
+</div>
+
+{{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
+  <div class="forum__post">
+    <div class="">
+      {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
+    </div>
+    <div class="action">
+      <button class="user-btn" type="submit" name="button">Post Comment</button>
+      <div class="action--item">
+        <div class="sp">
+          <a {{action "deletePost" model}} class="">Delete</a>
+        </div>
+        <a {{action "deletePost" model}} class="">Edit</a>
+      </div>
+    </div>
+  </div>
+{{/simple-form}}
+
 
 {{#each model.comments as |comment|}}
-  {{comment-section comment=comment}}
+  <div class="comment__card">
+    {{comment-section comment=comment}}
+  </div>
 {{/each}}

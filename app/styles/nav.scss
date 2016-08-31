@@ -1,165 +1,94 @@
-//  MEDIA Q's
-@media screen and (min-width: 10rem) and (max-width: 40rem) {
-  // MOBILE
-
-}
-@media screen and (min-width: 40rem) and (max-width: 76rem) {
-  // TABLET
-
-}
-@media screen and (min-width: 76rem) and (max-width: 300rem) {
-  // DESKTOP
-  //
-  .nav__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-  }
-  .search {
-    outline: none;
-    background: $grey-two;
-    color: $black;
-    border: 0;
-    width: 95%;
-    margin: 1rem 0;
-    border-radius: 4px;
-    font-size: 18px;
-    font-family: 'Europa', sans-serif;
-    padding-left: 1rem;
-  }
-
-  .search--form {
-    outline: none;
-    background: $grey-two;
-    color: $black;
-    border: 0;
-    width: 95%;
-    margin: 1rem 0;
-    border-radius: 4px;
-    font-size: 18px;
-    font-family: 'Europa', sans-serif;
-    padding-left: 1rem;
-    display: flex;
-  }
-
-  .search--btn {
-    font-size: 18px;
-    outline: none;
-    background: $grey-two;
-    border: 0;
-    color: $grey-three;
-    border-radius: 4px;
-    padding-right: 3rem;
-  }
-}
-
-
-
-
+// GlOBAL NAV ------------------------------------------------------
 .nav {
-  background: $grey-two;
+  background: $grey-one;
 
   &__inner {
+    width: 100%;
+    padding-top: 0.5rem;
   }
 
   &__content {
     display: flex;
-    align-items: center;
-  }
-
-  &__item {
-    font-size: 18px;
-    font-weight: 400;
-    color: $black;
-  }
-
-  &__item:active {
-    color: $red;
-  }
-
-  &__item:hover {
-    color: $red;
+    justify-content: space-between;
   }
 
   &__logo {
+    max-width: 6rem;
     width: 100%;
-    max-width: 8rem;
+  }
+}
+
+.logo__box {
+  max-width: 10rem;
+  min-width: 10rem;
+}
+
+.right__box {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  font-size: 24px;
+  color: $black;
+}
+
+.nav-btn {
+  max-width: 2rem;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn--su {
+
+}
+
+// GLOBAL SUB NAV ------------------------------------------------------
+
+.sub__nav {
+  background: $grey-one;
+  -webkit-box-shadow: 0 8px 6px -6px $grey-one;
+	   -moz-box-shadow: 0 8px 6px -6px $grey-one;
+	        box-shadow: 0 8px 6px -6px $grey-one;
+
+  &--inner {
+    overflow: hidden;
   }
 
-  &--user {
+  &--content {
+    padding: 0.75rem 0;
+    height: 45px;
+  }
+
+  &--content--inner {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
+    padding-bottom: 50px;
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
-}
-
-
-
-// SPECIAL SUB NAV
-
-@media screen and (min-width: 10rem) and (max-width: 76rem) {
-  // MOBILE
-
-  .sub__nav {
-    background: $grey-two;
-
-    &--inner {
-      overflow: hidden;
-    }
-
-    &--content {
-      padding: 1rem 0;
-      height: 60px;
-    }
-
-    &--content--inner {
-      display: flex;
-      // align-items: center;
-      // margin: 0 34px;
-      padding-bottom: 50px;
-      list-style: none;
-      white-space: nowrap;
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  .sub__nav--item {
+  &--item {
     color: $grey-four;
-    font-size: 22px;
-    margin-right: 6rem;
-    width: 100%;
+    font-family: "soleil",sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-right: 3rem;
   }
-
-  .sub__nav--item:first-child {
-    margin-left: 1rem;
-  }
-
-  .sub__nav--item:active {
+  &--item:active {
     color: $black;
   }
-
-  .sub__nav--item:hover {
+  &--item:hover {
     color: $black;
   }
-
-  .fa-bars {
-    text-align: left;
-    width: 100%;
-  }
-
-  .sub__nav--off {
-    display: none;
-  }
-
 }
-@media screen and (min-width: 76rem) and (max-width: 300rem) {
-  // DESKTOP
-  .sub__nav {
-    display: none;
-  }
+
+// SUB NAV TOGGLE ------------------------------------------------------
+.sub__nav--off {
+  // display: none;
 }

@@ -1,34 +1,44 @@
 <body class="site">
   <nav class="nav">
-    <div class="column is-11">
+    <div class="column is-9">
       <div class="nav__inner">
         <div class="nav__content">
+          <div class="logo__box">
           {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
-          <i {{action "toggleNav"}} class="fa fa-bars mt" aria-hidden="true"></i>
+          </div>
+          <div class="right__box">
+            {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
+              {{input class="search" type="text" value=search.query placeholder="Search the feed, comments, users..."}}
+              <button class="search--btn"></button>
+            {{/simple-form}}
+          <div class="right-nav">
+            {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}}
+            {{!-- <i {{action "toggleNav"}} class="fa fa-bars hamburger" aria-hidden="true"></i> --}}
+          </div>
+          </div>
         </div>
       </div>
     </div>
   </nav>
-  <nav class="sub__nav sub__nav--off">
-    <div class="column is-11">
+  {{!-- <nav class="sub__nav sub__nav--off">
+    <div class="column is-8">
       <div class="sub__nav--inner">
         <ul class="sub__nav--content">
           <div class="sub__nav--content--inner">
-            {{#link-to "app.forum" class="sub__nav--item" }}Forum{{/link-to}}
+            {{#link-to "app.forum" class="sub__nav--item" }}Feed{{/link-to}}
             {{#link-to "app.resources" class="sub__nav--item" }}Resources{{/link-to}}
             {{#link-to "app.jobs" class="sub__nav--item" }}Jobs{{/link-to}}
             {{#link-to "interviews" class="sub__nav--item" }}Interviews{{/link-to}}
             {{#link-to "app.forum" class="sub__nav--item" }}Likes{{/link-to}}
             {{#link-to "app.profile" class="sub__nav--item" }}My Profile{{/link-to}}
-            <a {{action 'invalidateSession' class="sub__nav--item"}}>Logout</a>
-
+            {{#link-to "logout" class="sub__nav--item" }}Logout{{/link-to}}
           </div>
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> --}}
   <main class="site__content">
-    <div class="column is-11">
+    <div class="column is-9">
       <div class="flash-messages">
         {{#each flashMessages.queue as |flash|}}
           {{#flash-message flash=flash class="success-message flash-success" as |message|}}
@@ -41,13 +51,13 @@
       {{outlet}}
     </div>
   </main>
-  {{!-- <footer class="footer">
-    <div class="column is-11">
+  <footer class="footer">
+    <div class="column is-9">
       <div class="footer__inner">
         <ul class="footer__content">
           <li class="footer__item">© 2016</li>
         </ul>
       </div>
     </div>
-  </footer> --}}
+  </footer>
 </body>

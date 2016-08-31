@@ -1,53 +1,53 @@
-<div class="forum__main--top index__container">
-  <h1 class="forum__post--title index__header">{{model.jsonData.title}}</h1>
-</div>
-
-<div class="forum__post index__post">
-  <div class="forum__post--inner index__post--inner">
-    <div class="forum__post--group index__post--wrapper">
-      <div class="forum__post--left user">
-        <div class="forum__post--img--box img__box">
-          <img src="/images/forum/C.png" alt="" class="forum__post--img user__img">
+<div class="index__post">
+  <div class="index__post--inner">
+    <div class="index__post--wrapper">
+      {{user-icon user=model.user}}
+      <div class="post__box">
+        <h1 class="post__title">{{model.jsonData.title}}</h1>
+        <div class="group">
+          {{#link-to 'app.profile'}}
+            <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
+          {{/link-to}}
+          <h1 class="learning">, {{model.user.email}}</h1>
         </div>
-        <div class="forum__post--user username__box">
-          <p class="forum__post--name username">{{model.user.firstName}} {{model.user.lastName}}</p>
-          <p class="forum__post--name date mt">Posted August 25</p>
-        </div>
-      </div>
-      <div class="forum__post--middle post__box">
-        {{#link-to 'app.forum.thread' 1 class="forum__post--question post__title" }}{{model.jsonData.title}}{{/link-to}}
       </div>
       <div class="second__line">
-        <div class="forum__post--right comment__box">
-          <p class="forum__post--comment comment">Posted August 25</p>
-        </div>
-        <div class="forum__post--heart icon__box">
-          <i class="fa fa-heart heart" aria-hidden="true"></i>
+        <div class="comment__box">
+          <p class="comment">{{model.comments.length}} Comments</p>
+          <p class="date">Posted {{model.createdAtFormatted}}</p>
         </div>
       </div>
     </div>
-
-    <div class="forum__post--description">
-      <div class="forum__post--description--copy content">
-        {{md-text text=model.jsonData.description}}
-      </div>
-    </div>
-
-    {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
-      <div class="forum__post">
-        <div class="">
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
-        </div>
-        <div class="">
-          <button class="submit-btn" type="submit" name="button">Post Comment</button>
-        </div>
-      </div>
-    {{/simple-form}}
   </div>
 </div>
+<div class="description__box">
+  {{md-text text=model.jsonData.description}}
+</div>
+
+{{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
+  <div class="forum__post">
+    <div class="">
+      {{textarea class="global__textarea" type="text" name="name" value=inputs.markdown placeholder="Add a comment"}}
+    </div>
+    <div class="action">
+      <button class="user-btn" type="submit" name="button">Post Comment</button>
+      <div class="action--item">
+        <div class="sp">
+          <a {{action "deletePost" model}} class="">Delete</a>
+        </div>
+        <a {{action "deletePost" model}} class="">Edit</a>
+      </div>
+    </div>
+  </div>
+{{/simple-form}}
+
 
 {{#each model.comments as |comment|}}
-  <div class="forum__post index__post">
+<div class="comment__card">
+  {{comment-section comment=comment}}
+</div>
+{{/each}}
+  {{!-- <div class="forum__post index__post">
     <div class="forum__post--inner index__post--inner">
       <div class="forum__post--group index__post--wrapper">
         <div class="forum__post--left user">
@@ -75,9 +75,8 @@
           {{#link-to 'app.forum.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
         </div>
       </div>
-      {{!-- {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}} --}}
+      {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
           <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Post</button>
-      {{!-- {{/if}} --}}
+      {{/if}}
     </div>
-  </div>
-{{/each}}
+  </div> --}}

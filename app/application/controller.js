@@ -11,5 +11,8 @@ export default Ember.Controller.extend({
       this.get('session').invalidate();
       // this.transitionToRoute('index');
     },
+    search(formValues) {
+      this.transitionToRoute('app.search', formValues.query);
+    },
   },
 });

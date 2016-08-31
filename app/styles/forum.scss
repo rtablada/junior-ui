@@ -1,70 +1,28 @@
+
+
 .forum {
   max-width: 100rem;
   margin: 0 auto;
   &__inner {
     display: flex;
-    background: $grey-one;
+    background: $white;
     border-radius: 4px;
     min-height: 100vh;
+    padding-top: 3rem;
   }
 }
 
 .forum__card {
   border-radius: 4px;
-  padding: 1rem;
 }
 
 .forum__nav {
-  max-width: 15rem;
-  min-width: 15rem;
+  max-width: 10rem;
+  min-width: 10rem;
 }
 
 .forum__main {
   flex-grow: 2;
-
-  &--top {
-    // display: flex;
-    // justify-content: space-between;
-    // padding: 1rem 0;
-  }
-}
-
-.forum__post {
-  // background: $white;
-  // border-radius: 4px;
-  // padding: 0.25rem;
-  // margin: 1rem 0;
-  // max-width: 70rem;
-
-  &--inner {
-    // padding: 1rem;
-  }
-
-  &--left {
-    // display: flex;
-    // align-items: center;
-    // width: 100%;
-  }
-
-  &--middle {
-    // width: 100%;
-  }
-
-  &--right {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // width: 100%;
-    // width: 10rem;
-  }
-
-  &--heart {
-    // padding: 0 2rem;
-  }
-
-  &--title {
-    // font-weight: 600;
-  }
 
   &--description {
     padding: 2rem 0;
@@ -76,11 +34,11 @@
 
 .forum__post--img {
   object-fit: cover;
-  width: 3rem;
-  height: 3rem;
-  min-width: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
   border-radius: 50%;
-  line-height: 3rem;
+  line-height: 2.75rem;
   font-size: 1.4rem;
   font-weight: inherit;
   background: $purple;
@@ -98,28 +56,28 @@
   &--3 {
     background: $green;
   }
-
-  &--4 {
-    background: $orange;
-  }
-  &--5 {
-    background: $pink;
-  }
-  &--6 {
-    background: $teal;
-  }
-  &--7 {
-    background: $light-blue;
-  }
-  &--8 {
-    background: $yellow;
-  }
-  &--9 {
-    background: $purple;
-  }
-  &--10 {
-    background: $light-green;
-  }
+  //
+  // &--4 {
+  //   background: $orange;
+  // }
+  // &--5 {
+  //   background: $pink;
+  // }
+  // &--6 {
+  //   background: $teal;
+  // }
+  // &--7 {
+  //   background: $light-blue;
+  // }
+  // &--8 {
+  //   background: $yellow;
+  // }
+  // &--9 {
+  //   background: $purple;
+  // }
+  // &--10 {
+  //   background: $light-green;
+  // }
 }
 
 
@@ -131,63 +89,6 @@
     font-size: 14px;
     font-weight: 600;
   }
-
-
-
-// INDEX
-.forum__post--group {
-  // display: flex;
-  // align-items: center;
-}
-
-// THREAD
-.forum__post {
-  &--top {
-    // display: flex;
-    // justify-content: space-between;
-    // width: 100%;
-  }
-
-  &--user {
-    // display: flex;
-    // flex-direction: column;
-    // margin: 0 1rem;
-  }
-
-  &--name {
-    // font-size: 18px;
-  }
-
-  &--question {
-    // font-size: 18px;
-    // color: $black;
-    // width: 100%;
-  }
-
-  &--comment {
-    // color: $grey-three;
-    // font-size: 18px;
-  }
-
-}
-
-.forum__post--text--box {
-  padding: 2rem 0;
-}
-
-//  MEDIA Q's
-@media screen and (min-width: 10rem) and (max-width: 40rem) {
-  // MOBILE
-
-}
-@media screen and (min-width: 40rem) and (max-width: 60rem) {
-  // TABLET
-
-}
-@media screen and (min-width: 60rem) and (max-width: 300rem) {
-  // DESKTOP
-
-}
 
 .forum__nav {
   &--item {
@@ -219,26 +120,53 @@
     display: block;
     color: $black;
     width: 100%;
-    padding-top: 1rem;
-    margin: 0.75rem 0;
+    margin: 1rem 0;
     border-radius: 4px;
-    font-size: 20px;
-    font-family: 'Europa', sans-serif;
-    padding-left: 1rem;
-    font-weight: 600;
+    font-size: 15px;
+    font-family: "soleil",sans-serif;
+    font-weight: 500;
   }
   .forum__nav {
     &--it {
       display: block;
       color: $grey-four;
       width: 100%;
-      margin: 0.5rem 0;
-      font-size: 18px;
-      font-family: 'Europa', sans-serif;
-      padding-left: 1rem;
+      margin: 0.25rem 0;
+      font-size: 14px;
+      font-family: "soleil",sans-serif;
     }
     &--it:hover {
       color: $black;
     }
   }
+}
+
+@media screen and (min-width: 10rem) and (max-width: 76rem) {
+  // TABLET
+  .forum__nav {
+    display: none;
+  }
+}
+
+
+
+.description__box {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.action--item {
+  color: $grey-four;
+  font-size: 14px;
+  display: flex;
+}
+
+.sp {
+  margin-right: 1rem;
 }

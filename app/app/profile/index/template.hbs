@@ -1,77 +1,70 @@
-{{outlet}}
-<div class="profile">
-  <div class="profile__inner">
-    {{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="profile__card" as |inputs|}}
-    <div class="forum__main--top index__container">
-      <h1 class="forum__post--title index__header">Edit Your Profile</h1>
-      <button class="submit-btn login-btn" type="submit" name="button">Update</button>
+{{#simple-form startingValues=model onsubmit=(action "updateUser" model) class="profile__card" as |inputs|}}
+  <div class="profile__container--input profile__small">
+    <div class="profile-input">
+      <p class="profile-label">First Name</p>
+      {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
     </div>
-        <div class="profile__container--input profile__small">
-        <div class="profile-input">
-          <p class="profile-label">First Name</p>
-          {{input class="global__input" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
-        </div>
 
-        <div class="profile-input">
-          <p class="profile-label">Last Name</p>
-          {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
-        </div>
+    <div class="profile-input">
+      <p class="profile-label">Last Name</p>
+      {{input class="global__input" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
+    </div>
 
-        <div class="profile-input">
-          <p class="profile-label">Email</p>
-          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
-        </div>
+    <div class="profile-input">
+      <p class="profile-label">Email</p>
+      {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Email"}}
+    </div>
 
-        <div class="profile-input">
-          <p class="profile-label">Password</p>
-          {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Confirm Password"}}
-        </div>
-      </div>
-    {{/simple-form}}
-
-      {{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="profile__card profile__big" as |inputs|}}
-      <div class="forum__main--top index__container">
-        <h1 class="forum__post--title index__header">About</h1>
-        <button class="submit-btn login-btn" type="submit" name="button">Update</button>
-      </div>
-        <div class="profile__container--input">
-          <div class="profile-input">
-            <p class="profile-label">Job Title</p>
-            {{input class="global__input" type="text" name="name" value=inputs.jobTitle placeholder="Product Designer, Junior Developer, Intern etc."}}
-          </div>
-
-          <div class="profile-input">
-            <p class="profile-label">Current Company</p>
-            {{input class="global__input" type="text" name="name" value=inputs.currentCompany placeholder="Apple, Google, Freelance etc."}}
-          </div>
-
-          <div class="profile-input">
-            <p class="profile-label">Mini-Resume</p>
-            {{textarea class="global__textarea" type="text" name="name" value=inputs.miniResume placeholder="Intern at Apple, Freelance Designer for 1 year, etc."}}
-          </div>
-
-          <div class="profile-input">
-            <p class="profile-label">What are you currently learning?</p>
-            {{textarea class="global__textarea" type="text" name="name" value=inputs.learning placeholder="I've spent the last there months learning Ruby and PHP etc."}}
-          </div>
-        </div>
-      {{/simple-form}}
-
-      {{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="profile__card profile__card--danger" as |inputs|}}
-      <div class="forum__main--top index__container">
-        <h1 class="forum__post--title index__header">Change Your Password</h1>
-        <button class="submit-btn login-btn" type="submit" name="button">Update</button>
-      </div>
-        <div class="profile__container--input">
-          <div class="profile-input">
-            {{input class="global__input" type="password" name="name" placeholder="Old Password"}}
-          </div>
-
-          <div class="profile-input">
-            {{input class="global__input" type="password" name="name" placeholder="New Password"}}
-          </div>
-        </div>
-      {{/simple-form}}
-
+    <div class="profile-input">
+      <p class="profile-label">Password</p>
+      {{input class="global__input" type="password" name="name"value=inputs.password placeholder="Confirm Password"}}
+    </div>
+    <div class="user__bubble">
+      <button class="user-btn" type="submit" name="button">Update</button>
+    </div>
   </div>
-</div>
+{{/simple-form}}
+
+{{#simple-form startingValues=model.profile onsubmit=(action "updateProfile" model) class="profile__card profile__big" as |inputs|}}
+  <div class="profile__container--input">
+    <div class="profile-input">
+      <p class="profile-label">Job Title</p>
+      {{input class="global__input" type="text" name="name" value=inputs.jobTitle placeholder="Product Designer, Junior Developer, Intern etc."}}
+    </div>
+
+    <div class="profile-input">
+      <p class="profile-label">Current Company</p>
+      {{input class="global__input" type="text" name="name" value=inputs.currentCompany placeholder="Apple, Google, Freelance etc."}}
+    </div>
+
+    <div class="profile-input">
+      <p class="profile-label">Mini-Resume</p>
+      {{textarea class="global__textarea" type="text" name="name" value=inputs.miniResume placeholder="Intern at Apple, Freelance Designer for 1 year, etc."}}
+    </div>
+
+    <div class="profile-input">
+      <p class="profile-label">What are you currently learning?</p>
+      {{textarea class="global__textarea" type="text" name="name" value=inputs.learning placeholder="I've spent the last there months learning Ruby and PHP etc."}}
+    </div>
+    <div class="user__bubble">
+      <button class="user-btn" type="submit" name="button">Update</button>
+    </div>
+  </div>
+{{/simple-form}}
+
+{{#simple-form startingValues=model onsubmit=(action "updatePassword" model) class="profile__card profile__card--danger" as |inputs|}}
+  <div class="profile__container--input">
+    <div class="profile-input">
+      <p class="profile-label">Old Password</p>
+      {{input class="global__input" type="password" name="name" placeholder="Old Password"}}
+    </div>
+
+    <div class="profile-input">
+      <p class="profile-label">New Password</p>
+      {{input class="global__input" type="password" name="name" placeholder="New Password"}}
+    </div>
+    <div class="user__bubble">
+      <button class="user-btn" type="submit" name="button">Update</button>
+    </div>
+  </div>
+{{/simple-form}}

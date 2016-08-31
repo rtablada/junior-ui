@@ -1,0 +1,224 @@
+
+// GLOBAL RESETS ------------------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "soleil",sans-serif;
+}
+
+// GLOBAL COLORS ------------------------------------------------------
+$grey-one: #F8F8F8;
+$grey-two: #F1F1F1;
+$grey-three: #DDDDDD;
+$grey-four: #BBBBBB;
+$white: #FFFFFF;
+$black: #000000;
+$red: #FF5A5A;
+$blue: #479CF7;
+$green: #00DD61;
+$purple: #BA5EFF;
+$orange: #FFB200;
+$pink: #DF3516;
+$teal: #46E1BC;
+$light-blue: #124CA6;
+$blue-three: #1F6BDF;
+$yellow: #F5B200;
+$light-green: #00AA59;
+
+
+// GLOBAL FLASH MESSAGE ------------------------------------------------------
+.flash-messages {
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+  z-index: 100000000000;
+}
+
+.flash-success {
+  font-family: 'Europa', sans-serif;
+  background: $green;
+  padding: 1rem;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  color: $white;
+}
+
+
+// FOOTER BOTTOM ------------------------------------------------------
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site__content {
+  flex: 1;
+  background: $white;
+}
+
+.column {
+  margin: 0 auto;
+}
+
+// GLOBAL BUTTONS ------------------------------------------------------
+.cta-btn {
+  padding: 0.75em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $blue;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  padding: 0.75em 2.5em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $red;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.submit-btn {
+  padding: 0.75em 2em;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  background: $green;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+// GLOBAL INPUT ------------------------------------------------------
+
+.global__input {
+  outline: none;
+  background: $grey-one;
+  color: $black;
+  border: 0;
+  width: 100%;
+  padding: 0.75rem 0;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "soleil",sans-serif;
+  padding-left: 1rem;
+}
+
+.global__textarea {
+  outline: none;
+  background: $grey-one;
+  color: $black;
+  border: 0;
+  width: 100%;
+  min-height: 10rem;
+  padding: 0.75rem 0;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "soleil",sans-serif;
+  padding-left: 1rem;
+  resize: none;
+}
+
+.search {
+  outline: none;
+  background: $white;
+  color: $black;
+  border: 0;
+  width: 95%;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "soleil",sans-serif;
+  font-weight: 300;
+  padding-left: 1rem;
+}
+
+.search--form {
+  outline: none;
+  background: $white;
+  color: $black;
+  border: 1px solid $grey-one;
+  width: 60%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "soleil",sans-serif;
+  padding-left: 1rem;
+  display: flex;
+}
+
+.search--btn {
+  font-size: 16px;
+  outline: none;
+  background: $white;
+  border: 0;
+  border-radius: 4px;
+  padding-right: 3rem;
+}
+
+
+// GLOBAL PADDING ------------------------------------------------------
+
+.box {
+  &__1 {
+    padding: 1rem 0;
+  }
+
+  &__2 {
+    padding: 2rem 0;
+  }
+
+  &__3 {
+    padding: 3rem 0;
+  }
+
+  &__4 {
+    padding: 4rem 0;
+  }
+
+  &__5 {
+    padding: 5rem 0;
+  }
+
+  &__6 {
+    padding: 6rem 0;
+  }
+}
+
+// GLOBAL MARGIN ------------------------------------------------------
+
+.space {
+  &__1 {
+    margin: 1rem 0;
+  }
+
+  &__2 {
+    margin: 2rem 0;
+  }
+
+  &__3 {
+    margin: 3rem 0;
+  }
+
+  &__4 {
+    margin: 4rem 0;
+  }
+
+  &__5 {
+    margin: 5rem 0;
+  }
+
+  &__6 {
+    margin: 6rem 0;
+  }
+}
