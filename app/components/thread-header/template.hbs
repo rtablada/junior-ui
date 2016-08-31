@@ -1,0 +1,19 @@
+<div class="forum__post--group index__post--wrapper">
+  <div class="forum__post--left user">
+    {{user-icon user=post.user}}
+    <div class="forum__post--user username__box">
+      <p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>
+    </div>
+  </div>
+  <div class="forum__post--middle post__box">
+    {{#link-to 'app.forum.thread' 1 class="forum__post--question post__title" }}{{post.jsonData.title}}{{/link-to}}
+  </div>
+  <div class="second__line">
+    <div class="forum__post--right comment__box">
+      <p class="forum__post--comment comment">Posted {{post.createdAtFormatted}}</p>
+    </div>
+    <div class="forum__post--heart icon__box">
+      <i class="fa fa-heart heart" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

@@ -4,26 +4,7 @@
 
 <div class="index__post">
   <div class="index__post--inner">
-    <div class="index__post--wrapper">
-      <div class="user">
-        {{user-icon user=model.user}}
-        <div class="username__box">
-          <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
-          <p class="date mt">Posted August 25</p>
-        </div>
-      </div>
-      <div class="post__box">
-        {{#link-to 'app.resources.thread' 1 class="post__title" }}{{model.jsonData.title}}{{/link-to}}
-      </div>
-      <div class="second__line">
-        <div class="comment__box">
-          <p class="comment">Posted August 25</p>
-        </div>
-        <div class="icon__box">
-          <i class="fa fa-heart heart" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div>
+    {{thread-header post=model}}
 
     <div class="forum__post--description">
       <div class="forum__post--description--copy content">
@@ -59,7 +40,7 @@
         </div>
         <div class="second__line">
           <div class="comment__box">
-            <p class="comment">Posted August 25</p>
+            <p class="comment">Posted {{comment.createdAtFormatted}}</p>
           </div>
           <div class="icon__box">
             <i class="fa fa-heart heart" aria-hidden="true"></i>
