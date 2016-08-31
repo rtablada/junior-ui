@@ -12,7 +12,7 @@
   }
 
   &__logo {
-    max-width: 7rem;
+    max-width: 1.5rem;
     width: 100%;
   }
 }
@@ -59,9 +59,9 @@
   }
   &--item {
     color: $grey-four;
-    font-family: "proxima-nova",sans-serif;
+    font-family: "soleil",sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     margin-right: 3rem;
   }
   &--item:active {

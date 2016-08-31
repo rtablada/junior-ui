@@ -1,26 +1,21 @@
-<div class="forum__post index__post">
-  {{#link-to 'app.forum.thread' post class="forum__post--question post__title" }}
-    <div class="forum__post--inner index__post--inner">
-      <div class="forum__post--group index__post--wrapper">
-        <div class="forum__post--left user">
-          {{user-icon user=post.user}}
-          <div class="forum__post--user username__box">
-            {{#link-to 'app.profile'}}<p class="forum__post--name username">{{post.user.firstName}} {{post.user.lastName}}</p>{{/link-to}}
-            <p class="forum__post--name date mt">Posted {{post.createdAtFormatted}}</p>
+<div class="index__post">
+  {{#link-to 'app.forum.thread' post class="post__title" }}
+    <div class="index__post--inner">
+      <div class="index__post--wrapper">
+        {{user-icon user=post.user}}
+        <div class="post__box">
+          <h1 class="post__title">{{post.jsonData.title}}</h1>
+          <div class="group">
+            {{#link-to 'app.profile'}}
+              <p class="username">{{post.user.firstName}} {{post.user.lastName}}</p>
+            {{/link-to}}
+            <h1 class="learning">, {{post.user.email}}</h1>
           </div>
-        </div>
-        <div class="forum__post--middle post__box">
-          {{post.jsonData.title}}
         </div>
         <div class="second__line">
-          {{!-- <div class="action">
-            <p class="identifiy">Question</p>
-          </div> --}}
-          <div class="forum__post--right comment__box">
-            <p class="forum__post--comment comment">{{post.comments.length}} Comments</p>
-          </div>
-          <div class="forum__post--heart icon__box">
-            <i {{action "toggleColor"}} class="fa fa-heart black red" aria-hidden="true"></i>
+          <div class="comment__box">
+            <p class="comment">{{post.comments.length}} Comments</p>
+            <p class="date">Posted {{post.createdAtFormatted}}</p>
           </div>
         </div>
       </div>

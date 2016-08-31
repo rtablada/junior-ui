@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "soleil",sans-serif;
 }
 
 // GLOBAL COLORS ------------------------------------------------------
@@ -56,7 +57,7 @@ $light-green: #00AA59;
 
 .site__content {
   flex: 1;
-  background: $grey-two;
+  background: $white;
 }
 
 .column {
@@ -109,7 +110,7 @@ $light-green: #00AA59;
   margin: 1rem 0;
   border-radius: 4px;
   font-size: 18px;
-  font-family: 'Europa', sans-serif;
+  font-family: "soleil",sans-serif;
   padding-left: 1rem;
 }
 
@@ -124,7 +125,7 @@ $light-green: #00AA59;
   margin: 1rem 0;
   border-radius: 4px;
   font-size: 18px;
-  font-family: 'Europa', sans-serif;
+  font-family: "soleil",sans-serif;
   padding-left: 1rem;
   resize: none;
 }
@@ -137,9 +138,9 @@ $light-green: #00AA59;
   width: 95%;
   margin: 0.5rem 0;
   border-radius: 4px;
-  font-size: 16px;
-  font-family: "proxima-nova",sans-serif;
-  font-weight: 400;
+  font-size: 14px;
+  font-family: "soleil",sans-serif;
+  font-weight: 300;
   padding-left: 1rem;
 }
 
@@ -151,7 +152,7 @@ $light-green: #00AA59;
   width: 60%;
   border-radius: 4px;
   font-size: 16px;
-  font-family: 'Europa', sans-serif;
+  font-family: "soleil",sans-serif;
   padding-left: 1rem;
   display: flex;
 }

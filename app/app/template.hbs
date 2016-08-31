@@ -1,14 +1,17 @@
 <div class="forum">
   <div class="forum__inner">
 
-    {{!-- <div class="forum__card forum__nav">
+    <div class="forum__card forum__nav">
       <div class="forum__nav--inner">
         <h1 class="forum__nav--header">Categories</h1>
         <div class="">
-          {{#link-to "app.forum" class="forum__nav--it"}}Questions{{/link-to}}
+          {{#link-to "app.forum" class="forum__nav--it"}}Feed{{/link-to}}
           {{#link-to "app.resources" class="forum__nav--it"}}Resources{{/link-to}}
           {{#link-to "app.jobs" class="forum__nav--it"}}Jobs{{/link-to}}
           {{#link-to "interviews" class="forum__nav--it"}}Interviews{{/link-to}}
+          <h1 class="forum__nav--header">Sort</h1>
+          {{#link-to "app.profile" class="forum__nav--it"}}Recent{{/link-to}}
+          {{#link-to "app.profile" class="forum__nav--it"}}Most Commented{{/link-to}}
           <h1 class="forum__nav--header">Account</h1>
           {{#link-to "app.profile" class="forum__nav--it"}}My Likes{{/link-to}}
           {{#link-to "app.profile" class="forum__nav--it"}}Edit Profile{{/link-to}}
@@ -18,29 +21,12 @@
           {{#link-to "logout" class="forum__nav--it"}}Logout{{/link-to}}
         </div>
       </div>
-    </div> --}}
+    </div>
 
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
-        {{!-- <div class="index__container">
-          {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
-            {{input class="search" type="text" value=search.query placeholder="Search"}}
-            <button class="search--btn">Submit</button>
-          {{/simple-form}}
-          <div class="">
-            {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="user__img" />{{/link-to}}
-          </div>
-          </div>
-          <div class="actions">
-          <div class="action">
-            <p class="action--item">Recent</p>
-          </div>
-          <div class="action">
-            <p class="action--item">Top</p>
-          </div>
-        </div> --}}
+        </div>
         {{outlet}}
       </div>
     </div>
   </div>
-</div>
