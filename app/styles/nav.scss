@@ -1,6 +1,6 @@
 // GlOBAL NAV ------------------------------------------------------
 .nav {
-  background: $blue;
+  background: $white;
 
   &__inner {
     width: 100%;
@@ -34,7 +34,7 @@
 // GLOBAL SUB NAV ------------------------------------------------------
 
 .sub__nav {
-  background: $white;
+  background: $grey-one;
   -webkit-box-shadow: 0 8px 6px -6px $grey-one;
 	   -moz-box-shadow: 0 8px 6px -6px $grey-one;
 	        box-shadow: 0 8px 6px -6px $grey-one;
@@ -45,7 +45,7 @@
 
   &--content {
     padding: 0.75rem 0;
-    height: 50px;
+    height: 45px;
   }
 
   &--content--inner {
@@ -59,7 +59,9 @@
   }
   &--item {
     color: $grey-four;
-    font-size: 18px;
+    font-family: "proxima-nova",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     margin-right: 3rem;
   }
   &--item:active {

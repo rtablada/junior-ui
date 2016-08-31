@@ -4,8 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  font-family: 'Europa', sans-serif;
   text-decoration: none;
   list-style: none;
 }
@@ -22,11 +20,12 @@ $blue: #479CF7;
 $green: #00DD61;
 $purple: #BA5EFF;
 $orange: #FFB200;
-$pink: #FF606A;
+$pink: #DF3516;
 $teal: #46E1BC;
-$light-blue: #19C3EB;
-$yellow: #F8E931;
-$light-green: #00D026;
+$light-blue: #124CA6;
+$blue-three: #1F6BDF;
+$yellow: #F5B200;
+$light-green: #00AA59;
 
 
 // GLOBAL FLASH MESSAGE ------------------------------------------------------
@@ -138,8 +137,9 @@ $light-green: #00D026;
   width: 95%;
   margin: 0.5rem 0;
   border-radius: 4px;
-  font-size: 18px;
-  font-family: 'Europa', sans-serif;
+  font-size: 16px;
+  font-family: "proxima-nova",sans-serif;
+  font-weight: 400;
   padding-left: 1rem;
 }
 

@@ -3,13 +3,14 @@
     <div class="column is-8">
       <div class="nav__inner">
         <div class="nav__content">
-          {{#link-to "app.forum"}}<img src="/images/nav/wlogo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
+          {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
             {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
               {{input class="search" type="text" value=search.query placeholder="Search the feed, comments, users..."}}
               <button class="search--btn"></button>
             {{/simple-form}}
           <div class="right-nav">
             {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}}
+            {{#link-to 'signup' class="cta-btn"}}Sign Up{{/link-to}}
             <i {{action "toggleNav"}} class="fa fa-bars hamburger mt" aria-hidden="true"></i>
           </div>
         </div>
