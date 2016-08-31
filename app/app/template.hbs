@@ -1,13 +1,7 @@
-<div class="mobile__nav">
-  <div class="mobile__nav--inner">
-
-  </div>
-</div>
-
 <div class="forum">
   <div class="forum__inner">
 
-    <div class="forum__card forum__nav">
+    {{!-- <div class="forum__card forum__nav">
       <div class="forum__nav--inner">
         <h1 class="forum__nav--header">Categories</h1>
         <div class="">
@@ -24,11 +18,11 @@
           {{#link-to "logout" class="forum__nav--it"}}Logout{{/link-to}}
         </div>
       </div>
-    </div>
+    </div> --}}
 
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
-        <div class="index__container">
+        {{!-- <div class="index__container">
           {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
             {{input class="search" type="text" value=search.query placeholder="Search"}}
             <button class="search--btn">Submit</button>
@@ -44,7 +38,7 @@
           <div class="action">
             <p class="action--item">Top</p>
           </div>
-        </div>
+        </div> --}}
         {{outlet}}
       </div>
     </div>

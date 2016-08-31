@@ -8,16 +8,27 @@
 
   &__content {
     display: flex;
+    justify-content: space-between;
   }
 
   &__logo {
+    max-width: 7rem;
     width: 100%;
-    max-width: 5rem;
   }
 }
+
 .hamburger {
   font-size: 24px;
   color: $black;
+}
+
+.nav-btn {
+  max-width: 2.5rem;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
 }
 
 // GLOBAL SUB NAV ------------------------------------------------------
@@ -61,5 +72,5 @@
 
 // SUB NAV TOGGLE ------------------------------------------------------
 .sub__nav--off {
-  display: none;
+  // display: none;
 }

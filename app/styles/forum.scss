@@ -11,7 +11,6 @@
 
 .forum__card {
   border-radius: 4px;
-  padding: 1rem;
 }
 
 .forum__nav {
@@ -76,11 +75,11 @@
 
 .forum__post--img {
   object-fit: cover;
-  width: 3rem;
-  height: 3rem;
-  min-width: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
   border-radius: 50%;
-  line-height: 3rem;
+  line-height: 2.75rem;
   font-size: 1.4rem;
   font-weight: inherit;
   background: $purple;

@@ -98,17 +98,6 @@ $light-green: #00D026;
   font-weight: 600;
 }
 
-.nav-btn {
-  padding: 0.5em 2em;
-  border: 0;
-  outline: none;
-  border-radius: 4px;
-  background: rgba(0,0,0, 0.3);
-  color: $white;
-  font-size: 18px;
-  font-weight: 400;
-}
-
 // GLOBAL INPUT ------------------------------------------------------
 
 .global__input {
@@ -149,7 +138,7 @@ $light-green: #00D026;
   width: 95%;
   margin: 0.5rem 0;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Europa', sans-serif;
   padding-left: 1rem;
 }
