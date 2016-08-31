@@ -147,3 +147,26 @@
     display: none;
   }
 }
+
+
+
+.description__box {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.action--item {
+  color: $grey-four;
+  font-size: 14px;
+  display: flex;
+}
+
+.sp {
+  margin-right: 1rem;
+}

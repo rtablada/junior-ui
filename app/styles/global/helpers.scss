@@ -102,21 +102,21 @@ $light-green: #00AA59;
 
 .global__input {
   outline: none;
-  background: $grey-two;
+  background: $grey-one;
   color: $black;
   border: 0;
   width: 100%;
   padding: 0.75rem 0;
   margin: 1rem 0;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "soleil",sans-serif;
   padding-left: 1rem;
 }
 
 .global__textarea {
   outline: none;
-  background: $grey-two;
+  background: $grey-one;
   color: $black;
   border: 0;
   width: 100%;
@@ -124,7 +124,7 @@ $light-green: #00AA59;
   padding: 0.75rem 0;
   margin: 1rem 0;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "soleil",sans-serif;
   padding-left: 1rem;
   resize: none;
@@ -132,7 +132,7 @@ $light-green: #00AA59;
 
 .search {
   outline: none;
-  background: $grey-two;
+  background: $white;
   color: $black;
   border: 0;
   width: 95%;
@@ -146,7 +146,7 @@ $light-green: #00AA59;
 
 .search--form {
   outline: none;
-  background: $grey-two;
+  background: $white;
   color: $black;
   border: 1px solid $grey-one;
   width: 60%;
@@ -160,9 +160,8 @@ $light-green: #00AA59;
 .search--btn {
   font-size: 16px;
   outline: none;
-  background: $grey-two;
+  background: $white;
   border: 0;
-  color: $grey-three;
   border-radius: 4px;
   padding-right: 3rem;
 }
