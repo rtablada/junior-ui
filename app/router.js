@@ -33,8 +33,6 @@ Router.map(function() {
           });
           this.route('new-resource');
         });
-        this.route('stories', function() {
-        });
         this.route('search', {
           path: '/q/:search_term'
         });
