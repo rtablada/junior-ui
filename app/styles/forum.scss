@@ -153,24 +153,31 @@
 }
 
 
+.tags-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tags {
+  display: flex;
+}
+
+.tag-list__item {
+  font-size: 14px;
+  color: $grey-four;
+  margin-right: 1rem;
+}
 
 .description__box {
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
+  font-size: 14px;
 }
+
 .action {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-}
-
-.action--item {
-  color: $grey-four;
-  font-size: 14px;
-  display: flex;
-}
-
-.sp {
-  margin-right: 1rem;
 }

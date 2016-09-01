@@ -24,9 +24,16 @@
   {{md-text text=model.jsonData.description}}
 </div>
 <ul class="tags-list">
-  {{#each model.tags as |tag|}}
-    <li class="tag-list__item">{{tag.name}}</li>
-  {{/each}}
+  <div class="tags">
+    {{#each model.tags as |tag|}}
+      <li class="tag-list__item">#{{tag.name}}</li>
+    {{/each}}
+  </div>
+  {{#if (eq session.currentUser.id model.user.id)}}
+    <div class="delete--btn">
+      <a {{action "deletePost" model}} class="tag-list__item delete">Delete Thread</a>
+    </div>
+  {{/if}}
 </ul>
 
 {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
@@ -36,14 +43,6 @@
     </div>
     <div class="action">
       <button class="user-btn" type="submit" name="button">Post Comment</button>
-    {{#if (eq session.currentUser.id model.user.id)}}
-      <div class="action--item">
-        <div class="sp">
-          <button {{action "deletePost" model}} class="">Delete</button>
-        </div>
-        <a {{action "updatePost" post}} class="">Edit</a>
-      </div>
-      {{/if}}
     </div>
   </div>
 {{/simple-form}}

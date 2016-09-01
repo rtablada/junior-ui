@@ -1,4 +1,4 @@
-@media screen and (min-width: 76rem) and (max-width: 300rem) {
+@media screen and (min-width: 0rem) and (max-width: 300rem) {
 
   // POST CARD
   .index__post {
@@ -7,7 +7,7 @@
   }
 
   .index__post--inner {
-    padding: 0.75rem 0rem;
+    padding: 0.75rem 0;
   }
 
   .index__post--wrapper {
@@ -117,5 +117,9 @@
     max-width: 0.60rem;
     max-height: 0.60rem;
     background: $red;
+  }
+
+  .delete {
+    cursor: pointer;
   }
 }
