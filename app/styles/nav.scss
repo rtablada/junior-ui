@@ -1,10 +1,10 @@
 // GlOBAL NAV ------------------------------------------------------
 .nav {
-  background: $grey-one;
+  background: $white;
 
   &__inner {
     width: 100%;
-    padding-top: 0.5rem;
+    padding-top: 2rem;
   }
 
   &__content {
@@ -43,17 +43,27 @@
   align-items: center;
 }
 
-.ember-view.ember-basic-dropdown-trigger.ember-basic-dropdown-trigger--left.ember-basic-dropdown-trigger--below {
-  outline: none;
+.menu-btn {
+  color: $grey-three;
+  fill: currentColor;
+}
+
+.search--icon {
+  color: $grey-four;
+  fill: currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 // GLOBAL SUB NAV ------------------------------------------------------
 
 .sub__nav {
   background: $grey-one;
-  -webkit-box-shadow: 0 8px 6px -6px $grey-one;
-	   -moz-box-shadow: 0 8px 6px -6px $grey-one;
-	        box-shadow: 0 8px 6px -6px $grey-one;
+  -webkit-box-shadow: 0 8px 6px -6px $grey-two;
+	   -moz-box-shadow: 0 8px 6px -6px $grey-two;
+	        box-shadow: 0 8px 6px -6px $grey-two;
 
   &--inner {
     overflow: hidden;
@@ -76,7 +86,7 @@
   &--item {
     color: $grey-four;
     font-family: "soleil",sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     margin-right: 3rem;
   }
@@ -88,7 +98,14 @@
   }
 }
 
+.add__nav {
+background: $grey-one;
+}
+
 // SUB NAV TOGGLE ------------------------------------------------------
 .sub__nav--off {
+  display: none;
+}
+.add__nav--off {
   display: none;
 }
