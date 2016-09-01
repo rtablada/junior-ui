@@ -18,20 +18,9 @@ export default Ember.Controller.extend({
       comment.destroyRecord();
     },
     deletePost(post) {
-      this.get('flashMessages').add({
-        message: 'Are you sure you want to delete this thread?',
-        type: 'alpaca',
-        timeout: 500,
-        priority: 200,
-        sticky: true,
-        showProgress: true,
-        extendedTimeout: 500,
-        destroyOnClick: true,
-      });
       post.destroyRecord().then(() => {
       this.transitionToRoute('app.forum.index');
       });
     },
-
   },
 });

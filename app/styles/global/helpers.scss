@@ -30,22 +30,25 @@ $light-green: #00AA59;
 
 
 // GLOBAL FLASH MESSAGE ------------------------------------------------------
-.flash-messages {
-  position: absolute;
-  top: 8rem;
-  width: 100%;
-  z-index: 100000000000;
-}
-
-.flash-success {
-  font-family: 'Europa', sans-serif;
-  background: $green;
-  padding: 1rem;
-  border: 0;
-  outline: none;
-  border-radius: 4px;
-  color: $white;
-}
+// .flash-messages {
+//   position: absolute;
+//   background: $grey-one;
+//   top: 0rem;
+//   width: 100%;
+//   z-index: 100000000000;
+//   padding: 1rem;
+// }
+//
+// .flash-success {
+//   font-family: 'Europa', sans-serif;
+//   background: $green;
+//   padding: 1rem;
+//   border: 0;
+//   outline: none;
+//   border-radius: 4px;
+//   color: $black;
+//   font-size: 14px;
+// }
 
 
 // FOOTER BOTTOM ------------------------------------------------------

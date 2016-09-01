@@ -9,7 +9,6 @@ export default Ember.Controller.extend({
       });
 
       post.save().then(() => {
-        alert('done');
         reset();
         this.transitionToRoute('app.resources.index');
       });
