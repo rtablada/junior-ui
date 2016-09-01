@@ -126,6 +126,10 @@
     font-family: "soleil",sans-serif;
     font-weight: 500;
   }
+  .forum__nav--header:first-child {
+    margin-top: 0;
+  }
+
   .forum__nav {
     &--it {
       display: block;

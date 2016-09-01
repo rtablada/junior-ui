@@ -1,78 +1,84 @@
 <body class="site">
-  {{!-- {{#if (eq session.currentUser.id model.user.id)}} --}}
+  {{!-- {{#if (eq session.currentUser.id model.user.id)}}
+  --}}
   {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-  <nav class="nav">
-    <div class="column is-9">
-      <div class="nav__inner">
-        <div class="nav__content">
-          <div class="logo__box">
-          {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
-          </div>
-          <div class="right__box">
-            {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
-              {{input class="search" type="text" value=search.query placeholder="Search the feed, comments, users..."}}
-              <button class="search--btn"></button>
-            {{/simple-form}}
-          <div class="right-nav">
-            {{!-- {{#link-to "app.forum.new-post" action="toggleNav"}}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}} --}}
-            <img src="/images/nav/add.svg" class="nav-btn" {{action "toggleNav"}}/>
-            {{!-- <i {{action "toggleNav"}} class="fa fa-bars hamburger" aria-hidden="true"></i> --}}
-          </div>
+    <nav class="nav">
+      <div class="column is-9">
+        <div class="nav__inner">
+          <div class="nav__content">
+            <div class="logo__box">
+              {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
+            </div>
+            <div class="right__box">
+              {{#simple-form onsubmit=(action "search") class="search--form" as |search|}}
+                {{input class="search" type="text" value=search.query placeholder="Search the feed, comments, users..."}}
+                <button class="search--btn"></button>
+              {{/simple-form}}
+              <div class="right-nav">
+                {{#basic-dropdown class="sub__nav sub__nav--off nav-btn" as |dropdown|}}
+                  {{#dropdown.trigger}}<img src="/images/nav/add.svg" class="nav-btn" {{action "toggleNav"}} />{{/dropdown.trigger}}
+                  {{#dropdown.content}}
+                    {{#link-to "app.forum.new-post" class="flex--item-1" }}Add A New Question{{/link-to}}
+                  {{/dropdown.content}}
+                  {{#dropdown.content}}
+                    {{#link-to "app.resources.new-resource" class="flex--item-2" }}Add A New Resource{{/link-to}}
+                  {{/dropdown.content}}
+                  {{#dropdown.content}}
+                    {{#link-to "app.jobs.new-job" class="flex--item-3" }}Add A New Job{{/link-to}}
+                  {{/dropdown.content}}
+                {{/basic-dropdown}}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </nav>
   {{/if}}
-  <nav class="sub__nav sub__nav--off">
-    <div class="overlay">
-        <ul class="overlay__card">
-          <div class="overlay__card--inner">
-            {{#link-to "app.forum.new-post" class="user-btn overlay__card--item" }}Add A New Question{{/link-to}}
-            {{#link-to "app.resources.new-resource" class="user-btn overlay__card--item" }}Add A New Resource{{/link-to}}
-            {{#link-to "app.jobs.new-job" class="user-btn overlay__card--item" }}Add A New Job{{/link-to}}
-          </div>
-        </ul>
-    </div>
-  </nav>
-  {{!-- <nav class="sub__nav sub__nav--off">
+
+
+  {{!-- {{#link-to "app.forum.new-post" action="toggleNav"}}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}}
+  {{#link-to "app.resources.new-resource" action="toggleNav" }}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}}
+  {{#link-to "app.jobs.new-job" action="toggleNav" }}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}} --}}
+
+    {{!-- <nav class="sub__nav sub__nav--off">
     <div class="column is-8">
       <div class="sub__nav--inner">
         <ul class="sub__nav--content">
           <div class="sub__nav--content--inner">
-            {{#link-to "app.forum" class="sub__nav--item" }}Feed{{/link-to}}
-            {{#link-to "app.resources" class="sub__nav--item" }}Resources{{/link-to}}
-            {{#link-to "app.jobs" class="sub__nav--item" }}Jobs{{/link-to}}
-            {{#link-to "interviews" class="sub__nav--item" }}Interviews{{/link-to}}
-            {{#link-to "app.forum" class="sub__nav--item" }}Likes{{/link-to}}
-            {{#link-to "app.profile" class="sub__nav--item" }}My Profile{{/link-to}}
-            {{#link-to "logout" class="sub__nav--item" }}Logout{{/link-to}}
+            {{#link-to "app.forum" class="sub__nav--item" }}
+    Feed{{/link-to}}
+      {{#link-to "app.resources" class="sub__nav--item" }}Resources{{/link-to}}
+      {{#link-to "app.jobs" class="sub__nav--item" }}Jobs{{/link-to}}
+      {{#link-to "interviews" class="sub__nav--item" }}Interviews{{/link-to}}
+      {{#link-to "app.forum" class="sub__nav--item" }}Likes{{/link-to}}
+      {{#link-to "app.profile" class="sub__nav--item" }}My Profile{{/link-to}}
+      {{#link-to "logout" class="sub__nav--item" }}Logout{{/link-to}}
+      </div>
+      </ul>
+      </div>
+      </div>
+      </nav> --}}
+      <main class="site__content">
+        <div class="column is-9">
+          <div class="flash-messages">
+            {{#each flashMessages.queue as |flash|}}
+              {{#flash-message flash=flash class="success-message flash-success" as |message|}}
+                <div class="chip">
+                  {{flash.message}}
+                </div>
+              {{/flash-message}}
+            {{/each}}
           </div>
-        </ul>
-      </div>
-    </div>
-  </nav> --}}
-  <main class="site__content">
-    <div class="column is-9">
-      <div class="flash-messages">
-        {{#each flashMessages.queue as |flash|}}
-          {{#flash-message flash=flash class="success-message flash-success" as |message|}}
-            <div class="chip">
-              {{flash.message}}
-            </div>
-          {{/flash-message}}
-        {{/each}}
-      </div>
-      {{outlet}}
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="column is-9">
-      <div class="footer__inner">
-        <ul class="footer__content">
-          <li class="footer__item">© 2016</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-</body>
+          {{outlet}}
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="column is-9">
+          <div class="footer__inner">
+            <ul class="footer__content">
+              <li class="footer__item">© 2016</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      </body>

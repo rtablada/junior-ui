@@ -10,10 +10,7 @@
 // Section
 @import 'sass/layout/section';
 // @import 'sass/layout/layout';
-
-
-
-
+@import 'ember-basic-dropdown';
 @import 'global/helpers';
 @import 'nav';
 @import 'footer';
@@ -25,8 +22,6 @@
 @import 'lists';
 @import 'content';
 @import 'comment';
-@import 'overlay';
-
 
 // GlOBAl INDEX ------------------------------------------------------
 @import 'index/mobile.scss';

@@ -2,10 +2,6 @@
 <div class="profile">
   <div class="profile__inner">
     {{#simple-form startingValues=model onsubmit=(action "addNewResource") class="profile__card" as |inputs|}}
-    <div class="index__container">
-      <h1 class="global__h3 forum__post--title">Add New Resource</h1>
-      <button class="submit-btn login-btn" type="submit" name="button">Add New Resource</button>
-    </div>
         <div class="profile__container--input profile__small">
         <div class="profile-input">
           <p class="profile-label">Resource Name</p>
@@ -20,6 +16,9 @@
         <div class="profile-input">
           <p class="profile-label">Tags</p>
           {{input class="global__input" type="text" name="name" value=inputs.tags placeholder="Design, Dev, Startup etc."}}
+        </div>
+        <div class="box__2 post__btn">
+          <button class="user-btn" type="submit" name="button">Post</button>
         </div>
       </div>
     {{/simple-form}}
