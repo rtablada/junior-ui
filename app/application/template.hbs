@@ -1,4 +1,6 @@
 <body class="site">
+  {{!-- {{#if (eq session.currentUser.id model.user.id)}} --}}
+  {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
   <nav class="nav">
     <div class="column is-9">
       <div class="nav__inner">
@@ -12,12 +14,25 @@
               <button class="search--btn"></button>
             {{/simple-form}}
           <div class="right-nav">
-            {{#link-to "app.forum.new-post"}}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}}
+            {{!-- {{#link-to "app.forum.new-post" action="toggleNav"}}<img src="/images/nav/add.svg" class="nav-btn" />{{/link-to}} --}}
+            <img src="/images/nav/add.svg" class="nav-btn" {{action "toggleNav"}}/>
             {{!-- <i {{action "toggleNav"}} class="fa fa-bars hamburger" aria-hidden="true"></i> --}}
           </div>
           </div>
         </div>
       </div>
+    </div>
+  </nav>
+  {{/if}}
+  <nav class="sub__nav sub__nav--off">
+    <div class="overlay">
+        <ul class="overlay__card">
+          <div class="overlay__card--inner">
+            {{#link-to "app.forum.new-post" class="user-btn overlay__card--item" }}Add A New Question{{/link-to}}
+            {{#link-to "app.resources.new-resource" class="user-btn overlay__card--item" }}Add A New Resource{{/link-to}}
+            {{#link-to "app.jobs.new-job" class="user-btn overlay__card--item" }}Add A New Job{{/link-to}}
+          </div>
+        </ul>
     </div>
   </nav>
   {{!-- <nav class="sub__nav sub__nav--off">
