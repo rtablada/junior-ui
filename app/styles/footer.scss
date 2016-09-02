@@ -1,18 +1,18 @@
 .footer {
-  background: $grey-two;
+  background: $white;
 
   &__inner {
-    padding: 1em;
+    padding: 1em 0;
   }
 
   &__content {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   &__item {
     font-weight: 400;
-    font-size: 16px;
-    color: $grey-four;
+    font-size: 14px;
+    color: $grey-three;
     }
 }
