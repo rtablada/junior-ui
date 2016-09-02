@@ -1,4 +1,4 @@
-@media screen and (min-width: 45rem) and (max-width: 300rem) {
+@media screen and (min-width: 45rem) and (max-width: 200rem) {
 
   // POST CARD
   .index__post {
@@ -137,10 +137,5 @@
 
   .forum__inner {
     padding-top: 1rem;
-  }
-
-  .column.is-8 {
-    width: 100%;
-    max-width: 60rem;
   }
 }

@@ -59,12 +59,15 @@ $light-green: #00AA59;
 }
 
 .site__content {
-  flex: 1;
-  background: $white;
 }
 
 .column {
   margin: 0 auto;
+}
+
+.column.is-8 {
+  width: 100%;
+  max-width: 60rem;
 }
 
 // GLOBAL BUTTONS ------------------------------------------------------
