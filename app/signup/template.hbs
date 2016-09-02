@@ -1,5 +1,8 @@
 {{outlet}}
 <div class="form form__input">
+  <div class="form__box">
+    {{#link-to "app.forum"}}<img src="/images/nav/logo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
+  </div>
   <div class="form__inner form__input--inner">
     <div class="form__card form__input--card">
       {{#simple-form onsubmit=(action "signUp") as |inputs|}}

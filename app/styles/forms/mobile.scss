@@ -1,5 +1,13 @@
-@media screen and (min-width: 10rem) and (max-width: 40rem) {
+@media screen and (min-width: 5rem) and (max-width: 45rem) {
   // MOBILE
+
+  .form__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .form__input {
     &--inner {
       margin: 0 auto;
@@ -8,6 +16,7 @@
 
     &--card {
       margin-bottom: 1rem;
+      padding-top: 10rem;
     }
 
     &--card--input {
@@ -19,16 +28,17 @@
 
     &--card--input--item {
       outline: none;
-      background: $grey-two;
+      background: $white;
+      border: 2px solid $grey-one;
       color: $black;
-      border: 0;
       width: 100%;
       padding: 0.75rem 0;
       margin: 0.5rem 0;
       border-radius: 4px;
-      font-size: 16px;
-      font-family: 'Europa', sans-serif;
-      padding-left: 1rem;
+      font-size: 15px;
+      font-weight: 300;
+      font-family: "soleil",sans-serif;
+      padding-left: 1rem
     }
 
   }
@@ -36,7 +46,7 @@
   .form--btn {
     width: 100%;
     padding: 0.75rem 0;
-    font-size: 16px;
+    font-size: 14px;
   }
 
 
@@ -44,7 +54,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $grey-one;
     border-radius: 0 0 4px 4px;
     padding: 2rem 0;
   }
@@ -52,7 +61,7 @@
 
   .form--sub {
     color: $grey-four;
-    font-size: 16px;
+    font-size: 15px;
     padding: 0.75em 2em;
   }
   .form--sub:hover {
@@ -61,7 +70,7 @@
     outline: none;
     border-radius: 4px;
     background: rgba(221,221,221, 0.4);
-    font-size: 16px;
+    font-size: 15px;
     color: $black;
   }
 
