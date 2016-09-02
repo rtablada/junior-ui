@@ -4,12 +4,12 @@
       <div class="index__post--wrapper">
         {{user-icon user=post.user}}
         <div class="post__box">
-          <h1 class="post__title">{{post.jsonData.company-name}}</h1>
+          <h1 class="post__title">{{post.jsonData.company-name}} is looking for a {{post.jsonData.job-title}} with {{post.jsonData.experience}} of experience.</h1>
           <div class="group">
             {{#link-to 'app.profile'}}
               <p class="username">{{post.user.firstName}} {{post.user.lastName}}</p>
             {{/link-to}}
-            <h1 class="learning">, {{post.user.jobTitle}}</h1>
+            <h1 class="learning">{{post.profile.learning}}</h1>
           </div>
         </div>
         <div class="second__line">

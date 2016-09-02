@@ -6,9 +6,9 @@
         <h1 class="post__title">{{model.firstName}} {{model.lastName}}</h1>
         <div class="group">
           {{#link-to 'app.profile'}}
-            <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
+            <p class="username"></p>
           {{/link-to}}
-          <h1 class="learning">, {{model.user.email}} Learning Javscript (React, Ember)</h1>
+          <h1 class="learning">{{model.profile.learning}}</h1>
         </div>
       </div>
       <div class="second__line">
@@ -23,25 +23,22 @@
 <div class="description__box">
   <div class="profile-input">
     <p class="profile-label">Current Company</p>
-    <h2>Google</h2>
+    <h2>{{model.profile.currentCompany}}</h2>
   </div>
   <div class="profile-input">
     <p class="profile-label">Job Title</p>
-    <h2>Product Designer</h2>
+    <h2>{{model.profile.jobTitle}}</h2>
   </div>
   <div class="profile-input">
     <p class="profile-label">Mini-Resume</p>
-    <h2>Good to see Pastebot's return. But it needs an iOS version to be truly great. There's a whole bunch of Clipboard apps that do the job. Some are brilliant, some are adequate, some are gorgeous and goodlooking and some are functional. Curious to see what Pastebot will add.</h2>
+    <h2>{{model.profile.miniResume}}</h2>
   </div>
   <div class="profile-input">
     <p class="profile-label">I'm currently learning</p>
-    <h2>Good to see Pastebot's return. But it needs an iOS version to be truly great. There's a whole bunch of Clipboard apps that do the job.</h2>
-  </div>
+    <h2>{{model.profile.learning}}</h2>
   <div class="profile-input">
     <p class="profile-label">My Work</p>
-    <h2>www.petercourt.com</h2>
-    <h2>www.petercourt.com</h2>
-    <h2>www.petercourt.com</h2>
+  <h2>{{model.profile.work}}</h2>
   </div>
-  {{md-text text=model.jsonData.description}}
+</div>
 </div>

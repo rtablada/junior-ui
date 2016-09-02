@@ -9,13 +9,17 @@ export default Ember.Controller.extend({
         post,
         markdown,
       });
-
       comment.save().then(() => {
         reset();
       });
     },
     deleteComment(comment) {
       comment.destroyRecord();
+    },
+    deletePost(post) {
+      post.destroyRecord().then(() => {
+        this.transitionToRoute('app.resources.index');
+      });
     },
   },
 });

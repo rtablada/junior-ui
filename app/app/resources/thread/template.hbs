@@ -23,6 +23,18 @@
 <div class="description__box">
   {{md-text text=model.jsonData.description}}
 </div>
+<ul class="tags-list">
+  <div class="tags">
+    {{#each model.tags as |tag|}}
+      <li class="tag-list__item">#{{tag.name}}</li>
+    {{/each}}
+  </div>
+  {{#if (eq session.currentUser.id model.user.id)}}
+    <div class="delete--btn">
+      <a {{action "deletePost" model}} class="tag-list__item delete">Delete Thread</a>
+    </div>
+  {{/if}}
+</ul>
 
 {{#simple-form onsubmit=(action "addComment" model) as |inputs| }}
   <div class="forum__post">
@@ -31,12 +43,6 @@
     </div>
     <div class="action">
       <button class="user-btn" type="submit" name="button">Post Comment</button>
-      <div class="action--item">
-        <div class="sp">
-          <a {{action "deletePost" model}} class="">Delete</a>
-        </div>
-        <a {{action "deletePost" model}} class="">Edit</a>
-      </div>
     </div>
   </div>
 {{/simple-form}}
@@ -47,34 +53,3 @@
     {{comment-section comment=comment}}
   </div>
 {{/each}}
-{{!-- <div class="index__post">
-  <div class="index__post--inner">
-    <div class="index__post--wrapper">
-      <div class="user">
-        {{user-icon user=comment.user}}
-        <div class="username__box">
-          <p class="username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
-        </div>
-      </div>
-      <div class="post__box">
-        <h1 class= "post__title">{{comment.user.email}}</h1>
-      </div>
-      <div class="second__line">
-        <div class="comment__box">
-          <p class="comment">Posted {{comment.createdAtFormatted}}</p>
-        </div>
-        <div class="icon__box">
-          <i class="fa fa-heart heart" aria-hidden="true"></i>
-        </div>
-      </div>
-      </div>
-      <div class="forum__post--description">
-        <div class="forum__post--description--copy content">
-        {{#link-to 'app.resources.thread' 1 class="forum__post--question" }}{{md-text text=comment.markdown}}{{/link-to}}
-      </div>
-    </div>
-    {{#if (and session.currentUser (not session.currentUser.profile.profileCompleted))}}
-        <button {{action "deleteComment" comment}} class="submit-btn" type="submit" name="button">Delete Post</button>
-    {{/if}}
-  </div>
-</div> --}}

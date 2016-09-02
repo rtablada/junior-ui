@@ -59,12 +59,15 @@ $light-green: #00AA59;
 }
 
 .site__content {
-  flex: 1;
-  background: $white;
 }
 
 .column {
   margin: 0 auto;
+}
+
+.column.is-8 {
+  width: 100%;
+  max-width: 60rem;
 }
 
 // GLOBAL BUTTONS ------------------------------------------------------
@@ -152,7 +155,7 @@ $light-green: #00AA59;
   background: $white;
   color: $black;
   border: 2px solid $grey-one;
-  width: 60%;
+  width: 80%;
   border-radius: 4px;
   font-size: 16px;
   font-family: "soleil",sans-serif;
