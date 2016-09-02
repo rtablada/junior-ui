@@ -1,5 +1,5 @@
-@media screen and (min-width: 45rem) and (max-width: 300rem) {
-
+@media screen and (min-width: 10rem) and (max-width: 45rem) {
+  // MOBILE
   // POST CARD
   .index__post {
     background: $white;
@@ -11,24 +11,21 @@
   }
 
   .index__post--wrapper {
-    display: flex;
-  }
-
+    }
   // USER
   .img__box {
     padding-right: 1rem;
   }
+
   .user__img {
     object-fit: cover;
-    // width: 3rem;
-    // height: 3rem;
-    // min-width: 3rem;
     border-radius: 50%;
+    display: none;
   }
 
   .username {
-    font-size: 14px;
-    font-family: "soleil",sans-serif;
+    font-size: 13px;
+    font-family: 'soleil',sans-serif;
     font-weight: 300;
     color: $black;
   }
@@ -44,8 +41,8 @@
   }
 
   .post__title {
-    font-size: 15px;
-    font-family: "soleil",sans-serif;
+    font-size: 14px;
+    font-family: 'soleil',sans-serif;
     font-weight: 500;
     color: $black;
   }
@@ -53,32 +50,34 @@
   .second__line {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 40%;
+    justify-content: flex-start;
   }
 
   .comment__box {
-    width: 67%;
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .comment {
     color: $black;
-    font-size: 15px;
-    font-family: "soleil",sans-serif;
+    font-size: 13px;
+    font-family: 'soleil',sans-serif;
     font-weight: 400;
   }
 
   .post__tit {
     font-size: 30px;
     width: 100%;
-    font-family: "soleil",sans-serif;
+    font-family: 'soleil',sans-serif;
     font-weight: 600;
     color: $black;
   }
 
   .learning {
     font-size: 14px;
-    font-family: "soleil",sans-serif;
+    font-family: 'soleil',sans-serif;
     font-weight: 300;
     color: $grey-four;
   }
@@ -89,7 +88,10 @@
 
   .date {
     color: $grey-four;
-    font-size: 14px;
+    font-size: 13px;
+    font-family: 'soleil',sans-serif;
+    font-weight: 300;
+    margin-left: 1rem;
   }
 
   .sort {
@@ -100,6 +102,7 @@
       color: $grey-four;
       margin-right: 1rem;
     }
+
     &--item:hover {
       color: $black;
     }
@@ -110,10 +113,11 @@
     display: flex;
     align-items: center;
   }
+
   .category {
     border-radius: 50%;
-	  width: 0.60rem;
-	  height: 0.60rem;
+    width: 0.60rem;
+    height: 0.60rem;
     max-width: 0.60rem;
     max-height: 0.60rem;
     background: $red;
@@ -123,24 +127,50 @@
     cursor: pointer;
   }
 
-  .menu-btn {
-    display: none;
-  }
-
-  .mobile--search {
-    display: none;
-  }
-
-  .search--form-m {
-    display: none;
-  }
-
   .forum__inner {
     padding-top: 1rem;
   }
 
-  .column.is-8 {
-    width: 100%;
-    max-width: 60rem;
+  .search--form {
+    display: none;
   }
+
+  .right__box {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-btn {
+    margin-right: 0;
+  }
+
+  .img__box {
+    display: none;
+  }
+
+  .mobile--search {
+    color: $grey-four;
+    fill: currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .search__nav--off {
+    display: none;
+  }
+
+  .search--form-m {
+    width: 100%;
+  }
+
+  .search {
+    padding: 1rem 0;
+  }
+
+  .search--icon {
+    display: none;
+  }
+
 }
