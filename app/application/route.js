@@ -22,13 +22,11 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
         type: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
-
         },
       }).then((raw) => raw.json())
     .then((response) => {
-      const { username, email, 'first-name': firstName, 'last-name': lastName } = response.data.attributes
-      response.data.attributes = { username, email, firstName, lastName };
-      const currentUser = this.store.push(response);
+      const currentUser = this.store.pushPayload(response);
+
       this.set('session.currentUser', currentUser);
     });
     }
