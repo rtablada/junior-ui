@@ -37,6 +37,8 @@ Router.map(function() {
           path: '/q/:search_term'
         });
         this.route('favorites');
+        this.route('recent');
+        this.route('most-comment');
       });
         this.route('interviews');
         this.route('brand');

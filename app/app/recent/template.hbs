@@ -1,0 +1,3 @@
+{{#each (sort-by "createdAt:desc" model) as |post|}}
+  {{forum-collection-item post=post}}
+{{/each}}
