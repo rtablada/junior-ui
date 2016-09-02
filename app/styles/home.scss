@@ -130,10 +130,38 @@
 //   }
 // }
 .home__input {
-
-}
+  }
 
 .home__input--inner {
   margin: 0 auto;
   max-width: 25rem;
+}
+
+.home__content {
+  padding-top: 10rem;
+  height: 100%;
+}
+
+.home__content--inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home__left {
+  width: calc(100% / 2);
+  min-width: 25rem;
+}
+
+.home__right {
+  min-width: 25rem;
+}
+
+.home__title {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.home__copy {
+  font-size: 18px;
 }
