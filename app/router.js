@@ -25,7 +25,7 @@ Router.map(function() {
           this.route('new-job');
         });
         this.route('profile', function() {
-          this.route('user-view');
+          this.route('user-view', { path: '/:user_id' });
         });
         this.route('resources', function() {
           this.route('thread', {
