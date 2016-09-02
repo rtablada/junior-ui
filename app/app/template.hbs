@@ -5,28 +5,26 @@
       <div class="forum__nav--inner">
         <h1 class="forum__nav--header">Categories</h1>
         <div class="">
-          {{#link-to "app.forum" class="forum__nav--it"}}Feed{{/link-to}}
-          {{#link-to "app.resources" class="forum__nav--it"}}Resources{{/link-to}}
-          {{#link-to "app.jobs" class="forum__nav--it"}}Jobs{{/link-to}}
-          {{!-- {{#link-to "interviews" class="forum__nav--it"}}Interviews{{/link-to}} --}}
+          {{#link-to "app.forum" class="forum__nav--it" }}Questions{{/link-to}}
+          {{#link-to "app.resources" class="forum__nav--it" }}Resources{{/link-to}}
+          {{#link-to "app.jobs" class="forum__nav--it" }}Jobs{{/link-to}}
           <h1 class="forum__nav--header">Sort</h1>
-          {{#link-to "app.profile" class="forum__nav--it"}}Recent{{/link-to}}
-          {{#link-to "app.profile" class="forum__nav--it"}}Most Commented{{/link-to}}
+          {{#link-to "app.recent" class="forum__nav--it" }}Recent{{/link-to}}
+          {{#link-to "app.most-comment" class="forum__nav--it" }}Most Commented{{/link-to}}
           <h1 class="forum__nav--header">Account</h1>
-          {{#link-to "app.favorites" class="forum__nav--it"}}Favorites{{/link-to}}
-          {{#link-to "app.profile" class="forum__nav--it"}}Edit Profile{{/link-to}}
-          {{#link-to "app.profile" class="forum__nav--it"}}Privacy Policy{{/link-to}}
+          {{#link-to "app.profile" class="forum__nav--it" }}Edit Profile{{/link-to}}
+          {{#link-to "app.profile" class="forum__nav--it" }}Privacy Policy{{/link-to}}
         </div>
         <div class="box__2">
-          {{#link-to "logout" class="forum__nav--it"}}Logout{{/link-to}}
+          {{#link-to "logout" class="forum__nav--it" }}Logout{{/link-to}}
         </div>
       </div>
     </div>
 
     <div class="forum__card forum__main">
       <div class="forum__main--inner">
-        </div>
-        {{outlet}}
       </div>
+      {{outlet}}
     </div>
   </div>
+</div>

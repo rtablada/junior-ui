@@ -2,39 +2,38 @@
 <div class="profile">
   <div class="profile__inner">
     {{#simple-form startingValues=model onsubmit=(action "addNewJob") class="profile__card" as |inputs|}}
-    <div class="index__container">
-      <h1 class="global__h3 forum__post--title">Add New Job</h1>
-      <button class="submit-btn login-btn" type="submit" name="button">Add New Job</button>
-    </div>
         <div class="profile__container--input profile__small">
         <div class="profile-input">
-          <p class="profile-label">Company</p>
-          {{input class="global__input" type="text" name="name" value=inputs.title placeholder="Etsy, Apple etc."}}
+          <p class="profile-label">Company Name</p>
+          {{input class="global__input" type="text" name="name" value=inputs.companyName placeholder="Etsy, Apple etc."}}
         </div>
 
         <div class="profile-input">
           <p class="profile-label">Job Title</p>
-          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Product Designer, Developer etc."}}
+          {{input class="global__input" type="text" name="name" value=inputs.jobTitle placeholder="Product Designer, Developer etc."}}
         </div>
 
         <div class="profile-input">
           <p class="profile-label">Job Description</p>
-          {{textarea class="global__textarea" type="text" name="name" value=inputs.experience placeholder="Union Made Creative is looking for a cross between Michael Jordan and Michael Bierut for their Senior Designer position in Los Angeles. Must love meticulous design and be able to dunk from the foul line."}}
+          {{textarea class="global__textarea" type="text" name="name" value=inputs.jobDescription placeholder="Union Made Creative is looking for a cross between Michael Jordan and Michael Bierut for their Senior Designer position in Los Angeles. Must love meticulous design and be able to dunk from the foul line."}}
         </div>
 
         <div class="profile-input">
           <p class="profile-label">Location</p>
-          {{input class="global__input" type="text" name="name" value=inputs.title placeholder="New York City, Dallas etc."}}
+          {{input class="global__input" type="text" name="name" value=inputs.location placeholder="New York City, Dallas etc."}}
         </div>
 
         <div class="profile-input">
           <p class="profile-label">Remote Friendly?</p>
-          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="Yes, No etc."}}
+          {{input class="global__input" type="text" name="name" value=inputs.remote placeholder="Yes, No etc."}}
         </div>
 
         <div class="profile-input">
           <p class="profile-label">Experience Needed</p>
-          {{input class="global__input" type="text" name="name" value=inputs.email placeholder="1-2 Years."}}
+          {{input class="global__input" type="text" name="name" value=inputs.experience placeholder="1-2 Years."}}
+        </div>
+        <div class="box__2 post__btn">
+          <button class="user-btn" type="submit" name="button">Post</button>
         </div>
       </div>
     {{/simple-form}}

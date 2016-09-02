@@ -7,4 +7,10 @@ export default DS.Model.extend({
   educationalBackground: DS.attr('string'),
   profileCompleted: DS.attr('boolean'),
   user: DS.belongsTo('user'),
+
+  jobTitle: DS.attr('string'),
+  currentCompany: DS.attr('string'),
+  miniResume: DS.attr('string'),
+  learning: DS.attr('string'),
+  work: DS.attr('string'),
 });

@@ -4,21 +4,12 @@
     {{#simple-form startingValues=model onsubmit=(action "addNewPost") class="profile__card" as |inputs|}}
       <div class="profile__container--input">
         <div class="profile-input">
-          <p class="profile-label">Post Title (140 character limit)</p>
+          <p class="profile-label">Question (140 character limit)</p>
           {{input class="global__input" type="text" name="name" maxlength="140" value=inputs.title placeholder="Post Title"}}
         </div>
 
         <div class="profile-input">
-          <p class="profile-label">Post Category</p>
-          <div class="user__bubble">
-            <button class="{{if (eq answers.q2 "Alone") "user-btn--active"}} user-btn" disabled= {{if answers.q2 true}} type="button" name="button">Question</button>
-            <button class="{{if (eq answers.q2 "Two People") "user-btn--active"}} user-btn" disabled= {{if answers.q2 true}} type="button" name="button">Resource</button>
-            <button class="{{if (eq answers.q2 "A Group") "user-btn--active"}} user-btn" disabled= {{if answers.q2 true}} type="button" name="button">Story</button>
-          </div>
-        </div>
-
-        <div class="profile-input">
-          <p class="profile-label">Post Description</p>
+          <p class="profile-label">Question Description</p>
           {{textarea class="global__textarea" type="text" name="name" value=inputs.description placeholder="Post Description"}}
         </div>
 

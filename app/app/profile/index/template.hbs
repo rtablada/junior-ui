@@ -39,12 +39,19 @@
 
     <div class="profile-input">
       <p class="profile-label">Mini-Resume</p>
+      {{model.profile.miniResume}}
+      {{inputs.miniResume}}
       {{textarea class="global__textarea" type="text" name="name" value=inputs.miniResume placeholder="Intern at Apple, Freelance Designer for 1 year, etc."}}
     </div>
 
     <div class="profile-input">
       <p class="profile-label">What are you currently learning?</p>
       {{textarea class="global__textarea" type="text" name="name" value=inputs.learning placeholder="I've spent the last there months learning Ruby and PHP etc."}}
+    </div>
+
+    <div class="profile-input">
+      <p class="profile-label">My Work</p>
+      {{textarea class="global__textarea" type="text" name="name" value=inputs.work placeholder="I've spent the last there months learning Ruby and PHP etc."}}
     </div>
     <div class="user__bubble">
       <button class="user-btn" type="submit" name="button">Update</button>

@@ -7,7 +7,10 @@ export default Ember.Component.extend({
   didReceiveAttrs() {
     const letter = this.get('user.firstName') ? this.get('user.firstName')[0] : null;
 
+    if (letter) {
+      this.set('letter', letter.toUpperCase());
+    }
+
     this.set('color', this.get('user.id') % 3);
-    this.set('letter', letter);
   },
 });
