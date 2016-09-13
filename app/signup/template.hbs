@@ -1,24 +1,29 @@
 {{outlet}}
-<div class="form form__input">
-  <div class="form__inner form__input--inner">
-    <div class="form__card form__input--card">
-      {{#simple-form onsubmit=(action "signUp") as |inputs|}}
-        <div class="form__container--input form__input--card--input">
-          <div class="box__1">
-            <h1 class="form--title">Get Started</h1>
-          </div>
-          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.firstName placeholder="First Name"}}
-          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.lastName placeholder="Last Name"}}
-          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.email placeholder="Email"}}
-          {{input class="form__input--card--input--item" type="password" name="name"value=inputs.password placeholder="Password"}}
-          <div class="box__1">
-            <button class="submit-btn form--btn">Signup</button>
-          </div>
+<div class="background">
+  <div class="column is-8">
+    <div class="form form__input">
+      <div class="form__box">
+        {{#link-to "app.forum"}}<img src="/images/nav/wlogo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
+      </div>
+      <div class="form__inner form__input--inner">
+        <div class="form__card form__input--card">
+          {{#simple-form onsubmit=(action "signUp") as |inputs|}}
+            <div class="form__container--input form__input--card--input">
+              <div class="box__1">
+                <h1 class="form--title">Create An Account</h1>
+              </div>
+              {{input class="form__input--card--input--item" type="text" name="name" value=inputs.firstName placeholder="First Name"}} {{input class="form__input--card--input--item" type="text" name="name" value=inputs.lastName placeholder="Last Name"}} {{input class="form__input--card--input--item"
+              type="text" name="name" value=inputs.email placeholder="Email"}} {{input class="form__input--card--input--item" type="password" name="name"value=inputs.password placeholder="Password"}}
+              <div class="box__1">
+                <button class="submit-btn form--btn">Signup</button>
+              </div>
+            </div>
+            <div class="form__container--btn form--sub--container">
+              {{#link-to 'login' class="form--sub" }}Already have an account?{{/link-to}}
+            </div>
+          {{/simple-form}}
         </div>
-        <div class="form__container--btn form--sub--container">
-          {{#link-to 'login' class="form--sub" }}Already have an account?{{/link-to}}
-        </div>
-      {{/simple-form}}
+      </div>
     </div>
   </div>
 </div>

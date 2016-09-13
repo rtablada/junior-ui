@@ -3,7 +3,7 @@
     <div class="index__post--wrapper">
       {{user-icon user=model.user}}
       <div class="post__box">
-        <h1 class="post__title">{{model.jsonData.title}}</h1>
+        <h1 class="post__title">{{model.jsonData.company-name}}is looking for a {{model.jsonData.job-title}}.</h1>
         <div class="group">
           {{#link-to 'app.profile'}}
             <p class="username">{{model.user.firstName}} {{model.user.lastName}}</p>
@@ -21,8 +21,48 @@
   </div>
 </div>
 <div class="description__box">
-  {{md-text text=model.jsonData.description}}
+
+  <div class="box__1">
+    <div class="profile-input">
+      <p class="profile-label">Company Name</p>
+      {{model.jsonData.company-name}}
+    </div>
+  </div>
+
+  <div class="box__1">
+    <div class="profile-input">
+      <p class="profile-label">Job Title</p>
+      {{model.jsonData.job-title}}
+    </div>
+  </div>
+
+  <div class="box__1">
+    <div class="profile-input">
+      <p class="profile-label">Job Description</p>
+      {{model.jsonData.job-description}}
+    </div>
+  </div>
+
+  <div class="profile-input">
+    <p class="profile-label">Location</p>
+    {{model.jsonData.location}}
+  </div>
+
+  <div class="box__1">
+    <div class="profile-input">
+      <p class="profile-label">Remote Friendly?</p>
+      {{model.jsonData.remote}}
+    </div>
+  </div>
+
+  <div class="box__1">
+    <div class="profile-input">
+      <p class="profile-label">Experience Needed</p>
+      {{model.jsonData.experience}}
+    </div>
+  </div>
 </div>
+
 <ul class="tags-list">
   <div class="tags">
     {{#each model.tags as |tag|}}
@@ -49,7 +89,7 @@
 
 
 {{#each model.comments as |comment|}}
-<div class="comment__card">
-  {{comment-section comment=comment}}
-</div>
+  <div class="comment__card">
+    {{comment-section comment=comment}}
+  </div>
 {{/each}}

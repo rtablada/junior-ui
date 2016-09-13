@@ -1,27 +1,25 @@
-<div class="index__post">
-  {{#link-to 'app.jobs.thread' post class="post__title" }}
-    <div class="index__post--inner">
-      <div class="index__post--wrapper">
-        {{user-icon user=post.user}}
-        <div class="post__box">
-          <h1 class="post__title">{{post.jsonData.company-name}} is looking for a {{post.jsonData.job-title}} with {{post.jsonData.experience}} of experience.</h1>
-          <div class="group">
-            {{#link-to 'app.profile'}}
-              <p class="username">{{post.user.firstName}} {{post.user.lastName}}</p>
-            {{/link-to}}
-            <h1 class="learning">{{post.profile.learning}}</h1>
+
+  <div class="index__post">
+    {{#link-to 'app.jobs.thread' post class="post__title" }}
+      <div class="index__post--inner">
+        <div class="index__post--wrapper">
+          {{user-icon user=post.user}}
+          <div class="post__box">
+            <h1 class="post__title">{{post.jsonData.company-name}} is looking for a {{post.jsonData.job-title}}.</h1>
+            <div class="group">
+              {{#link-to 'app.profile.user-view' post.user}}
+                <p class="username">{{post.user.firstName}} {{post.user.lastName}}</p>
+              {{/link-to}}
+              <h1 class="learning">{{post.profile.learning}}</h1>
+            </div>
           </div>
-        </div>
-        <div class="second__line">
-          <div class="category__box">
-            <div class="category"></div>
-          </div>
-          <div class="comment__box">
-            <p class="comment">{{post.comments.length}} Comments</p>
-            <p class="date">Posted {{post.createdAtFormatted}}</p>
+          <div class="second__line">
+            <div class="comment__box">
+              <p class="comment">{{post.comments.length}} Comments</p>
+              <p class="date">Posted {{post.createdAtFormatted}}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  {{/link-to}}
-</div>
+    {{/link-to}}
+  </div>

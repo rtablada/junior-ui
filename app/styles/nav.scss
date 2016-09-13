@@ -35,7 +35,7 @@
 }
 
 .nav-btn {
-  max-width: 2.5rem;
+  max-width: 2rem;
   margin-right: 0.5rem;
 }
 
@@ -47,6 +47,7 @@
 .menu-btn {
   color: $grey-three;
   fill: currentColor;
+  cursor: pointer;
 }
 
 .search--icon {
@@ -108,4 +109,12 @@ background: $grey-one;
 }
 .add__nav--off {
   display: none;
+}
+
+.search__nav--off {
+  display: none;
+}
+
+.form__box {
+  padding-top: 2rem;
 }

@@ -1,28 +1,28 @@
 <div class="index__post">
-  <div class="index__post--inner">
-    <div class="index__post--wrapper">
-      {{user-icon user=comment.user}}
-      <div class="post__box comments__box">
-        <div class="group">
-          {{#link-to 'app.profile'}}
-            <p class="username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
-          {{/link-to}}
-          <h1 class="learning">, {{comment.user.email}}</h1>
+    <div class="index__post--inner">
+      <div class="index__post--wrapper">
+        {{user-icon user=comment.user}}
+        <div class="post__box comments__box">
+          <div class="group">
+            {{#link-to 'app.profile'}}
+              <p class="username">{{comment.user.firstName}} {{comment.user.lastName}}</p>
+            {{/link-to}}
+            <h1 class="learning">{{comment.user.email}}</h1>
+          </div>
         </div>
-      </div>
-      <div class="second__line">
-        <div class="comment__box">
-          <p class="date">Posted {{comment.createdAtFormatted}}</p>
+        <div class="second__line">
+          <div class="comment__box">
+            <p class="date">Posted {{comment.createdAtFormatted}}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="description__box">
-  {{md-text text=comment.markdown}}
-</div>
-<div class="action--item">
-  <div class="delete--btn">
-  <a class="tag-list__item delete" {{action "deleteComment" comment}}>Delete</a>
-</div>
-</div>
+  <div class="description__box">
+    {{md-text text=comment.markdown}}
+  </div>
+  <div class="action--item">
+    <div class="delete--btn">
+      <a class="tag-list__item delete" {{action "deleteComment" comment}}>Delete</a>
+    </div>
+  </div>

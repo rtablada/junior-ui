@@ -1,23 +1,29 @@
 {{outlet}}
-<div class="form__input">
-  <div class="form__input--inner">
-    <div class="form__input--card">
-      {{#simple-form onsubmit=(action "login") as |inputs|}}
-        <div class="form__input--card--input">
-          <div class="box__1">
-          <h1 class="form--title">Login</h1>
+<div class="background">
+  <div class="column is-8">
+    <div class="form__input">
+      <div class="form__box">
+        {{#link-to "app.forum"}}<img src="/images/nav/wlogo.svg" class="nav__logo" alt="Junior Logo" />{{/link-to}}
+      </div>
+      <div class="form__input--inner">
+        <div class="form__input--card">
+          {{#simple-form onsubmit=(action "login") as |inputs|}}
+            <div class="form__input--card--input">
+              <div class="box__1">
+                <h1 class="form--title">Login</h1>
+              </div>
+              {{input class="form__input--card--input--item" type="text" name="name" value=inputs.username placeholder="Username"}} {{input class="form__input--card--input--item" type="password" name="name" value=inputs.password placeholder="Password"}}
+              <div class="box__2">
+                <button class="submit-btn form--btn" type="submit" name="button">Login</button>
+              </div>
+            </div>
+            <div class="login--container">
+              {{#link-to 'forgot' class="form--sub" }}Forgot Password?{{/link-to}}
+              {{#link-to 'signup' class="form--sub" }}Create a new account{{/link-to}}
+            </div>
+          {{/simple-form}}
         </div>
-          {{input class="form__input--card--input--item" type="text" name="name" value=inputs.username placeholder="Username"}}
-          {{input class="form__input--card--input--item" type="password" name="name" value=inputs.password placeholder="Password"}}
-          <div class="box__2">
-            <button class="submit-btn form--btn" type="submit" name="button">Login</button>
-          </div>
-        </div>
-        <div class="login--container">
-          {{#link-to 'forgot' class="form--sub" }}Forgot Password?{{/link-to}}
-          {{#link-to 'signup' class="form--sub" }}Create a new account{{/link-to}}
-        </div>
-      {{/simple-form}}
+      </div>
     </div>
   </div>
 </div>

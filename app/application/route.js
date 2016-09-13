@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import config from 'junior-ui/config/environment';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
+import fetch from 'ember-network/fetch';
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
   init() {

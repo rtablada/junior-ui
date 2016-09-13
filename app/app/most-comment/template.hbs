@@ -1,3 +1,7 @@
 {{#each (sort-by "comments.length:desc" model) as |post|}}
-  {{forum-collection-item post=post}}
+  {{#if (eq post.postType "job")}}
+    {{jobs-collection-item post=post}}
+  {{else}}
+    {{forum-collection-item post=post}}
+  {{/if}}
 {{/each}}

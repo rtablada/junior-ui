@@ -26,7 +26,7 @@
 <ul class="tags-list">
   <div class="tags">
     {{#each model.tags as |tag|}}
-      <li class="tag-list__item">#{{tag.name}}</li>
+      <li class="tag-list__item">{{tag.name}}</li>
     {{/each}}
   </div>
   {{#if (eq session.currentUser.id model.user.id)}}

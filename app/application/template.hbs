@@ -1,4 +1,4 @@
-<body class="site">
+<body class="site home">
   {{#if session.currentUser}}
     <nav class="nav">
       <div class="column is-8">
@@ -13,8 +13,8 @@
                 <button class="search--btn"><svg xmlns="http://www.w3.org/2000/svg" class="search--icon" width="21" height="21" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
               {{/simple-form}}
               <div class="right-nav">
-                <svg xmlns="http://www.w3.org/2000/svg" class="mobile--search" {{action "toggleSearch"}} width="30" height="30" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="menu-btn" {{action "toggleNav"}} width="35" height="35" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile--search" {{action "toggleSearch"}} width="28" height="28" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="menu-btn" {{action "toggleNav"}} width="30" height="30" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
                 <img src="/images/nav/add.svg" class="nav-btn" {{action "toggleAdd"}} />
                 {{#link-to 'app.profile.user-view' session.currentUser}}{{user-icon user=session.currentUser}}{{/link-to}}
               </div>
@@ -32,8 +32,8 @@
             {{#link-to "app.forum" class="sub__nav--item" }}Questions{{/link-to}}
             {{#link-to "app.resources" class="sub__nav--item" }}Resources{{/link-to}}
             {{#link-to "app.jobs" class="sub__nav--item" }}Jobs{{/link-to}}
-            {{#link-to "interviews" class="sub__nav--item" }}Recent{{/link-to}}
-            {{#link-to "app.forum" class="sub__nav--item" }}Most Commented{{/link-to}}
+            {{#link-to "app.recent" class="sub__nav--item" }}Recent{{/link-to}}
+            {{#link-to "app.most-comment" class="sub__nav--item" }}Most Commented{{/link-to}}
             {{#link-to "app.profile" class="sub__nav--item" }}Edit Profile{{/link-to}}
             {{#link-to "logout" class="sub__nav--item" }}Logout{{/link-to}}
           </div>
@@ -63,8 +63,7 @@
     </div>
   </nav>
   <main class="site__content">
-    <div class="column is-8">
-      <div class="flash-messages column is-8">
+      <div class="flash-messages">
         {{#each flashMessages.queue as |flash|}}
           {{#flash-message flash=flash class="success-message flash-success" as |message|}}
             <div class="chip">
@@ -74,8 +73,8 @@
         {{/each}}
       </div>
       {{outlet}}
-    </div>
   </main>
+  </body>
   <footer class="footer">
     <div class="column is-8">
       <div class="footer__inner">
@@ -85,4 +84,3 @@
       </div>
     </div>
   </footer>
-</body>
