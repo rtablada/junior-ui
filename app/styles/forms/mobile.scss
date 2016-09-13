@@ -1,4 +1,4 @@
-@media screen and (min-width: 5rem) and (max-width: 45rem) {
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
   // MOBILE
 
   .form__box {
@@ -16,22 +16,23 @@
 
     &--card {
       margin-bottom: 1rem;
-      padding-top: 10rem;
+      padding-top: 3rem;
     }
 
     &--card--input {
       padding: 1rem;
       text-align: center;
       background: $white;
+      border: 2px solid $grey-one;
       border-radius: 4px 4px 0 0;
     }
 
     &--card--input--item {
       outline: none;
-      background: $white;
-      border: 2px solid $grey-one;
+      background: $grey-one;
+      border: 0;
       color: $black;
-      width: 100%;
+      width: 90%;
       padding: 0.75rem 0;
       margin: 0.5rem 0;
       border-radius: 4px;
@@ -44,7 +45,7 @@
   }
 
   .form--btn {
-    width: 100%;
+    width: 30%;
     padding: 0.75rem 0;
     font-size: 14px;
   }

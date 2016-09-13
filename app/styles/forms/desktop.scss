@@ -1,5 +1,10 @@
-@media screen and (min-width: 45rem) and (max-width: 200rem) {
-  // MOBILE
+@media screen and (min-width: 40rem) and (max-width: 200rem) {
+
+  .background {
+    background: $red;
+    width: 100%;
+    height: 100vh;
+  }
 
   .form__box {
     display: flex;
@@ -11,7 +16,7 @@
   .form__input {
     &--inner {
       margin: 0 auto;
-      max-width: 25rem;
+      max-width: 23rem;
     }
 
     &--card {
@@ -23,13 +28,14 @@
       padding: 1rem;
       text-align: center;
       background: $white;
-      border-radius: 4px 4px 0 0;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 7px 15px rgba(0,0,0,0.1);
     }
 
     &--card--input--item {
       outline: none;
-      background: $white;
-      border: 2px solid $grey-one;
+      background: $grey-one;
+      border: 0;
       color: $black;
       width: 100%;
       padding: 0.75rem 0;
@@ -54,8 +60,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 5px 5px;
     padding: 2rem 0;
+    background: $grey-one;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 7px 15px rgba(0,0,0,0.1);
   }
 
 
@@ -79,6 +87,17 @@
     text-align: center;
     font-weight: 700;
     font-size: 24px;
+  }
+
+  .login--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $grey-one;
+    padding: 2rem 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 7px 15px rgba(0,0,0,0.1);
   }
 
 }
