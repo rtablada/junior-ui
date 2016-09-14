@@ -114,11 +114,16 @@ background: $grey-one;
   padding-top: 2rem;
 }
 
+img {
+  max-width: 2.25rem;
+}
+
 
 //  MEDIA Q's
 @media screen and (min-width: 10rem) and (max-width: 45rem) {
   .nav-btn {
     max-width: 2rem;
+    min-width: 2rem;
     margin-right: 0.5rem;
   }
 
@@ -126,6 +131,7 @@ background: $grey-one;
 @media screen and (min-width: 45rem) and (max-width: 200rem) {
   .nav-btn {
     max-width: 2.25rem;
+    min-width: 2.25rem;
     margin-right: 0.5rem;
   }
 
