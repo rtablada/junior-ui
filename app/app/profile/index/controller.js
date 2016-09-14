@@ -4,7 +4,6 @@ export default Ember.Controller.extend({
   actions: {
     updateProfile(user, formValues) {
       user.get('profile').then((profile) => {
-        debugger;
         profile.setProperties({...formValues,
           profileCompleted: true
         });
@@ -13,6 +12,7 @@ export default Ember.Controller.extend({
     },
     updateUser(user, formValues) {
       user.get('profile').then((profile) => {
+        debugger;
         profile.setProperties({...formValues,
           profileCompleted: true
         });
