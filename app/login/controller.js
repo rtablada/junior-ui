@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
       this.get('session').authenticate(authenticator,
       { identification: formValues.username, password: formValues.password })
       .then(() => {
-          this.get('flashMessages').success('Login Success!');
+          // this.get('flashMessages').success('Login Success!');
           this.transitionToRoute('app.forum');
         })
         .catch((reason) => {
