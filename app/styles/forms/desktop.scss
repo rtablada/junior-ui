@@ -1,7 +1,7 @@
 @media screen and (min-width: 40rem) and (max-width: 200rem) {
 
   .background {
-    background: $blue;
+    background: rgba(71, 156, 247, 0.1);
     width: 100%;
     min-height: 100vh;
   }
@@ -29,7 +29,7 @@
       text-align: center;
       background: $white;
       border-radius: 5px 5px 0 0;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 7px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 1px rgba(241,241,241,0.1),0 7px 15px rgba(0,0,0,0.1);
     }
 
     &--card--input--item {
@@ -63,7 +63,7 @@
     border-radius: 0 0 5px 5px;
     padding: 2rem 0;
     background: $grey-one;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 1px rgba(241,241,241,0.1),0 7px 15px rgba(0,0,0,0.1);
   }
 
 
@@ -97,7 +97,7 @@
     background: $grey-one;
     padding: 2rem 0;
     border-radius: 0 0 5px 5px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 1px rgba(241,241,241,0.1),0 7px 15px rgba(0,0,0,0.1);
   }
 
 }

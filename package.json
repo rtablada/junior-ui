@@ -12,7 +12,7 @@
     "start": "ember server",
     "test": "ember test",
     "lintfix": "eslint app --fix && eslint tests --fix",
-    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist beta.hr.surge.sh"
+    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist beta.hellojunior.us"
   },
   "repository": "",
   "engines": {

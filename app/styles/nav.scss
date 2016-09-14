@@ -34,11 +34,6 @@
   color: $black;
 }
 
-.nav-btn {
-  max-width: 2rem;
-  margin-right: 0.5rem;
-}
-
 .right-nav {
   display: flex;
   align-items: center;
@@ -117,4 +112,21 @@ background: $grey-one;
 
 .form__box {
   padding-top: 2rem;
+}
+
+
+//  MEDIA Q's
+@media screen and (min-width: 10rem) and (max-width: 45rem) {
+  .nav-btn {
+    max-width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+}
+@media screen and (min-width: 45rem) and (max-width: 200rem) {
+  .nav-btn {
+    max-width: 2.25rem;
+    margin-right: 0.5rem;
+  }
+
 }

@@ -1,5 +1,10 @@
 @media screen and (min-width: 10rem) and (max-width: 40rem) {
-  // MOBILE
+
+  .background {
+    background: rgba(71, 156, 247, 0.1);
+    width: 100%;
+    min-height: 100vh;
+  }
 
   .form__box {
     display: flex;
@@ -11,20 +16,20 @@
   .form__input {
     &--inner {
       margin: 0 auto;
-      max-width: 25rem;
+      max-width: 23rem;
     }
 
     &--card {
       margin-bottom: 1rem;
-      padding-top: 3rem;
+      padding-top: 4rem;
     }
 
     &--card--input {
       padding: 1rem;
       text-align: center;
       background: $white;
-      border: 2px solid $grey-one;
-      border-radius: 4px 4px 0 0;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 0 0 1px rgba(241,241,241,0.1),0 7px 15px rgba(0,0,0,0.1);
     }
 
     &--card--input--item {
@@ -32,7 +37,7 @@
       background: $grey-one;
       border: 0;
       color: $black;
-      width: 90%;
+      width: 100%;
       padding: 0.75rem 0;
       margin: 0.5rem 0;
       border-radius: 4px;
@@ -45,7 +50,7 @@
   }
 
   .form--btn {
-    width: 30%;
+    width: 100%;
     padding: 0.75rem 0;
     font-size: 14px;
   }
@@ -55,8 +60,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 5px 5px;
     padding: 2rem 0;
+    background: $grey-one;
+    box-shadow: 0 0 0 1px rgba(241,241,241,0.1),0 7px 15px rgba(0,0,0,0.1);
   }
 
 
@@ -64,6 +71,7 @@
     color: $grey-four;
     font-size: 15px;
     padding: 0.75em 2em;
+    font-family: "soleil",sans-serif;
   }
   .form--sub:hover {
     padding: 0.75em 2em;
@@ -78,7 +86,18 @@
   .form--title {
     text-align: center;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  .login--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $grey-one;
+    padding: 2rem 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 0 1px rgba(241,241,241,0.1),0 7px 15px rgba(0,0,0,0.1);
   }
 
 }
