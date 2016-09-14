@@ -21,8 +21,10 @@
   <div class="description__box">
     {{md-text text=comment.markdown}}
   </div>
+  {{#if (eq session.currentUser.id comment.user.id)}}
   <div class="action--item">
     <div class="delete--btn">
       <a class="tag-list__item delete" {{action "deleteComment" comment}}>Delete</a>
     </div>
   </div>
+  {{/if}}
